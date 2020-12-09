@@ -3,7 +3,7 @@
 #include <assert.h>
 #include <stdio.h>
 
-#define SIZE_ERROR -1
+#define PQ_ERROR -1
 
 typedef struct node {
     PQElement element;
@@ -58,7 +58,6 @@ static PriorityQueueResult copyAllOrDestroy(PriorityQueue newQueue, PriorityQueu
     return PQ_SUCCESS;
 }
 /*------------------------------------------------------------------------------------------*/
-
 PriorityQueue pqCreate(CopyPQElement copy_element,
                        FreePQElement free_element,
                        EqualPQElements equal_elements,
@@ -148,13 +147,15 @@ PriorityQueue pqCopy(PriorityQueue queue) {
 
 int pqGetSize(PriorityQueue queue) {
     if (queue == NULL) {
-        return SIZE_ERROR;
+        return PQ_ERROR;
     }
     int size = 0;
-    PQElement current_element = pqGetFirst(queue);
-    while (current_element) {
-        current_element = pqGetNext(queue);
-        ++size;
+    Node current_node = queue->head;
+    while (current_node) {
+        if (current_node->element) {
+            ++size;
+        }
+        current_node = current_node->next;
     }
     return size;
 }
@@ -180,12 +181,10 @@ PriorityQueueResult pqInsert(PriorityQueue queue, PQElement element, PQElementPr
     queue->iterator = NULL;
     Node current_node = queue->head;
     while (current_node) {
-        assert(current_node->priority == NULL || current_node->element == NULL);
-
-        if (queue->compare_priorities(queue->head->priority, priority) >= 0) {
+        if (queue->compare_priorities(current_node->priority, priority) >= 0) {
             current_node = current_node->next;
-        } 
-        
+        }
+
         else {
             Node newNode = createNode(queue->copy_element(current_node->element), queue->copy_priority(current_node->priority));
             if (newNode == NULL) {
@@ -204,6 +203,7 @@ PriorityQueueResult pqInsert(PriorityQueue queue, PQElement element, PQElementPr
     if (current_node == NULL) {
         return PQ_OUT_OF_MEMORY;
     }
+    queue->head = current_node;
     return PQ_SUCCESS;
 }
 
@@ -216,7 +216,7 @@ PriorityQueueResult pqChangePriority(PriorityQueue queue, PQElement element,
     queue->iterator = NULL;
     Node current_node = queue->head;
     while (current_node) {
-        assert (current_node->element == NULL || current_node->priority == NULL);
+        assert (!current_node->element && !current_node->priority);
         
         int compare_output = queue->compare_priorities(current_node->priority, old_priority);
 
@@ -279,5 +279,6 @@ PQElement pqGetNext(PriorityQueue queue) {
     if (queue == NULL || queue->head == NULL || queue->head->next == NULL) {
         return NULL;
     }
-    return queue->head->next->element;
+    queue->head = queue->head->next;
+    return queue->head->element;
 }
