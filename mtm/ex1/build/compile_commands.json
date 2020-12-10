@@ -1,0 +1,12 @@
+[
+{
+  "directory": "C:/Users/100ba/source/Technion_projects/mtm/ex1/build",
+  "command": "C:\\TDM-GCC-64\\bin\\x86_64-w64-mingw32-gcc.exe   -g -o CMakeFiles\\Ex1.dir\\priority_queue.c.obj -c C:\\Users\\100ba\\source\\Technion_projects\\mtm\\ex1\\priority_queue.c",
+  "file": "C:/Users/100ba/source/Technion_projects/mtm/ex1/priority_queue.c"
+},
+{
+  "directory": "C:/Users/100ba/source/Technion_projects/mtm/ex1/build",
+  "command": "C:\\TDM-GCC-64\\bin\\x86_64-w64-mingw32-gcc.exe   -g -o CMakeFiles\\Ex1.dir\\tests\\all_tests.c.obj -c C:\\Users\\100ba\\source\\Technion_projects\\mtm\\ex1\\tests\\all_tests.c",
+  "file": "C:/Users/100ba/source/Technion_projects/mtm/ex1/tests/all_tests.c"
+}
+]
