@@ -6,21 +6,17 @@
 
 #IncludeRegexTransform: 
 
+C:/Users/100ba/source/Technion_projects/mtm/ex1/priority_queue.c
+priority_queue.h
 C:/Users/100ba/source/Technion_projects/mtm/ex1/priority_queue.h
-stdbool.h
--
-
-C:/Users/100ba/source/Technion_projects/mtm/ex1/tests/all_tests.c
 stdlib.h
 -
-test_utilities.h
-C:/Users/100ba/source/Technion_projects/mtm/ex1/tests/test_utilities.h
-../priority_queue.h
-C:/Users/100ba/source/Technion_projects/mtm/ex1/priority_queue.h
-
-C:/Users/100ba/source/Technion_projects/mtm/ex1/tests/test_utilities.h
-stdbool.h
+assert.h
 -
 stdio.h
+-
+
+C:/Users/100ba/source/Technion_projects/mtm/ex1/priority_queue.h
+stdbool.h
 -
 
