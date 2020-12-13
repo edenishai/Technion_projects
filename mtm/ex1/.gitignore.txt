@@ -1,4 +1,0 @@
-build/
-CMakeLists
-.vscode/
-main.cpp
