@@ -1,8 +1,7 @@
 #ifndef DATE_H_
 #define DATE_H_
-#include "priority_queue.h"
+
 #include <stdbool.h>
-#include <stdio.h>
 
 /** Type for defining the date */
 typedef struct Date_t *Date;
@@ -24,7 +23,7 @@ Date dateCreate(int day, int month, int year);
 *
 * @param date - Target date to be deallocated. If priority queue is NULL nothing will be done
 */
-void dateDestroy(PQElementPriority date);
+void dateDestroy(Date date);
 
 /**
 * dateCopy: Creates a copy of target Date.
@@ -34,7 +33,7 @@ void dateDestroy(PQElementPriority date);
 * 	NULL if a NULL was sent or a memory allocation failed.
 * 	A Date containing the same elements as date otherwise.
 */
-PQElementPriority dateCopy(PQElementPriority date);
+Date dateCopy(Date date);
 
 /**
 * dateGet: Returns the day, month and year of a date
@@ -58,7 +57,7 @@ bool dateGet(Date date, int* day, int* month, int* year);
 * 		0 if they're equal or one of the given dates is NULL;
 *		A positive integer if date1 arrives after date2.
 */
-int dateCompare(PQElementPriority date1, PQElementPriority date2);
+int dateCompare(Date date1, Date date2);
 
 /**
 * dateTick: increases the date by one day, if date is NULL should do nothing.

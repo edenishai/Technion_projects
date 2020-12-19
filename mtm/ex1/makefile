@@ -7,10 +7,10 @@ DEBUG_FLAG = # now empty, assign -g for debug
 COMP_FLAG = -std=c99 -Wall -pedantic-errors -Werror -DNDEBUG
 
 event_manager : $(OBJS)
-	$(CC) $(DEBUG_FLAG) $(COMP_FLAG) tests/event_manager_example_tests.c $(OBJS) -L. -lpriority_queue -o $@
+	$(CC) $(DEBUG_FLAG) $(COMP_FLAG) tests/event_manager_tests.c $(OBJS) -L. -lpriority_queue -o $@
 
 priority_queue: $(PQOBJS)
-	$(CC) $(DEBUG_FLAG) $(COMP_FLAG) tests/pq_example_tests.c $(PQOBJS) -o $@
+	$(CC) $(DEBUG_FLAG) $(COMP_FLAG) tests/priority_queue_tests.c $(PQOBJS) -o $@
 
 event_manager.o: event_manager.c date.h priority_queue.h event_manager.h event.h member.h
 	$(CC) -c $(DEBUG_FLAG) $(COMP_FLAG) $*.c

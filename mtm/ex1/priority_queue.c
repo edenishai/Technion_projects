@@ -146,7 +146,9 @@ PriorityQueueResult pqClear(PriorityQueue queue)
     }
     while (queue->head) {
         PriorityQueueResult remove_result = pqRemove(queue);
-        assert(remove_result == PQ_SUCCESS);
+        if (remove_result != PQ_SUCCESS) {
+            return remove_result;
+        }
     }
     queue->iterator = NULL;
     return PQ_SUCCESS;
