@@ -32,7 +32,7 @@ Member createMember(char* member_name,int member_id,int event_counter){
     if(!member){
         return NULL;
     }
-    member->member_name=malloc(sizeof(char)*(strlen(member_name)+1));
+    member->member_name=malloc(strlen(member_name)+1);
     if(!member_name){
         freeMember(member);
         return NULL;
@@ -75,7 +75,7 @@ void freeMember(PQElement member){
 }
 
 /*******************************************************************************************/
-/*******************************************************************************************/
+
 bool compareMember(PQElement member1,PQElement member2){
     if(!member1||!member2){
         return false;
@@ -85,7 +85,7 @@ bool compareMember(PQElement member1,PQElement member2){
     }
     return false;
 }
-/*******************************************************************************************/
+
 /*******************************************************************************************/
 
 char* getMemberName(Member member){
@@ -107,27 +107,20 @@ int getMemberID(Member member){
 
 /*******************************************************************************************/
 
-PQElementPriority getMemberIDPointer(Member member){
-    if(!member){
-        return NULL;
-    }
-    return &(member->member_id);
-}
-
-/*******************************************************************************************/
-
 PQElementPriority copyMemberID(PQElementPriority member_id){
-    return member_id;
+    int *new_member_id=malloc(sizeof(*new_member_id));
+    *new_member_id=*(int*)member_id;
+    return new_member_id;
 }
 
 /*******************************************************************************************/
-/*******************************************************************************************/
+
 void freeMemberID(PQElementPriority member_id){
-    return;
+    free(member_id);
 }
+
 /*******************************************************************************************/
-/*******************************************************************************************/
-//positive=the first is with greater priority
+
 int compareMemberID(PQElementPriority first_member_id, PQElementPriority second_member_id){
     return (*(int*)second_member_id - *(int*)first_member_id);
 }
@@ -140,7 +133,7 @@ Member getMember(PriorityQueue queue,int member_id){
     }
     Member iterator=pqGetFirst(queue);
     if(!iterator){
-        return NULL;//try to delete later
+        return NULL;
     }
     while(iterator){
         if (getMemberID(iterator)==member_id)
@@ -180,7 +173,7 @@ void subFromInvolvedEvents(Member member){
 }
 
 /*******************************************************************************************/
-//is it necessery?
+
 void printMemberName(Member member,FILE* outputFile){
     if(!member){
         return;
@@ -241,140 +234,3 @@ int compareMemberPriority(PQElementPriority first_member_priority, PQElementPrio
 }
 
 /**************************************/
-
-
-/*
-struct Member_List_t{
-    Member head;
-};
-
-MemberList createMemberList(){
-    MemberList member_list=malloc(sizeof(*member_list));
-    if(!member_list){
-        return NULL;
-    }
-    member_list->head=NULL;
-    return member_list;
-}
-
-void destroyMemberList(MemberList member_list){
-    if(!member_list){
-        return;
-    }
-    if(!member_list->head){
-        free(member_list);
-        return;
-    }
-    while(member_list->head){
-        Member toDelete=member_list->head;
-        member_list->head=member_list->head->next;
-        free(toDelete);
-    }
-    free(member_list);
-}
-
-Member createMember(char* member_name,int member_id){
-    Member member=malloc(sizeof(*member));
-    strcpy(member->member_name,member_name);
-    member->member_id=member_id;
-    member->counter=0;
-    return member;
-}
-
-MemberListResult insertMember(MemberList member_list, char* member_name, int member_id){
-    Member member=createMember(member_name,member_id);
-    if(!member){
-        return ML_OUT_OF_MEMORY;
-    }
-    Member iterator=member_list->head;
-    while(iterator->member_id<member->member_id&&iterator->next->member_id<member->member_id&&iterator->counter==0){
-        iterator=iterator->next;
-    }
-    member->next=iterator->next;
-    iterator->next=member;
-    return MEMBER_LIST_SUCCESS;
-}
-
-MemberListResult isMemberAlreadyExists(MemberList member_list,int member_id){
-    Member iterator=member_list->head;
-    while(iterator){
-        if(iterator->member_id==member_id){
-            return MEMBER_ID_ALREADY_EXISTS;
-        }
-    }
-    return MEMBER_ID_NOT_EXISTS;
-}
-
-char* getMemberName(MemberList member_list,int member_id){
-    if(!member_list){
-        return NULL;
-    }
-    Member member=member_list->head;
-    while(member){
-        if(member->member_id==member_id){
-            return member->member_name;
-        }
-        member=member->next;
-    }
-    return NULL;
-}
-
-void addToCounter(MemberList member_list,int member_id){
-    if(!member_list){
-        return;
-    }
-    Member member=member_list->head;
-    while (member&&member->member_id!=member_id)
-    {
-        member=member->next;
-    }
-    removeMember(member_list,member_id);
-    ++(member->counter);
-    insertMember(member_list,member->member_name,member->member_id);
-}
-
-void reduceFromCounter(MemberList member_list,int member_id){
-    if(!member_list){
-        return;
-    }
-    Member member=member_list->head;
-    while (member&&member->member_id!=member_id)
-    {
-        member=member->next;
-    }
-    removeMember(member_list,member_id);
-    --(member->counter);
-    insertMember(member_list,member->member_name,member->member_id);
-}
-
-MemberListResult removeMember(MemberList member_list, int member_id){
-    Member iterator=member_list->head;
-    while(iterator->next&&iterator->next->member_id!=member_id){
-        iterator=iterator->next;
-    }
-    Member member=iterator->next;
-    iterator->next=member->next;
-    free(member);
-    return MEMBER_LIST_SUCCESS;
-}
-
-void printMemberList(MemberList member_list,const char* file_name){
-    Member member=member_list->head;
-    FILE *fp=fopen(file_name,"+w");
-    while(member){
-        fprintf(fp,"%s,",member->member_name);
-    }
-    fprintf(fp,"/n");
-    fclose(fp);
-}
-
-void printMainMemberList(MemberList member_list,const char* file_name){
-    Member member=member_list->head;
-    FILE *fp=fopen(file_name,"+w");
-    while(member){
-        fprintf(fp,"%s,%d/n",member->member_name,member->counter);
-        member=member->next;
-    }
-    fprintf(fp,"/n");
-    fclose(fp);
-}*/

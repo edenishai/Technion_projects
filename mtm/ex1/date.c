@@ -142,7 +142,7 @@ static bool dateIsValid(Date date){
 }
 
 /*******************************************************************************************/
-//negative-the first with greater priority
+
 int dateCompare(PQElementPriority first_date, PQElementPriority second_date){
     if (!dateIsValid((Date)first_date) || !dateIsValid((Date)second_date)) {
         return 0;
@@ -175,15 +175,6 @@ void dateTick(Date date){
         ++(date->year);
     }
     return;
-}
-
-/*******************************************************************************************/
-
-void printDate(Date date,FILE* outputFile){
-    if(!date){
-        return;
-    }
-    fprintf(outputFile,"%d.%d.%d",(date->day),(findNumOfMonth(date->month)),(date->year));
 }
 
 /*******************************************************************************************/

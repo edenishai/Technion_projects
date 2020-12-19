@@ -68,12 +68,4 @@ int dateCompare(PQElementPriority date1, PQElementPriority date2);
 */
 void dateTick(Date date);
 
-void printDate(Date date,FILE* outputFile);
-
-int getDay(Date date);
-
-int getMonthNum(Date date);
-
-int getYear(Date date);
-
 #endif //DATE_H_

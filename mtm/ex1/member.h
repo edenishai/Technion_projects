@@ -49,38 +49,4 @@ void freeMemberPriority(PQElementPriority member_priority);
 int compareMemberPriority(PQElementPriority first_member_priority, PQElementPriority second_member_priority);
 
 
-
-/*
-typedef struct Member_List_t* MemberList;
-
-typedef enum MemberListResult_t {
-    ML_NULL_ARGUMENT,
-    MEMBER_LIST_SUCCESS,
-    ML_OUT_OF_MEMORY,
-    MEMBER_ID_ALREADY_EXISTS,
-    MEMBER_ID_NOT_EXISTS
-} MemberListResult;
-
-MemberList createMemberList();
-
-MemberListResult insertMember(MemberList member_list, char* member_name, int member_id);
-
-MemberListResult removeMember(MemberList member_list, int member_id);
-
-MemberListResult isMemberAlreadyExists(MemberList member_list,int member_id);
-
-void destroyMemberList(MemberList member_list);
-
-char* getMemberName(MemberList member_list,int member_id);
-
-void addToCounter(MemberList member_list,int member_id);
-
-void reduceFromCounter(MemberList member_list,int member_id);
-
-//EventListResult linkMemberToEventByID(EventList event_list,MemberList member_list,int event_id,int member_id);
-
-void printMemberList(MemberList member_list,const char* file_name);
-
-void printMainMemberList(MemberList member_list,const char* file_name);
-*/
 #endif
