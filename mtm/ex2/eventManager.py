@@ -16,6 +16,8 @@ def validID(ID: int):
     ID_str = str(ID)
     if (ID_str[0] == 0):
         return False
+    if (len(ID_str) != 8):
+        return False
     return True
 
 def validName(name: str):
