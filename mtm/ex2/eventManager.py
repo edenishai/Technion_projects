@@ -113,6 +113,9 @@ def printYoungestStudents(in_file_path: str, out_file_path: str, k: int) -> int:
 
     student_objects = createStudentObjects(in_file_path)
 
+    if (len(student_objects) == 0):
+        return 0
+
     student_objects = sorted(student_objects, key=lambda student: (student.age, student.ID)) # sort by age and ID
 
     dest_file = open(out_file_path, 'w')
