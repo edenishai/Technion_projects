@@ -9,8 +9,7 @@ class Student:
         self.birth = birth
         self.semester = semester
     def __repr__(self):
-        return str(self.ID) + ', ' + self.name + ', ' + str(self.age) + ', ' \
-            + str(self.birth) + ', ' + str(self.semester)
+        return str(self.ID) + ', ' + self.name + ', ' + str(self.age) + ', ' + str(self.birth) + ', ' + str(self.semester)
 
 def validID(ID: int):
     if (int((str(ID))[0]) == 0):
@@ -46,8 +45,7 @@ def validSemester(semester: int):
     return True
 
 def validStudent(student):
-    if (validID(student.ID) and validName(student.name) and validAge(student.age) and \
-            validBirth(student.birth, student.age) and validSemester(student.semester)):
+    if (validID(student.ID) and validName(student.name) and validAge(student.age) and validBirth(student.birth, student.age) and validSemester(student.semester)):
         return True
     return False
 
