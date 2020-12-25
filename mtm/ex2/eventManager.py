@@ -67,9 +67,9 @@ def createStudentObjects(src_file_path: str):
             continue
 
         exists = False
-        for e in student_objects:
+        for i, e in enumerate(student_objects):
             if (e.ID == student.ID):
-                e = student
+                student_objects[i] = student
                 exists = True
                 break
         
