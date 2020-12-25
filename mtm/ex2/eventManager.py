@@ -120,7 +120,7 @@ def printYoungestStudents(in_file_path: str, out_file_path: str, k: int) -> int:
         k = students_num
 
     for i in range(k): 
-        dest_file.write(repr(student_objects[i]) + '\n')
+        dest_file.write((student_objects[i]).name + '\n')
 
     dest_file.close()
 
