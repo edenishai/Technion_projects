@@ -1,11 +1,96 @@
 #### IMPORTS ####
 import event_manager as EM
 
+class Student:
+    def __init__(self, ID, name, age, birth, semester):
+        self.ID = ID
+        self.name = name
+        self.age = age
+        self.birth = birth
+        self.semester = semester
+    def __repr__(self):
+        return str(self.ID) + ', ' + self.name + ', ' + str(self.age) + ', ' + str(self.birth) + ', ' + str(self.semester)
+
+def validID(ID: int):
+    if (int((str(ID))[0]) == 0):
+        return False
+    return True
+
+def validName(name: str):
+    for e in name:
+        if ('a' <= e and e <= 'z'):
+            continue
+        elif ('A' <= e and e <= 'Z'):
+            continue
+        elif (e == ' '):
+            continue
+        else:
+            return False
+
+    return True
+
+def validAge(age: int):
+    if (16 <= age <= 120): #define
+        return True
+    return False
+
+def validBirth(birth: int, age: int):
+    if (2020 - age != birth): #define
+        return False
+    return True
+
+def validSemester(semester: int):
+    if (semester < 1):
+        return False
+    return True
+
+def validStudent(student):
+    if (validID(student.ID) and validName(student.name) and validAge(student.age) and 
+            validBirth(student.birth, student.age) and validSemester(student.semester)):
+        return True
+    return False
+
 #### PART 1 ####
 # Filters a file of students' subscription to specific event:
 #   orig_file_path: The path to the unfiltered subscription file
 #   filtered_file_path: The path to the new filtered file
 def fileCorrect(orig_file_path: str, filtered_file_path: str):
+    src_file = open(orig_file_path, 'r')
+
+    student_objects = []
+
+    for line in src_file:
+        student = [e.strip() for e in line.split(',')]
+        student[1] = " ".join(student[1].split())
+
+        student = Student(int(student[0]), student[1], int(student[2]), int(student[3]), int(student[4]))
+
+        #validation check
+        if (validStudent(student) is False):
+            continue
+
+        exists = False
+        for i, e in enumerate(student_objects):
+            if (e.ID == student.ID):
+                student_objects[i] = student
+                exists = True
+                break
+        
+        if (exists):
+            continue
+
+        student_objects.append(student)
+
+    sorted(student_objects, key=lambda student: student.ID)
+
+    dest_file = open(filtered_file_path, 'w') 
+
+    for i student_objects: 
+        dest_file.write(repr(student_objects[i]) + '\n')
+
+    src_file.close()
+    dest_file.close()
+
     pass
     #TODO
     
@@ -15,6 +100,7 @@ def fileCorrect(orig_file_path: str, filtered_file_path: str):
 #   in_file_path: The path to the unfiltered subscription file
 #   out_file_path: file path of the output file
 def printYoungestStudents(in_file_path: str, out_file_path: str, k: int) -> int:
+    sorted(student_objects, key=lambda student: (student.age, student.ID)) # sort by age and ID
     pass
     #TODO
     
