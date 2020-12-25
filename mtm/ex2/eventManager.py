@@ -9,7 +9,8 @@ class Student:
         self.birth = birth
         self.semester = semester
     def __repr__(self):
-        return str(self.ID) + ', ' + self.name + ', ' + str(self.age) + ', ' + str(self.birth) + ', ' + str(self.semester)
+        return str(self.ID) + ', ' + self.name + ', ' + str(self.age) + ', ' \
+            + str(self.birth) + ', ' + str(self.semester)
 
 def validID(ID: int):
     if (int((str(ID))[0]) == 0):
@@ -45,17 +46,13 @@ def validSemester(semester: int):
     return True
 
 def validStudent(student):
-    if (validID(student.ID) and validName(student.name) and validAge(student.age) and 
+    if (validID(student.ID) and validName(student.name) and validAge(student.age) and \
             validBirth(student.birth, student.age) and validSemester(student.semester)):
         return True
     return False
 
-#### PART 1 ####
-# Filters a file of students' subscription to specific event:
-#   orig_file_path: The path to the unfiltered subscription file
-#   filtered_file_path: The path to the new filtered file
-def fileCorrect(orig_file_path: str, filtered_file_path: str):
-    src_file = open(orig_file_path, 'r')
+def createStudentObjects(src_file_path: str):
+    src_file = open(src_file_path, 'r')
 
     student_objects = []
 
@@ -70,9 +67,9 @@ def fileCorrect(orig_file_path: str, filtered_file_path: str):
             continue
 
         exists = False
-        for i, e in enumerate(student_objects):
+        for e in student_objects:
             if (e.ID == student.ID):
-                student_objects[i] = student
+                e = student
                 exists = True
                 break
         
@@ -81,14 +78,22 @@ def fileCorrect(orig_file_path: str, filtered_file_path: str):
 
         student_objects.append(student)
 
-    sorted(student_objects, key=lambda student: student.ID)
+    src_file.close()
+    return student_objects
+
+#### PART 1 ####
+# Filters a file of students' subscription to specific event:
+#   orig_file_path: The path to the unfiltered subscription file
+#   filtered_file_path: The path to the new filtered file
+def fileCorrect(orig_file_path: str, filtered_file_path: str):
+    student_objects = createStudentObjects(orig_file_path)
+    student_objects = sorted(student_objects, key=lambda student: student.ID)
 
     dest_file = open(filtered_file_path, 'w') 
 
-    for i, e in enumerate(student_objects): 
-        dest_file.write(repr(student_objects[i]) + '\n')
+    for e in student_objects: 
+        dest_file.write(repr(e) + '\n')
 
-    src_file.close()
     dest_file.close()
 
     pass
@@ -100,7 +105,25 @@ def fileCorrect(orig_file_path: str, filtered_file_path: str):
 #   in_file_path: The path to the unfiltered subscription file
 #   out_file_path: file path of the output file
 def printYoungestStudents(in_file_path: str, out_file_path: str, k: int) -> int:
-    sorted(student_objects, key=lambda student: (student.age, student.ID)) # sort by age and ID
+    if (k <= 0):
+        return -1
+
+    student_objects = createStudentObjects(in_file_path)
+
+    student_objects = sorted(student_objects, key=lambda student: (student.age, student.ID)) # sort by age and ID
+
+    dest_file = open(out_file_path, 'w')
+
+    students_num = len(student_objects)
+
+    if (students_num < k):
+        k = students_num
+
+    for i in range(k): 
+        dest_file.write(repr(student_objects[i]) + '\n')
+
+    dest_file.close()
+
     pass
     #TODO
     
@@ -109,6 +132,24 @@ def printYoungestStudents(in_file_path: str, out_file_path: str, k: int) -> int:
 #   in_file_path: The path to the unfiltered subscription file
 #   retuns the avg, else error codes defined.
 def correctAgeAvg(in_file_path: str, semester: int) -> float:
+    if (semester < 1):
+        return -1
+
+    student_objects = createStudentObjects(in_file_path)
+
+    age_sum = 0
+    students = 0
+
+    for e in student_objects: 
+        if (e.semester == semester):
+            age_sum += e.age
+            students += 1
+
+    if (students == 0):
+        return students
+    
+    return age_sum/students
+
     pass
     #TODO
     
