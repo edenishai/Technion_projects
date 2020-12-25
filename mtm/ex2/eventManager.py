@@ -85,7 +85,7 @@ def fileCorrect(orig_file_path: str, filtered_file_path: str):
 
     dest_file = open(filtered_file_path, 'w') 
 
-    for i student_objects: 
+    for i, e in enumerate(student_objects): 
         dest_file.write(repr(student_objects[i]) + '\n')
 
     src_file.close()
