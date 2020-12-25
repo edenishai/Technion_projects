@@ -13,8 +13,8 @@ class Student:
             + str(self.birth) + ', ' + str(self.semester)
 
 def validID(ID: int):
-
-    if (int(((str(ID))[0])) == 0):
+    ID_str = str(ID)
+    if (ID_str[0] == 0):
         return False
     return True
 
