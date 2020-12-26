@@ -21,16 +21,15 @@ def validID(ID: int):
     return True
 
 def validName(name: str):
-    for e in name:
-        if ('a' <= e and e <= 'z'):
+    for letter in name:
+        if ('a' <= letter and letter <= 'z'):
             continue
-        elif ('A' <= e and e <= 'Z'):
+        elif ('A' <= letter and letter <= 'Z'):
             continue
-        elif (e == ' '):
+        elif (letter == ' '):
             continue
         else:
             return False
-
     return True
 
 def validAge(age: int):
@@ -56,31 +55,23 @@ def validStudent(student):
 
 def createStudentObjects(src_file_path: str):
     src_file = open(src_file_path, 'r')
-
     student_objects = []
-
     for line in src_file:
         student = [e.strip() for e in line.split(',')]
         student[1] = " ".join(student[1].split())
-
         student = Student(int(student[0]), student[1], int(student[2]), int(student[3]), int(student[4]))
-
         #validation check
         if (validStudent(student) is False):
             continue
-
         exists = False
         for i, e in enumerate(student_objects):
             if (e.ID == student.ID):
                 student_objects[i] = student
                 exists = True
                 break
-        
         if (exists):
             continue
-
         student_objects.append(student)
-
     src_file.close()
     return student_objects
 
@@ -91,18 +82,13 @@ def createStudentObjects(src_file_path: str):
 def fileCorrect(orig_file_path: str, filtered_file_path: str):
     student_objects = createStudentObjects(orig_file_path)
     student_objects = sorted(student_objects, key=lambda student: student.ID)
-
     dest_file = open(filtered_file_path, 'w') 
-
     for e in student_objects: 
         dest_file.write(repr(e) + '\n')
-
     dest_file.close()
-
     pass
-    #TODO
-    
-    
+
+
 # Writes the names of the K youngest students which subscribed 
 # to the event correctly.
 #   in_file_path: The path to the unfiltered subscription file
@@ -110,28 +96,17 @@ def fileCorrect(orig_file_path: str, filtered_file_path: str):
 def printYoungestStudents(in_file_path: str, out_file_path: str, k: int) -> int:
     if (k <= 0):
         return -1
-
     student_objects = createStudentObjects(in_file_path)
-
-    student_objects = sorted(student_objects, key=lambda student: (student.age, student.ID)) # sort by age and ID
-
+    student_objects = sorted(student_objects, key=lambda student: (student.age, student.ID))
     dest_file = open(out_file_path, 'w')
-
     students_num = len(student_objects)
-
     if (students_num < k):
         k = students_num
-
     for i in range(k): 
         dest_file.write((student_objects[i]).name + '\n')
-
     dest_file.close()
-
     return k
 
-    pass
-    #TODO
-    
     
 # Calculates the avg age for a given semester
 #   in_file_path: The path to the unfiltered subscription file
@@ -139,24 +114,16 @@ def printYoungestStudents(in_file_path: str, out_file_path: str, k: int) -> int:
 def correctAgeAvg(in_file_path: str, semester: int) -> float:
     if (semester < 1):
         return -1
-
     student_objects = createStudentObjects(in_file_path)
-
     age_sum = 0
     students = 0
-
     for e in student_objects: 
         if (e.semester == semester):
             age_sum += e.age
             students += 1
-
     if (students == 0):
         return students
-    
     return age_sum/students
-
-    pass
-    #TODO
     
 
 #### PART 2 ####
@@ -164,9 +131,20 @@ def correctAgeAvg(in_file_path: str, semester: int) -> float:
 # print the events in the list "events" using the functions from hw1
 #   events: list of dictionaries
 #   file_path: file path of the output file
-def printEventsList(events :list,file_path :str): #em, event_names: list, event_id_list: list, day: int, month: int, year: int):
-    pass
-    #TODO   
+#em, event_names: list, event_id_list: list, day: int, month: int, year: int):
+def printEventsList(events :list, file_path :str): 
+    if (len(events) == 0):
+        return
+    earliest_date = EM.dateCopy((events[0])["date"])
+    for event in events:
+        if (EM.dateCompare(earliest_date, event["date"]) > 0):
+            earliest_date = event["date"]
+    events_lists = EM.createEventManager(earliest_date)
+    for event in events:
+        EM.emAddEventByDate(events_lists, event["name"], event["date"], event["id"])
+    EM.emPrintAllEvents(events_lists, file_path)
+    EM.dateDestroy(earliest_date)
+    return events_lists  
     
     
 def testPrintEventsList(file_path :str):
