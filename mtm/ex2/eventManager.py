@@ -96,7 +96,7 @@ def fileCorrect(orig_file_path: str, filtered_file_path: str):
 #   out_file_path: file path of the output file
 def printYoungestStudents(in_file_path: str, out_file_path: str, k: int) -> int:
     if (k <= 0):
-        return -1
+        return ERROR
     student_objects = createStudentObjects(in_file_path)
     student_objects = sorted(student_objects, key=lambda student: (student.age, student.ID))
     dest_file = open(out_file_path, 'w')
