@@ -1,6 +1,13 @@
 #### IMPORTS ####
 import event_manager as EM
 
+MINIMAL_AGE = 16
+MAXIMAL_AGE = 120
+MINIMAL_SEMESTER = 1
+ID_VALID_LEN = 8
+CURRENT_YEAR = 2020
+ERROR = -1
+
 class Student:
     def __init__(self, ID, name, age, birth, semester):
         self.ID = ID
@@ -12,43 +19,36 @@ class Student:
         return str(self.ID) + ', ' + self.name + ', ' + str(self.age) + ', ' \
             + str(self.birth) + ', ' + str(self.semester)
 
-def validID(ID: int):
-    ID_str = str(ID)
-    if (ID_str[0] == 0):
+def validID(ID: str):
+    if (len(ID) != ID_VALID_LEN):
         return False
-    if (len(ID_str) != 8):
+    if (ID[0] is '0'):
         return False
     return True
 
 def validName(name: str):
     for letter in name:
-        if ('a' <= letter and letter <= 'z'):
-            continue
-        elif ('A' <= letter and letter <= 'Z'):
-            continue
-        elif (letter == ' '):
-            continue
-        else:
+        if (letter.isalpha() == False and letter.isspace() == False):
             return False
     return True
 
 def validAge(age: int):
-    if (16 <= age <= 120): #define
+    if (MINIMAL_AGE <= age <= MAXIMAL_AGE): 
         return True
     return False
 
 def validBirth(birth: int, age: int):
-    if (2020 - age != birth): #define
+    if (CURRENT_YEAR - age != birth): 
         return False
     return True
 
 def validSemester(semester: int):
-    if (semester < 1):
+    if (semester < MINIMAL_SEMESTER):
         return False
     return True
 
 def validStudent(student):
-    if (validID(student.ID) and validName(student.name) and validAge(student.age) and \
+    if (validName(student.name) and validAge(student.age) and \
             validBirth(student.birth, student.age) and validSemester(student.semester)):
         return True
     return False
@@ -59,8 +59,9 @@ def createStudentObjects(src_file_path: str):
     for line in src_file:
         student = [e.strip() for e in line.split(',')]
         student[1] = " ".join(student[1].split())
+        if (validID(student[0]) is False):
+            continue
         student = Student(int(student[0]), student[1], int(student[2]), int(student[3]), int(student[4]))
-        #validation check
         if (validStudent(student) is False):
             continue
         exists = False
@@ -83,8 +84,8 @@ def fileCorrect(orig_file_path: str, filtered_file_path: str):
     student_objects = createStudentObjects(orig_file_path)
     student_objects = sorted(student_objects, key=lambda student: student.ID)
     dest_file = open(filtered_file_path, 'w') 
-    for e in student_objects: 
-        dest_file.write(repr(e) + '\n')
+    for student in student_objects: 
+        dest_file.write(repr(student) + '\n')
     dest_file.close()
     pass
 
@@ -113,13 +114,13 @@ def printYoungestStudents(in_file_path: str, out_file_path: str, k: int) -> int:
 #   retuns the avg, else error codes defined.
 def correctAgeAvg(in_file_path: str, semester: int) -> float:
     if (semester < 1):
-        return -1
+        return ERROR
     student_objects = createStudentObjects(in_file_path)
     age_sum = 0
     students = 0
-    for e in student_objects: 
-        if (e.semester == semester):
-            age_sum += e.age
+    for student in student_objects: 
+        if (student.semester == semester):
+            age_sum += student.age
             students += 1
     if (students == 0):
         return students
