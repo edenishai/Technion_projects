@@ -22,7 +22,7 @@ class Student:
 def validID(ID: str):
     if (len(ID) != ID_VALID_LEN):
         return False
-    if (ID[0] is '0'):
+    if (ID[0] == '0'):
         return False
     return True
 
@@ -144,7 +144,6 @@ def printEventsList(events :list, file_path :str):
     for event in events:
         EM.emAddEventByDate(events_lists, event["name"], event["date"], event["id"])
     EM.emPrintAllEvents(events_lists, file_path)
-    EM.dateDestroy(earliest_date)
     return events_lists  
     
     
