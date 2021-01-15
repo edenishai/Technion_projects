@@ -50,7 +50,7 @@ Date dateCopy(Date date);
 bool dateGet(Date date, int* day, int* month, int* year);
 
 /**
-* dateCompare: compares to dates and return which comes first
+* dateCompare: compares two dates and return which comes first
 *
 * @return
 * 		A negative integer if date1 occurs first;
