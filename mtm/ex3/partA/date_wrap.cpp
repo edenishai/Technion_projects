@@ -12,10 +12,6 @@ DateWrap::DateWrap(int day, int month, int year):
         }
 }
 
-DateWrap::~DateWrap() {
-    dateDestroy(date);
-}
-
 int DateWrap::day() const {
     int *day = new int;
     int *month = new int;

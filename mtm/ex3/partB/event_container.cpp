@@ -9,7 +9,7 @@ EventContainer::EventIterator EventContainer::begin() {
 
 EventContainer::EventIterator EventContainer::end() {
     setIterator();
-    while(!iterator.isNull()) {
+    while(!(iterator.isNull())) {
         ++iterator;
     }
     return iterator;

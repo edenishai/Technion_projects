@@ -1,7 +1,9 @@
 #ifndef DATE_WRAP_H
 #define DATE_WRAP_H
 
-#include "../provided/date.h"
+extern "C" {
+    #include "../provided/date.h"
+}
 #include <iostream>
 using std::ostream;
 
@@ -10,7 +12,7 @@ namespace mtm {
         Date date;
     public:
         DateWrap(int day, int month, int year);
-        ~DateWrap();
+        ~DateWrap() = default;
         int day() const;
         int month() const;
         int year() const;
@@ -25,6 +27,6 @@ namespace mtm {
     };
 }
 
-ostream& operator<<(ostream& os, const DateWrap& date);
+ostream& operator<<(ostream& os, const mtm::DateWrap& date);
 
 #endif /* DATE_WRAP_H */

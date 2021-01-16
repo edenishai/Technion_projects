@@ -1,38 +1,67 @@
 #include "base_event.h"
 using mtm::BaseEvent;
 
-BaseEvent::BaseEvent(DateWrap date, const string event_name):
-    date(date),
-    event_name(string(event_name)),
-    members_list() {
+BaseEvent::BaseEvent(DateWrap date, const string name):
+    date(date), name(name), members_list() {
 }
 
 void BaseEvent::registerParticipant(int student_id) {
+    if(student_id < 1 || student_id > 1234567890) {
+        throw InvalidStudent();
+    }
     if(members_list.contains(student_id)) {
         throw AlreadyRegistered();
     }
-    isRegistrationBlocked(members_list, student_id);
+    isRegistrationBlocked(student_id);
     members_list.insert(student_id);
 }
 
 void BaseEvent::unregisterParticipant(int student_id) {
+    if(student_id < 1 || student_id > 1234567890) {
+        throw InvalidStudent();
+    }
     if(!members_list.contains(student_id)) {
         throw NotRegistered();
     }
     members_list.remove(student_id);
 }
 
-ostream& BaseEvent::printShort(ostream& os) {
-    return os << event_name << " " << date;
+ostream& BaseEvent::printShort(ostream& os) const {
+    return os << name << " " << date;
 }
 
-ostream& BaseEvent::printLong(ostream& os) {
+ostream& BaseEvent::printLong(ostream& os) const {
     printShort(os);
     return os << members_list;
 }
 
 BaseEvent& BaseEvent::clone() {
-    BaseEvent copy(date, event_name);
-    members_list(copy.members_list);
-    
+    BaseEvent copy(*this);
+    return copy;
+}
+
+bool BaseEvent::operator>(const BaseEvent& event) const {
+    if(date < event.date) {
+        return true;
+    }
+    if(date == event.date) {
+        if(name.compare(event.name) < 0) {
+            return true;
+        }
+    }
+    return false;
+}
+
+bool BaseEvent::operator==(const BaseEvent& event) const {
+    if(date == event.date && !name.compare(event.name)) {
+        return true;
+    }
+    return false;
+}
+
+bool BaseEvent::operator<(const BaseEvent& event) const {
+    if(!operator>(event) && !operator==(event)) {
+        return true;
+    }
+    return false;
 }

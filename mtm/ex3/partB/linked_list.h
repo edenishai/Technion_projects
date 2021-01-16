@@ -4,18 +4,18 @@
 #include "node.h"
 #include "iterator.h"
 #include <stdbool.h>
-#include <ostream>
+#include <iostream>
 using std::ostream;
 
 template<typename T>
-class List {
+class LinkedList {
     Node<T>* head;
 protected:
     Iterator<T> iterator;
 public:
-    List();
-    ~List() = default;
-    List(const List& list);
+    LinkedList();
+    LinkedList(const LinkedList& list);
+    ~LinkedList();
     int compareData(const T& data) const;
     void setIterator();
     T& getFirst() const;
@@ -27,29 +27,37 @@ public:
 
 //to add null check in every func
 template<typename T>
-List<T>::List():
-    head(NULL),
-    iterator(NULL) {
+LinkedList<T>::LinkedList() {
+    head = NULL;
+    iterator.node_ptr = NULL;
 }
 
 template<typename T>
-List<T>::List(const List<T>& list) {
-    list.setIterator();
-    Node<T>* node(*(list.iterator));
-    head = node;
+LinkedList<T>::LinkedList(const LinkedList<T>& list) {
+    Iterator<T> src_iterator(list.head);
+    Node<T> node(src_iterator.node_ptr);
+    head = &node;
     setIterator();
-    ++(list.iterator);
-    ++iterator;
-    while(!list.iterator.isNull()) {
-        Node<T> node(*(list.iterator));
-        iterator->next = node;
+    ++src_iterator;
+    while(!src_iterator.isNull()) {
+        Node<T> node(src_iterator.node_ptr->data);
+        iterator.node_ptr->next = &node;
         ++iterator;
-        ++(list.iterator);
+        ++src_iterator;
     }
 }
 
 template<typename T>
-int List<T>::compareData(const T& data) const {
+LinkedList<T>::~LinkedList() {
+    while(head) {
+        Node<T>* to_delete = head;
+        head = head->getNext();
+        delete to_delete;
+    }
+}
+
+template<typename T>
+int LinkedList<T>::compareData(const T& data) const {
     if(iterator->data > data) {
         return 1;
     }
@@ -60,26 +68,26 @@ int List<T>::compareData(const T& data) const {
 }
 
 template<typename T>
-void List<T>::setIterator() {
+void LinkedList<T>::setIterator() {
     iterator.node_ptr = head;
 }
 
 template<typename T>
-T& List<T>::getFirst() const {
+T& LinkedList<T>::getFirst() const {
     iterator = head;
     return iterator->data;
 }
 
 template<typename T>
-T& List<T>::getNext() const {
+T& LinkedList<T>::getNext() const {
     iterator = iterator->next;
     return iterator->data;
 }
 
 template<typename T>
-bool List<T>::contains(const T& data) const {
+bool LinkedList<T>::contains(const T& data) const {
     iterator = head;
-    while(iterator) {   // operator??
+    while(iterator.isNull()) {
         if(compareData(data) == 0) {
             return true;
         }
@@ -88,35 +96,37 @@ bool List<T>::contains(const T& data) const {
     return false;
 }
 
-template<typename T>
-void List<T>::insert(const T& data) {
-    Node<T> new_node(data);
-    if(head == NULL) {   // operator??
-        head = &new_node;
+template<typename T>    //fixed
+void LinkedList<T>::insert(const T& data) {
+    Node<T>* temp = new Node<T>(data);
+    if(!head) {
+        head = temp;
+        head->next = NULL;
         return;
     }
-    iterator = head;
+    setIterator();
     if(compareData(data) > 0) {
-        new_node.next = head;
-        head = &new_node;
+        temp->next = head;
+        head = temp;
         return;
     }
-    Node<T>* back_iterator = head;
-    iterator = iterator->next;
-    while(iterator) {
+    Iterator<T> back_iterator = iterator;
+    ++iterator;
+    while(!iterator.isNull()) {
         if(compareData(data) > 0) {
-            new_node.next = iterator;
-            back_iterator->next = new_node;
+            temp->next = iterator.node_ptr;
+            back_iterator.node_ptr->next = temp;
             return;
         }
-        back_iterator = iterator;
-        iterator = iterator->next;
+        ++back_iterator;
+        ++iterator;
     }
-    back_iterator->next = new_node;
+    temp->next = NULL;
+    back_iterator.node_ptr->next = temp;
 }
 
 template<typename T>
-void List<T>::remove(const T& data) {
+void LinkedList<T>::remove(const T& data) {
     iterator = head;
     if(compareData(data) == 0) {
         Node<T>* to_delete = head;
@@ -139,7 +149,7 @@ void List<T>::remove(const T& data) {
 }
 
 template<typename T>
-ostream& operator<<(ostream& os, const List<T>& list) {
+ostream& operator<<(ostream& os, const LinkedList<T>& list) {
     list.iterator = list.head;
     while(list.iterator) {
         os << list.iterator->data;
