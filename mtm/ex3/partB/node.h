@@ -6,15 +6,16 @@ using std::ostream;
 
 template<typename T>
 class Node {
-    T data;
+    T& data;    //not to change to not const or to pointer
     Node<T>* next;
 public:
-    Node(const T& data);
+    Node(const T& data);    //not to change to not const
     Node(const Node& node);
     ~Node() = default;
-    Node* getNext();
+    Node* getNext() const;
+    void setNext(Node* next);
+    T& getData();   //not to change to const (related to *iterator)
     Node& operator=(const Node& node);
-    //friend ostream& operator<<(ostream& os, const Node& node);
 };
 
 template<typename T>
@@ -28,8 +29,18 @@ Node<T>::Node(const Node<T>& node):
 }
 
 template<typename T>
-Node<T>* Node<T>::getNext() {
+Node<T>* Node<T>::getNext() const {
     return next;
+}
+
+template<typename T>
+void Node<T>::setNext(Node<T>* next) {
+    this->next = next;
+}
+
+template<typename T>
+T& Node<T>::getData() {
+    return data;
 }
 
 template<typename T>

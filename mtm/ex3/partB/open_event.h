@@ -8,6 +8,8 @@ namespace mtm {
     class OpenEvent : public BaseEvent {
     public:
         OpenEvent(const DateWrap date, const string name = "");
+        void isRegistrationBlocked(int student_id) override;
+        BaseEvent* clone() override;
     };
 }
 

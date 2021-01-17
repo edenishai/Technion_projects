@@ -6,8 +6,12 @@ using mtm::EventContainer;
 
 namespace mtm {
     class Festival : public EventContainer {
-        const DateWrap date;
+        DateWrap date;
     public:
+        Festival(const DateWrap date);
+        void add(const BaseEvent& event) override;
+
+        class DateMismatch : public Exception {};
     };
 }
 

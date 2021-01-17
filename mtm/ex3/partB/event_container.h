@@ -9,7 +9,7 @@ namespace mtm {
     class EventContainer : public LinkedList<BaseEvent> {
     public:
         EventContainer();
-        virtual void add(const BaseEvent& event);
+        virtual void add(const BaseEvent& event) = 0;
 
         typedef Iterator<BaseEvent> EventIterator;
         

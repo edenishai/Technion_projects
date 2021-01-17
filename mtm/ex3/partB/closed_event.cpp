@@ -15,13 +15,13 @@ void ClosedEvent::addInvitee(int student_id) {
     guest_list.insert(student_id);
 }
 
-void ClosedEvent::isRegistrationBlocked(int student_id) const {
+void ClosedEvent::isRegistrationBlocked(int student_id) {
     if(!(guest_list.contains(student_id))) {
         throw RegistrationBlocked();
     }
 }
 
-ClosedEvent& ClosedEvent::clone() {
+ClosedEvent* ClosedEvent::clone() {
     ClosedEvent copy(*this);
-    return copy;
+    return new ClosedEvent(copy);
 }

@@ -14,8 +14,8 @@ using mtm::DateWrap;
 
 namespace mtm {
     class BaseEvent {
-        const DateWrap date;
-        const string name;
+        DateWrap date;
+        string name;
         LinkedList<int> members_list;
     public:
         BaseEvent(const DateWrap date, const string name = "");
@@ -24,10 +24,11 @@ namespace mtm {
         BaseEvent& operator=(const BaseEvent& event) = default;
         void registerParticipant(int student_id);
         void unregisterParticipant(int student_id);
-        virtual void isRegistrationBlocked(int student_id) const;
-        ostream& printShort(ostream& os) const;
-        ostream& printLong(ostream& os) const;
-        virtual BaseEvent& clone();
+        virtual void isRegistrationBlocked(int student_id) = 0;
+        ostream& printShort(ostream& os);
+        ostream& printLong(ostream& os);
+        virtual BaseEvent* clone() = 0;
+        const DateWrap& getDate() const;
         bool operator>(const BaseEvent& event) const;
         bool operator<(const BaseEvent& event) const;
         bool operator==(const BaseEvent& event) const;

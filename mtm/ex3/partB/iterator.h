@@ -8,18 +8,20 @@ template<typename T>
 class Iterator {
     Node<T>* node_ptr;
 public:
-    Iterator(const Node<T>* node_ptr = NULL);
+    Iterator(Node<T>* node_ptr = NULL);
     Iterator(const Iterator& iterator);
     ~Iterator();
-    Iterator& operator=(const Iterator& iterator);
+    Iterator& operator=(Node<T>* node_ptr);
     bool operator==(const Iterator<T>& iterator) const;
     T& operator*() const;
     T& operator++();
+    void setNext(Node<T>* next);
+    Node<T>* getNext();
     bool isNull() const;
 };
 
 template<typename T>
-Iterator<T>::Iterator(const Node<T>* node_ptr):
+Iterator<T>::Iterator(Node<T>* node_ptr):
     node_ptr(node_ptr) {
 }
 
@@ -34,11 +36,8 @@ Iterator<T>::~Iterator() {
 }
 
 template<typename T>
-Iterator<T>& Iterator<T>::operator=(const Iterator<T>& iterator) {
-    node_ptr = iterator.node_ptr;
-    Node<T>* node = new Node<T>(iterator.node_ptr);
-    delete node_ptr;
-    node_ptr = &node;
+Iterator<T>& Iterator<T>::operator=(Node<T>* node_ptr) {
+    this->node_ptr = node_ptr;
     return *this;
 }
 
@@ -56,14 +55,24 @@ bool operator!=(const Iterator<T>& iterator1, const Iterator<T>& iterator2) {
 }
 
 template<typename T>
-T& Iterator<T>::operator*() const {
-    return node_ptr->data;
+T& Iterator<T>::operator*() const { //not to change const (test *iterator)
+    return node_ptr->getData();
 }
 
 template<typename T>
 T& Iterator<T>::operator++() {
-    node_ptr = node_ptr->next;
-    return node_ptr->data;
+    node_ptr = node_ptr->getNext();
+    return node_ptr->getData();
+}
+
+template<typename T>
+void Iterator<T>::setNext(Node<T>* next) {
+    node_ptr->setNext(next);
+}
+
+template<typename T>
+Node<T>* Iterator<T>::getNext() {
+    return node_ptr->getNext();
 }
 
 template<typename T>

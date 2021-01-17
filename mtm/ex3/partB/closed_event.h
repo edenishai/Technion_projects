@@ -10,8 +10,8 @@ namespace mtm {
     public:
         ClosedEvent(const DateWrap date, const string name = "");
         void addInvitee(int student_id);
-        void isRegistrationBlocked(int student_id) const override;
-        ClosedEvent& clone() override;
+        void isRegistrationBlocked(int student_id) override;
+        ClosedEvent* clone() override;
 
         class RegistrationBlocked : public Exception {};
         class AlreadyInvited: public Exception {};

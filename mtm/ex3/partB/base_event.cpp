@@ -1,7 +1,7 @@
 #include "base_event.h"
 using mtm::BaseEvent;
 
-BaseEvent::BaseEvent(DateWrap date, const string name):
+BaseEvent::BaseEvent(const DateWrap date, const string name):
     date(date), name(name), members_list() {
 }
 
@@ -26,18 +26,16 @@ void BaseEvent::unregisterParticipant(int student_id) {
     members_list.remove(student_id);
 }
 
-ostream& BaseEvent::printShort(ostream& os) const {
+ostream& BaseEvent::printShort(ostream& os) {
     return os << name << " " << date;
 }
 
-ostream& BaseEvent::printLong(ostream& os) const {
-    printShort(os);
-    return os << members_list;
+ostream& BaseEvent::printLong(ostream& os) {
+    return os << name << " " << date << members_list;
 }
 
-BaseEvent& BaseEvent::clone() {
-    BaseEvent copy(*this);
-    return copy;
+const DateWrap& BaseEvent::getDate() const {
+    return date;
 }
 
 bool BaseEvent::operator>(const BaseEvent& event) const {
