@@ -27,7 +27,7 @@ namespace mtm {
         virtual void isRegistrationBlocked(int student_id) = 0;
         ostream& printShort(ostream& os);
         ostream& printLong(ostream& os);
-        virtual BaseEvent* clone() = 0;
+        virtual BaseEvent* clone() const = 0;
         const DateWrap& getDate() const;
         bool operator>(const BaseEvent& event) const;
         bool operator<(const BaseEvent& event) const;

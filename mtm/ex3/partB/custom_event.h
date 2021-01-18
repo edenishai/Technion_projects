@@ -2,6 +2,7 @@
 #define CUSTOM_EVENT_H
 
 #include "base_event.h"
+#include <cstdbool>
 using mtm::BaseEvent;
 
 namespace mtm {
@@ -11,7 +12,7 @@ namespace mtm {
     public:
         CustomEvent(const DateWrap date, const string name, CanRegister cr);
         void isRegistrationBlocked(int student_id) override;
-        CustomEvent* clone() override;
+        CustomEvent* clone() const override;
 
         class RegistrationBlocked : public Exception {};
     };
@@ -23,13 +24,13 @@ namespace mtm {
 
     template<typename CanRegister>
     void CustomEvent<CanRegister>::isRegistrationBlocked(int student_id) {
-        if(!cr) {
+        if(!cr(student_id)) {
             throw RegistrationBlocked();
         }
     }
 
     template<typename CanRegister>
-    CustomEvent<CanRegister>* CustomEvent<CanRegister>::clone() {
+    CustomEvent<CanRegister>* CustomEvent<CanRegister>::clone() const {
         CustomEvent<CanRegister> copy(*this);
         return new CustomEvent<CanRegister>(copy);
     }

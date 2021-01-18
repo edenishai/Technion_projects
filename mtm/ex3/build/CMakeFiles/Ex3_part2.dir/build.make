@@ -179,18 +179,18 @@ CMakeFiles/Ex3_part2.dir/partB/festival.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Ex3_part2.dir/partB/festival.cpp.s"
 	C:\TDM-GCC-64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\100ba\source\Technion_projects\mtm\ex3\partB\festival.cpp -o CMakeFiles\Ex3_part2.dir\partB\festival.cpp.s
 
-CMakeFiles/Ex3_part2.dir/provided/test_partA.cpp.obj: CMakeFiles/Ex3_part2.dir/flags.make
-CMakeFiles/Ex3_part2.dir/provided/test_partA.cpp.obj: ../provided/test_partA.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\100ba\source\Technion_projects\mtm\ex3\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/Ex3_part2.dir/provided/test_partA.cpp.obj"
-	C:\TDM-GCC-64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Ex3_part2.dir\provided\test_partA.cpp.obj -c C:\Users\100ba\source\Technion_projects\mtm\ex3\provided\test_partA.cpp
+CMakeFiles/Ex3_part2.dir/provided/test_partB.cpp.obj: CMakeFiles/Ex3_part2.dir/flags.make
+CMakeFiles/Ex3_part2.dir/provided/test_partB.cpp.obj: ../provided/test_partB.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\100ba\source\Technion_projects\mtm\ex3\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/Ex3_part2.dir/provided/test_partB.cpp.obj"
+	C:\TDM-GCC-64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Ex3_part2.dir\provided\test_partB.cpp.obj -c C:\Users\100ba\source\Technion_projects\mtm\ex3\provided\test_partB.cpp
 
-CMakeFiles/Ex3_part2.dir/provided/test_partA.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Ex3_part2.dir/provided/test_partA.cpp.i"
-	C:\TDM-GCC-64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\100ba\source\Technion_projects\mtm\ex3\provided\test_partA.cpp > CMakeFiles\Ex3_part2.dir\provided\test_partA.cpp.i
+CMakeFiles/Ex3_part2.dir/provided/test_partB.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Ex3_part2.dir/provided/test_partB.cpp.i"
+	C:\TDM-GCC-64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\100ba\source\Technion_projects\mtm\ex3\provided\test_partB.cpp > CMakeFiles\Ex3_part2.dir\provided\test_partB.cpp.i
 
-CMakeFiles/Ex3_part2.dir/provided/test_partA.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Ex3_part2.dir/provided/test_partA.cpp.s"
-	C:\TDM-GCC-64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\100ba\source\Technion_projects\mtm\ex3\provided\test_partA.cpp -o CMakeFiles\Ex3_part2.dir\provided\test_partA.cpp.s
+CMakeFiles/Ex3_part2.dir/provided/test_partB.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Ex3_part2.dir/provided/test_partB.cpp.s"
+	C:\TDM-GCC-64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\100ba\source\Technion_projects\mtm\ex3\provided\test_partB.cpp -o CMakeFiles\Ex3_part2.dir\provided\test_partB.cpp.s
 
 # Object files for target Ex3_part2
 Ex3_part2_OBJECTS = \
@@ -202,7 +202,7 @@ Ex3_part2_OBJECTS = \
 "CMakeFiles/Ex3_part2.dir/partB/open_event.cpp.obj" \
 "CMakeFiles/Ex3_part2.dir/partB/event_container.cpp.obj" \
 "CMakeFiles/Ex3_part2.dir/partB/festival.cpp.obj" \
-"CMakeFiles/Ex3_part2.dir/provided/test_partA.cpp.obj"
+"CMakeFiles/Ex3_part2.dir/provided/test_partB.cpp.obj"
 
 # External object files for target Ex3_part2
 Ex3_part2_EXTERNAL_OBJECTS =
@@ -215,7 +215,7 @@ Ex3_part2.exe: CMakeFiles/Ex3_part2.dir/partB/closed_event.cpp.obj
 Ex3_part2.exe: CMakeFiles/Ex3_part2.dir/partB/open_event.cpp.obj
 Ex3_part2.exe: CMakeFiles/Ex3_part2.dir/partB/event_container.cpp.obj
 Ex3_part2.exe: CMakeFiles/Ex3_part2.dir/partB/festival.cpp.obj
-Ex3_part2.exe: CMakeFiles/Ex3_part2.dir/provided/test_partA.cpp.obj
+Ex3_part2.exe: CMakeFiles/Ex3_part2.dir/provided/test_partB.cpp.obj
 Ex3_part2.exe: CMakeFiles/Ex3_part2.dir/build.make
 Ex3_part2.exe: libdate.a
 Ex3_part2.exe: CMakeFiles/Ex3_part2.dir/linklibs.rsp

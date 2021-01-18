@@ -395,32 +395,32 @@ partB/open_event.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ex3_part2.dir\build.make CMakeFiles/Ex3_part2.dir/partB/open_event.cpp.s
 .PHONY : partB/open_event.cpp.s
 
-provided/test_partA.obj: provided/test_partA.cpp.obj
+provided/test_partB.obj: provided/test_partB.cpp.obj
 
-.PHONY : provided/test_partA.obj
+.PHONY : provided/test_partB.obj
 
 # target to build an object file
-provided/test_partA.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ex3_part2.dir\build.make CMakeFiles/Ex3_part2.dir/provided/test_partA.cpp.obj
-.PHONY : provided/test_partA.cpp.obj
+provided/test_partB.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ex3_part2.dir\build.make CMakeFiles/Ex3_part2.dir/provided/test_partB.cpp.obj
+.PHONY : provided/test_partB.cpp.obj
 
-provided/test_partA.i: provided/test_partA.cpp.i
+provided/test_partB.i: provided/test_partB.cpp.i
 
-.PHONY : provided/test_partA.i
+.PHONY : provided/test_partB.i
 
 # target to preprocess a source file
-provided/test_partA.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ex3_part2.dir\build.make CMakeFiles/Ex3_part2.dir/provided/test_partA.cpp.i
-.PHONY : provided/test_partA.cpp.i
+provided/test_partB.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ex3_part2.dir\build.make CMakeFiles/Ex3_part2.dir/provided/test_partB.cpp.i
+.PHONY : provided/test_partB.cpp.i
 
-provided/test_partA.s: provided/test_partA.cpp.s
+provided/test_partB.s: provided/test_partB.cpp.s
 
-.PHONY : provided/test_partA.s
+.PHONY : provided/test_partB.s
 
 # target to generate assembly for a file
-provided/test_partA.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ex3_part2.dir\build.make CMakeFiles/Ex3_part2.dir/provided/test_partA.cpp.s
-.PHONY : provided/test_partA.cpp.s
+provided/test_partB.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ex3_part2.dir\build.make CMakeFiles/Ex3_part2.dir/provided/test_partB.cpp.s
+.PHONY : provided/test_partB.cpp.s
 
 # Help Target
 help:
@@ -458,9 +458,9 @@ help:
 	@echo ... partB/open_event.obj
 	@echo ... partB/open_event.i
 	@echo ... partB/open_event.s
-	@echo ... provided/test_partA.obj
-	@echo ... provided/test_partA.i
-	@echo ... provided/test_partA.s
+	@echo ... provided/test_partB.obj
+	@echo ... provided/test_partB.i
+	@echo ... provided/test_partB.s
 .PHONY : help
 
 

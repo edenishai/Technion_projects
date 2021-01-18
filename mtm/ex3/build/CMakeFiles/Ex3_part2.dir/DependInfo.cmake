@@ -20,7 +20,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "C:/Users/100ba/source/Technion_projects/mtm/ex3/partB/event_container.cpp" "C:/Users/100ba/source/Technion_projects/mtm/ex3/build/CMakeFiles/Ex3_part2.dir/partB/event_container.cpp.obj"
   "C:/Users/100ba/source/Technion_projects/mtm/ex3/partB/festival.cpp" "C:/Users/100ba/source/Technion_projects/mtm/ex3/build/CMakeFiles/Ex3_part2.dir/partB/festival.cpp.obj"
   "C:/Users/100ba/source/Technion_projects/mtm/ex3/partB/open_event.cpp" "C:/Users/100ba/source/Technion_projects/mtm/ex3/build/CMakeFiles/Ex3_part2.dir/partB/open_event.cpp.obj"
-  "C:/Users/100ba/source/Technion_projects/mtm/ex3/provided/test_partA.cpp" "C:/Users/100ba/source/Technion_projects/mtm/ex3/build/CMakeFiles/Ex3_part2.dir/provided/test_partA.cpp.obj"
+  "C:/Users/100ba/source/Technion_projects/mtm/ex3/provided/test_partB.cpp" "C:/Users/100ba/source/Technion_projects/mtm/ex3/build/CMakeFiles/Ex3_part2.dir/provided/test_partB.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

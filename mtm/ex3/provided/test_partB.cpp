@@ -28,7 +28,7 @@ void test1() {
     closed.addInvitee(500);
     festival.add(closed);
     printEventsShort(festival);
-
+    /*
     mtm::RecurringEvent<mtm::OpenEvent> recurring(mtm::DateWrap(21, 10, 2020),
                                                   "Wednesday Noon", 13, 7);
     printEventsShort(recurring);
@@ -36,6 +36,7 @@ void test1() {
     mtm::OneTimeEvent<mtm::OpenEvent> one_time(mtm::DateWrap(2, 3, 80),
                                                "A long time ago");
     printEventsShort(one_time);
+    */
 }
 
 void test2_aux(mtm::BaseEvent& event) {

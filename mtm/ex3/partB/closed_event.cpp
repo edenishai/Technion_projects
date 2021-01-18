@@ -21,7 +21,6 @@ void ClosedEvent::isRegistrationBlocked(int student_id) {
     }
 }
 
-ClosedEvent* ClosedEvent::clone() {
-    ClosedEvent copy(*this);
-    return new ClosedEvent(copy);
+ClosedEvent* ClosedEvent::clone() const {
+    return new ClosedEvent(*this);
 }

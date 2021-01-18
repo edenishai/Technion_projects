@@ -9,7 +9,7 @@ void OpenEvent::isRegistrationBlocked(int student_id) {
     return;
 }
 
-BaseEvent* OpenEvent::clone() {
+BaseEvent* OpenEvent::clone() const {
     OpenEvent copy(*this);
     return new OpenEvent(copy);
 }

@@ -47,6 +47,7 @@ CMakeFiles/Ex3_part2.dir/partB/festival.cpp.obj: ../partB/festival.cpp
 CMakeFiles/Ex3_part2.dir/partB/festival.cpp.obj: ../partB/festival.h
 CMakeFiles/Ex3_part2.dir/partB/festival.cpp.obj: ../partB/linked_list.h
 CMakeFiles/Ex3_part2.dir/partB/festival.cpp.obj: ../partB/node.h
+CMakeFiles/Ex3_part2.dir/partB/festival.cpp.obj: ../partB/open_event.h
 
 CMakeFiles/Ex3_part2.dir/partB/open_event.cpp.obj: ../partA/date.h
 CMakeFiles/Ex3_part2.dir/partB/open_event.cpp.obj: ../partA/date_wrap.h
@@ -57,8 +58,18 @@ CMakeFiles/Ex3_part2.dir/partB/open_event.cpp.obj: ../partB/node.h
 CMakeFiles/Ex3_part2.dir/partB/open_event.cpp.obj: ../partB/open_event.cpp
 CMakeFiles/Ex3_part2.dir/partB/open_event.cpp.obj: ../partB/open_event.h
 
-CMakeFiles/Ex3_part2.dir/provided/test_partA.cpp.obj: ../partA/date.h
-CMakeFiles/Ex3_part2.dir/provided/test_partA.cpp.obj: ../partA/date_wrap.h
-CMakeFiles/Ex3_part2.dir/provided/test_partA.cpp.obj: ../partA/exceptions.h
-CMakeFiles/Ex3_part2.dir/provided/test_partA.cpp.obj: ../provided/test_partA.cpp
+CMakeFiles/Ex3_part2.dir/provided/test_partB.cpp.obj: ../partA/date.h
+CMakeFiles/Ex3_part2.dir/provided/test_partB.cpp.obj: ../partA/date_wrap.h
+CMakeFiles/Ex3_part2.dir/provided/test_partB.cpp.obj: ../partA/exceptions.h
+CMakeFiles/Ex3_part2.dir/provided/test_partB.cpp.obj: ../partB/base_event.h
+CMakeFiles/Ex3_part2.dir/provided/test_partB.cpp.obj: ../partB/closed_event.h
+CMakeFiles/Ex3_part2.dir/provided/test_partB.cpp.obj: ../partB/custom_event.h
+CMakeFiles/Ex3_part2.dir/provided/test_partB.cpp.obj: ../partB/event_container.h
+CMakeFiles/Ex3_part2.dir/provided/test_partB.cpp.obj: ../partB/festival.h
+CMakeFiles/Ex3_part2.dir/provided/test_partB.cpp.obj: ../partB/linked_list.h
+CMakeFiles/Ex3_part2.dir/provided/test_partB.cpp.obj: ../partB/node.h
+CMakeFiles/Ex3_part2.dir/provided/test_partB.cpp.obj: ../partB/one_time_event.h
+CMakeFiles/Ex3_part2.dir/provided/test_partB.cpp.obj: ../partB/open_event.h
+CMakeFiles/Ex3_part2.dir/provided/test_partB.cpp.obj: ../partB/recurring_event.h
+CMakeFiles/Ex3_part2.dir/provided/test_partB.cpp.obj: ../provided/test_partB.cpp
 

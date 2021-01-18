@@ -18,7 +18,7 @@ public:
     T getNext() const;
     Node<T>* getHead() const;
     bool contains(const T& data) const;
-    void insert(const T& data); //not to change const
+    void insert(const T& data);
     void remove(const T& data);
 };
 
@@ -31,12 +31,12 @@ LinkedList<T>::LinkedList() {
 template<typename T>
 LinkedList<T>::LinkedList(const LinkedList<T>& list) {
     Node<T>* src_iterator = list.head;
-    head = new Node<T>(*(list.head));
+    head = new Node<T>(list.head->getData());
     Node<T>* iterator = head;
-    ++src_iterator;
+    src_iterator = src_iterator->getNext();
     while(!src_iterator) {
         Node<T> next(*src_iterator);
-        iterator->setNext(new Node<T>(*src_iterator));
+        iterator->setNext(new Node<T>(src_iterator->getData()));
         iterator = iterator->getNext();
         src_iterator = src_iterator->getNext();
     }
@@ -92,29 +92,29 @@ Node<T>* LinkedList<T>::getHead() const {
 
 template<typename T>
 void LinkedList<T>::insert(const T& data) {
-    Node<T> temp(data);
+    Node<T>* temp = new Node<T>(data);
     if(!head) {
-        head = &temp;
+        head = temp;
         return;
     }
     Node<T>* iterator = head;
     if(compareData(iterator->getData(), data) > 0) {
-        temp.setNext(head);
-        head = &temp;
+        temp->setNext(head);
+        head = temp;
         return;
     }
     Node<T>* back_iterator = iterator;
     iterator = iterator->getNext();
     while(!iterator) {
         if(compareData(iterator->getData(), data) > 0) {
-            temp.setNext(back_iterator->getNext());
-            back_iterator->setNext(&temp);
+            temp->setNext(back_iterator->getNext());
+            back_iterator->setNext(temp);
             return;
         }
         back_iterator = iterator;
         iterator = iterator->getNext();
     }
-    back_iterator->setNext(&temp);
+    back_iterator->setNext(temp);
 }
 
 template<typename T>

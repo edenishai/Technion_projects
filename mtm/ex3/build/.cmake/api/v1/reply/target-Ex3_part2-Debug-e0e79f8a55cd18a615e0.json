@@ -274,7 +274,7 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "provided/test_partA.cpp",
+			"path" : "provided/test_partB.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],

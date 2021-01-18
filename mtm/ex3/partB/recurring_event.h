@@ -16,7 +16,7 @@ namespace mtm {
         class InvalidInterval : public Exception {};
         class NotSupported : public Exception {};
     };
-
+    /*
     template<typename EventType>
     RecurringEvent<EventType>::RecurringEvent(const DateWrap first_date, const string name,
                                                             int num_occurrences, int interval_days):
@@ -25,7 +25,7 @@ namespace mtm {
         //to complete
                                                                                 
     }
-
+    */
     template<typename EventType>
     void RecurringEvent<EventType>::add(const BaseEvent& event) {
         throw NotSupported();

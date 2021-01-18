@@ -14,7 +14,7 @@ add_executable(Ex3_part2 partA/date_wrap.cpp partA/date_wrap.h partA/date.h part
                 partB/linked_list.h partB/node.h
                 partB/custom_event.h partB/recurring_event.h
                 partB/festival.cpp partB/festival.h
-                provided/test_partA.cpp
+                provided/test_partB.cpp
 )
 
 target_link_libraries(Ex3_part2 date)

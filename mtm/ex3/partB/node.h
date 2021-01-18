@@ -9,24 +9,26 @@ class Node {
     T data;    //not to change to const or to pointer
     Node<T>* next;
 public:
-    Node(const T& data);    //not to change to not const
-    Node(const Node& node);
+    //Node(): data(0), next(0) {}
+    Node(const T& data = NULL);    //not to change to not const
+    //Node(const Node& node);
     T getData() const;  //not to change to const (related to *iterator)
     Node* getNext() const;
     void setNext(Node* next);
     Node& operator=(const Node& node);
+    bool isNull();
 };
 
 template<typename T>
 Node<T>::Node(const T& data):
     data(data), next(NULL) {
 }
-
+/*
 template<typename T>
 Node<T>::Node(const Node<T>& node):
     data(node.data), next(NULL) {
 }
-
+*/
 template<typename T>
 T Node<T>::getData() const {
     return data;
@@ -53,6 +55,11 @@ Node<T>& Node<T>::operator=(const Node<T>& node) {
 template<typename T>
 ostream& operator<<(ostream& os, const Node<T>& node) {
     return os << node.data << "\n";
+}
+
+template<typename T>
+bool Node<T>::isNull() {
+    return data == NULL;
 }
 
 #endif /* NODE_H */
