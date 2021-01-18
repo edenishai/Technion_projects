@@ -1,0 +1,6 @@
+C:/Users/100ba/source/Technion_projects/mtm/ex3/build/CMakeFiles/package_source.dir
+C:/Users/100ba/source/Technion_projects/mtm/ex3/build/CMakeFiles/date.dir
+C:/Users/100ba/source/Technion_projects/mtm/ex3/build/CMakeFiles/package.dir
+C:/Users/100ba/source/Technion_projects/mtm/ex3/build/CMakeFiles/Ex3_part2.dir
+C:/Users/100ba/source/Technion_projects/mtm/ex3/build/CMakeFiles/edit_cache.dir
+C:/Users/100ba/source/Technion_projects/mtm/ex3/build/CMakeFiles/rebuild_cache.dir

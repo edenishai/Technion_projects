@@ -6,12 +6,27 @@
 using mtm::BaseEvent;
 
 namespace mtm {
-    class EventContainer : public LinkedList<BaseEvent> {
+    class EventContainer {
+    protected:
+        LinkedList<const BaseEvent&> events_list;
     public:
+        class EventIterator {
+        protected:
+            BaseEvent* iterator;
+        public:
+            EventIterator();
+            EventIterator(const EventIterator& event_iter);
+            ~EventIterator() = default; //?
+            BaseEvent& operator->();
+            EventIterator& operator=(const EventIterator& event_iter);
+            EventIterator& operator++();
+            friend bool operator==(const EventIterator& event_iter1, const EventIterator& event_iter2);
+            friend bool operator!=(const EventIterator& event_iter1, const EventIterator& event_iter2);
+            //friend class Schedule;
+        };
+
         EventContainer();
         virtual void add(const BaseEvent& event) = 0;
-
-        typedef Iterator<BaseEvent> EventIterator;
         
         EventIterator begin();
         EventIterator end();

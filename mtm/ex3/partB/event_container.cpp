@@ -3,18 +3,41 @@
 using mtm::EventContainer;
 
 EventContainer::EventContainer():
-    LinkedList<BaseEvent>() {
+    events_list() {
 }
 
 EventContainer::EventIterator EventContainer::begin() {
-    setIterator();
-    return iterator;
+    return this->events_list.getFirst();
 }
 
-EventContainer::EventIterator EventContainer::end() {
-    setIterator();
-    while(!(iterator.isNull())) {
-        ++iterator;
-    }
-    return iterator;
+
+
+
+EventContainer::EventIterator::EventIterator():
+    iterator(NULL) {
 }
+
+EventContainer::EventIterator::EventIterator(const EventIterator& event_iter) {
+    this->iterator = event_iter.iterator;
+}
+
+EventIterator& EventContainer::EventIterator::operator=(const EventIterator& event_iter) {
+
+}
+
+/*
+EventContainer::EventIterator EventIterator(const EventContainer::EventIterator& iterator):
+    iterator(iterator) {
+}
+
+
+
+EventContainer::EventContainer():
+    LinkedList<const BaseEvent&>() {
+}
+
+
+
+EventContainer::EventIterator EventContainer::end() {
+}
+*/

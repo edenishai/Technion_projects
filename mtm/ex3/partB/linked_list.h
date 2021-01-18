@@ -2,7 +2,6 @@
 #define LINKED_LIST_H
 
 #include "node.h"
-#include "iterator.h"
 #include <stdbool.h>
 #include <iostream>
 using std::ostream;
@@ -10,17 +9,15 @@ using std::ostream;
 template<typename T>
 class LinkedList {
     Node<T>* head;
-protected:
-    Iterator<T> iterator;
 public:
     LinkedList();
     LinkedList(const LinkedList& list);
     ~LinkedList();
-    int compareData(T const &data) const;
-    void setIterator();
-    const T& getFirst();
-    const T& getNext();
-    bool contains(T const &data);
+    int compareData(const T& data1, const T& data2) const;
+    T getFirst() const;
+    T getNext() const;
+    Node<T>* getHead() const;
+    bool contains(const T& data) const;
     void insert(const T& data); //not to change const
     void remove(const T& data);
 };
@@ -29,20 +26,19 @@ public:
 template<typename T>
 LinkedList<T>::LinkedList() {
     head = NULL;
-    iterator = NULL;
 }
 
 template<typename T>
 LinkedList<T>::LinkedList(const LinkedList<T>& list) {
-    Iterator<T> src_iterator(list.head);
+    Node<T>* src_iterator = list.head;
     head = new Node<T>(*(list.head));
-    iterator = head;
+    Node<T>* iterator = head;
     ++src_iterator;
-    while(!src_iterator.isNull()) {
+    while(!src_iterator) {
         Node<T> next(*src_iterator);
-        iterator.setNext(&next);
-        ++iterator;
-        ++src_iterator;
+        iterator->setNext(new Node<T>(*src_iterator));
+        iterator = iterator->getNext();
+        src_iterator = src_iterator->getNext();
     }
 }
 
@@ -56,43 +52,42 @@ LinkedList<T>::~LinkedList() {
 }
 
 template<typename T>
-int LinkedList<T>::compareData(T const &data) const {
-    if(*iterator > data) {
+int LinkedList<T>::compareData(const T& data1, const T& data2) const {
+    if(data1 > data2) {
         return 1;
     }
-    else if(*iterator < data) {
+    else if(data1 < data2) {
         return -1;
     } 
     return 0;
 }
 
 template<typename T>
-void LinkedList<T>::setIterator() {
-    iterator = head;
+T LinkedList<T>::getFirst() const {
+    return head->getData();
 }
 
 template<typename T>
-const T& LinkedList<T>::getFirst() {
-    iterator = head;
-    return *iterator;
+T LinkedList<T>::getNext() const {
+    Node<T>* temp = head->getNext();
+    return temp->getData();
 }
 
 template<typename T>
-const T& LinkedList<T>::getNext() {
-    ++iterator;
-    return *iterator;
-}
-
-template<typename T>
-bool LinkedList<T>::contains(T const &data) {
-    iterator = head;
-    while(!iterator.isNull()) {
-        if(compareData(data) == 0) {
+bool LinkedList<T>::contains(const T& data) const {
+    Node<T>* iterator = head;
+    while(!iterator) {
+        if(compareData(iterator->getData(), data) == 0) {
             return true;
         }
-        ++iterator;
+        iterator = iterator->getNext();
     }
     return false;
+}
+
+template<typename T>
+Node<T>* LinkedList<T>::getHead() const {
+    return head;
 }
 
 template<typename T>
@@ -102,47 +97,46 @@ void LinkedList<T>::insert(const T& data) {
         head = &temp;
         return;
     }
-    iterator = head;
-    if(compareData(data) > 0) {
+    Node<T>* iterator = head;
+    if(compareData(iterator->getData(), data) > 0) {
         temp.setNext(head);
         head = &temp;
         return;
     }
-    Iterator<T> back_iterator = iterator;
-    ++iterator;
-    while(!iterator.isNull()) {
-        if(compareData(data) > 0) {
-            temp.setNext(back_iterator.getNext());
-            back_iterator.setNext(&temp);
+    Node<T>* back_iterator = iterator;
+    iterator = iterator->getNext();
+    while(!iterator) {
+        if(compareData(iterator->getData(), data) > 0) {
+            temp.setNext(back_iterator->getNext());
+            back_iterator->setNext(&temp);
             return;
         }
-        ++back_iterator;
-        ++iterator;
+        back_iterator = iterator;
+        iterator = iterator->getNext();
     }
-    back_iterator.setNext(&temp);
+    back_iterator->setNext(&temp);
 }
 
 template<typename T>
 void LinkedList<T>::remove(const T& data) {
-    iterator = head;
-    if(compareData(data) == 0) {
+    Node<T>* iterator = head;
+    if(compareData(iterator->getData(), data) == 0) {
         Node<T>* to_delete = head;
         head = head->getNext();
         delete to_delete;
         return;
     }
-    Iterator<T> back_iterator = head;
-    iterator = head;
-    ++iterator;
-    while(!iterator.isNull()) {
-        if(compareData(data) == 0) {
-            Node<T>* to_delete = back_iterator.getNext();
-            back_iterator.setNext(iterator.getNext());
+    Node<T>* back_iterator = iterator;
+    iterator = iterator->getNext();
+    while(!iterator) {
+        if(compareData(iterator->getData(), data) == 0) {
+            Node<T>* to_delete = back_iterator->getNext();
+            back_iterator->setNext(iterator->getNext());
             delete to_delete;
             return;
         }
-        ++back_iterator;
-        ++iterator;
+        back_iterator = iterator;
+        iterator = iterator->getNext();
     }
 }
 
