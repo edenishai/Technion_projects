@@ -12,8 +12,6 @@ namespace mtm {
     public:
         OneTimeEvent(const DateWrap date, const string name = "");
         void add(const BaseEvent& event) override;
-
-        class NotSupported : public Exception {};
     };
 
     template<typename EventType>

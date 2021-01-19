@@ -119,7 +119,7 @@ void LinkedList<T>::remove(const T& data) {
     }
     Node<T>* back_iterator = iterator;
     iterator = iterator->getNext();
-    while(!iterator) {
+    while(iterator) {
         if(compareData(iterator->getData(), data) == 0) {
             Node<T>* to_delete = back_iterator->getNext();
             back_iterator->setNext(iterator->getNext());

@@ -9,12 +9,10 @@ namespace mtm {
         LinkedList<int> invitees_list;
     public:
         ClosedEvent(const DateWrap date, const string name = "");
+        ClosedEvent(const ClosedEvent& event);
         void addInvitee(int student_id);
-        void isRegistrationBlocked(int student_id) override;
-        ClosedEvent* clone() const override;
-
-        class RegistrationBlocked : public Exception {};
-        class AlreadyInvited: public Exception {};
+        void registerParticipant(int student_id) override;
+        BaseEvent* clone() const override;
     };
 }
 

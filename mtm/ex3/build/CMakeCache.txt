@@ -338,6 +338,12 @@ SLURM_SRUN_COMMAND:FILEPATH=SLURM_SRUN_COMMAND-NOTFOUND
 //Path to a program.
 SVNCOMMAND:FILEPATH=SVNCOMMAND-NOTFOUND
 
+//Value Computed by CMake
+ex_BINARY_DIR:STATIC=C:/Users/100ba/source/Technion_projects/mtm/ex3/build
+
+//Value Computed by CMake
+ex_SOURCE_DIR:STATIC=C:/Users/100ba/source/Technion_projects/mtm/ex3
+
 
 ########################
 # INTERNAL cache entries

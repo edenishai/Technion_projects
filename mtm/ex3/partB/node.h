@@ -45,7 +45,7 @@ void Node<T>::setNext(Node<T>* next) {
 template<typename T>
 Node<T>& Node<T>::operator=(const Node<T>& node) {
     T new_data(node.data);
-    delete data;    //??
+    delete data;
     data = new_data;
     return *this;
 }

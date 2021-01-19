@@ -1,27 +1,22 @@
 #include "base_event.h"
 using mtm::BaseEvent;
 
+using mtm::AlreadyRegistered;
+using mtm::NotRegistered;
+
 BaseEvent::BaseEvent(const DateWrap date, const string name):
     date(date), name(name), members_list() {
-        //Node<int>* head = members_list.getHead();
-        //head = NULL;
 }
-
+/*
 BaseEvent::BaseEvent(const BaseEvent& event):
-    date(event.date), name(event.name), members_list(event.members_list) {
+    date(event.date), name(name), members_list() {
+        Node<int>* iterator = event.members_list.getHead();
+        while(iterator) {
+            members_list.insert(iterator->getData());
+            iterator = iterator->getNext();
+        }
 }
-
-void BaseEvent::registerParticipant(int student_id) {
-    if(student_id < 1 || student_id > 1234567890) {
-        throw InvalidStudent();
-    }
-    if(members_list.contains(student_id)) {
-        throw AlreadyRegistered();
-    }
-    isRegistrationBlocked(student_id);
-    members_list.insert(student_id);
-}
-
+*/
 void BaseEvent::unregisterParticipant(int student_id) {
     if(student_id < 1 || student_id > 1234567890) {
         throw InvalidStudent();

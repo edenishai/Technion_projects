@@ -10,7 +10,7 @@ using std::exception;
 
 namespace mtm{
     class Exception : public exception {};
-    class InvalidDate : public Exception{
+    class InvalidDate : public Exception {
     public:
         InvalidDate() = default;
         const string what();
@@ -60,7 +60,6 @@ namespace mtm{
         InvalidNumber() = default;
         const string what();
     };
-
     class InvalidInterval : public Exception {
     public:
         InvalidInterval() = default;

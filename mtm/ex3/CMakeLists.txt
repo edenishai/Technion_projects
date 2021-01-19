@@ -3,6 +3,7 @@ project(Ex3)
 
 set(CMAKE_CXX_STANDARD 11)
 
+
 add_library(date partA/date.c partA/date.h partA/exceptions.h)
 
 add_executable(Ex3_part2 partA/date_wrap.cpp partA/date_wrap.h partA/date.h partA/date.c
@@ -12,10 +13,9 @@ add_executable(Ex3_part2 partA/date_wrap.cpp partA/date_wrap.h partA/date.h part
                 partB/open_event.cpp partB/open_event.h
                 partB/event_container.cpp partB/event_container.h
                 partB/linked_list.h partB/node.h
-                partB/custom_event.h partB/recurring_event.h
+                partB/custom_event.h partB/recurring_event.h partB/one_time_event.h
                 partB/festival.cpp partB/festival.h
                 provided/test_partB.cpp
 )
 
 target_link_libraries(Ex3_part2 date)
-

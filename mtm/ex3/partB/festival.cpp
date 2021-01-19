@@ -1,6 +1,7 @@
 #include "festival.h"
-
 using mtm::Festival;
+
+using mtm::DateMismatch;
 
 Festival::Festival(DateWrap date):
     EventContainer(), date(date) {
@@ -12,5 +13,6 @@ void Festival::add(const BaseEvent& event) {
         throw DateMismatch();
     }
     BaseEvent* copy = event.clone();
+    *copy = event;
     this->events_list.insert(*copy);
 }

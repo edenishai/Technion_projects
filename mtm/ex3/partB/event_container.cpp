@@ -1,5 +1,5 @@
 #include "event_container.h"
-#include <stdbool.h>
+#include <cstdbool>
 using mtm::EventContainer;
 
 

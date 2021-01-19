@@ -28,13 +28,13 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 8,
+				"line" : 9,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 20,
+				"line" : 21,
 				"parent" : 0
 			}
 		]
@@ -68,8 +68,8 @@
 				8,
 				10,
 				12,
-				18,
-				20
+				19,
+				21
 			]
 		},
 		{
@@ -138,8 +138,8 @@
 				8,
 				10,
 				12,
-				18,
-				20
+				19,
+				21
 			]
 		},
 		{
@@ -157,7 +157,8 @@
 				15,
 				16,
 				17,
-				19
+				18,
+				20
 			]
 		}
 	],
@@ -258,6 +259,11 @@
 		{
 			"backtrace" : 1,
 			"path" : "partB/recurring_event.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "partB/one_time_event.h",
 			"sourceGroupIndex" : 1
 		},
 		{

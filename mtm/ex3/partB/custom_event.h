@@ -1,9 +1,16 @@
 #ifndef CUSTOM_EVENT_H
 #define CUSTOM_EVENT_H
 
-#include "base_event.h"
+#include "../partA/date_wrap.h"
+#include "../partA/exceptions.h"
+#include "linked_list.h"
+#include <string.h>
+#include <iostream>
 #include <cstdbool>
+#include "base_event.h"
 using mtm::BaseEvent;
+using std::string;
+using std::ostream;
 
 namespace mtm {
     template<typename CanRegister>
@@ -11,10 +18,8 @@ namespace mtm {
         CanRegister cr;
     public:
         CustomEvent(const DateWrap date, const string name, CanRegister cr);
-        void isRegistrationBlocked(int student_id) override;
-        CustomEvent* clone() const override;
-
-        class RegistrationBlocked : public Exception {};
+        void registerParticipant(int student_id) override;
+        BaseEvent* clone() const override;
     };
 
     template<typename CanRegister>
@@ -23,16 +28,22 @@ namespace mtm {
     }
 
     template<typename CanRegister>
-    void CustomEvent<CanRegister>::isRegistrationBlocked(int student_id) {
+    void CustomEvent<CanRegister>::registerParticipant(int student_id) {
+        if(student_id < 1 || student_id > 1234567890) {
+            throw InvalidStudent();
+        }
+        if(members_list.contains(student_id)) {
+            throw AlreadyRegistered();
+        }
         if(!cr(student_id)) {
             throw RegistrationBlocked();
         }
+        members_list.insert(student_id);
     }
 
     template<typename CanRegister>
-    CustomEvent<CanRegister>* CustomEvent<CanRegister>::clone() const {
-        CustomEvent<CanRegister> copy(*this);
-        return new CustomEvent<CanRegister>(copy);
+    BaseEvent* CustomEvent<CanRegister>::clone() const {
+        return new CustomEvent(*this);
     }
 }
 
