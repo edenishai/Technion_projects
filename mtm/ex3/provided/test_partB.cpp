@@ -32,11 +32,11 @@ void test1() {
     mtm::RecurringEvent<mtm::OpenEvent> recurring(mtm::DateWrap(21, 10, 2020),
                                                   "Wednesday Noon", 13, 7);
     printEventsShort(recurring);
-    /*
+    
     mtm::OneTimeEvent<mtm::OpenEvent> one_time(mtm::DateWrap(2, 3, 80),
                                                "A long time ago");
     printEventsShort(one_time);
-    */
+    
 }
 
 void test2_aux(mtm::BaseEvent& event) {

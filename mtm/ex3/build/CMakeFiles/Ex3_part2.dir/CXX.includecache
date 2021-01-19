@@ -48,21 +48,11 @@ C:/Users/100ba/source/Technion_projects/mtm/ex3/partB/base_event.h
 cstdbool
 -
 
-C:/Users/100ba/source/Technion_projects/mtm/ex3/partB/event_container.cpp
-event_container.h
-C:/Users/100ba/source/Technion_projects/mtm/ex3/partB/event_container.h
-stdbool.h
--
-
 C:/Users/100ba/source/Technion_projects/mtm/ex3/partB/event_container.h
 base_event.h
 C:/Users/100ba/source/Technion_projects/mtm/ex3/partB/base_event.h
 linked_list.h
 C:/Users/100ba/source/Technion_projects/mtm/ex3/partB/linked_list.h
-
-C:/Users/100ba/source/Technion_projects/mtm/ex3/partB/festival.cpp
-festival.h
-C:/Users/100ba/source/Technion_projects/mtm/ex3/partB/festival.h
 
 C:/Users/100ba/source/Technion_projects/mtm/ex3/partB/festival.h
 event_container.h
