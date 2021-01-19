@@ -6,7 +6,7 @@ using mtm::BaseEvent;
 
 namespace mtm {
     class ClosedEvent : public BaseEvent {
-        LinkedList<int> guest_list;
+        LinkedList<int> invitees_list;
     public:
         ClosedEvent(const DateWrap date, const string name = "");
         void addInvitee(int student_id);

@@ -12,7 +12,6 @@ class LinkedList {
 public:
     LinkedList();
     LinkedList(const LinkedList& list);
-    ~LinkedList();
     int compareData(const T& data1, const T& data2) const;
     T getFirst() const;
     T getNext() const;
@@ -22,7 +21,6 @@ public:
     void remove(const T& data);
 };
 
-//to add null check in every func
 template<typename T>
 LinkedList<T>::LinkedList() {
     head = NULL;
@@ -31,23 +29,16 @@ LinkedList<T>::LinkedList() {
 template<typename T>
 LinkedList<T>::LinkedList(const LinkedList<T>& list) {
     Node<T>* src_iterator = list.head;
-    head = new Node<T>(list.head->getData());
+    if(!src_iterator) {
+        return;
+    }
+    head = new Node<T>(*(list.head));
     Node<T>* iterator = head;
     src_iterator = src_iterator->getNext();
-    while(!src_iterator) {
-        Node<T> next(*src_iterator);
-        iterator->setNext(new Node<T>(src_iterator->getData()));
+    while(src_iterator) {
+        iterator->setNext(new Node<T>(*src_iterator));
         iterator = iterator->getNext();
         src_iterator = src_iterator->getNext();
-    }
-}
-
-template<typename T>
-LinkedList<T>::~LinkedList() {
-    while(head) {
-        Node<T>* to_delete = head;
-        head = head->getNext();
-        delete to_delete;
     }
 }
 
@@ -76,7 +67,7 @@ T LinkedList<T>::getNext() const {
 template<typename T>
 bool LinkedList<T>::contains(const T& data) const {
     Node<T>* iterator = head;
-    while(!iterator) {
+    while(iterator) {
         if(compareData(iterator->getData(), data) == 0) {
             return true;
         }
@@ -105,7 +96,7 @@ void LinkedList<T>::insert(const T& data) {
     }
     Node<T>* back_iterator = iterator;
     iterator = iterator->getNext();
-    while(!iterator) {
+    while(iterator) {
         if(compareData(iterator->getData(), data) > 0) {
             temp->setNext(back_iterator->getNext());
             back_iterator->setNext(temp);
@@ -142,9 +133,11 @@ void LinkedList<T>::remove(const T& data) {
 
 template<typename T>
 ostream& operator<<(ostream& os, LinkedList<T>& list) {
-    os << list.getFirst();
-    while(list.getNext()) {
-        os << list.getNext();
+    Node<T>* iterator = list.getHead();
+    while(iterator) {
+        os << iterator->getData();
+        os << "\n";
+        iterator = iterator->getNext();
     }
     return os;
 }

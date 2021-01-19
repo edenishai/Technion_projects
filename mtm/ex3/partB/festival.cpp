@@ -1,5 +1,4 @@
 #include "festival.h"
-#include "open_event.h"
 
 using mtm::Festival;
 
@@ -13,6 +12,5 @@ void Festival::add(const BaseEvent& event) {
         throw DateMismatch();
     }
     BaseEvent* copy = event.clone();
-    this->events_list.insert(*copy); 
-    delete copy;
+    this->events_list.insert(*copy);
 }

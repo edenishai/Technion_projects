@@ -2,6 +2,8 @@
 #define FESTIVAL_H
 
 #include "event_container.h"
+#include "open_event.h"
+#include "closed_event.h"
 using mtm::EventContainer;
 
 namespace mtm {

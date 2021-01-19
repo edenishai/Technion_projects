@@ -15,6 +15,7 @@ EventContainer::EventIterator EventContainer::begin() {
 
 EventContainer::EventIterator EventContainer::end() {
     EventIterator event_iter;
+    event_iter.iterator = this->events_list.getHead();
     while(event_iter.iterator) {
         ++event_iter;
     }
@@ -53,16 +54,24 @@ EventContainer::EventIterator& EventContainer::EventIterator::operator=(const Ev
 EventContainer::EventIterator& EventContainer::EventIterator::operator++() {
     iterator = iterator->getNext();
     return *this;
-
 }
 
 bool EventContainer::EventIterator::operator==(const EventIterator& event_iter) const {
-    if(iterator->getData() == event_iter.iterator->getData()) {
+    if(!(this->iterator) && !(event_iter.iterator)) {
         return true;
     }
-    return false;
+    if(!(this->iterator) || !(event_iter.iterator)) {
+        return false;
+    }
+    return this->iterator->getData() == event_iter.iterator->getData();
 }
 
 bool EventContainer::EventIterator::operator!=(const EventIterator& event_iter) const {
-    return !(*this == event_iter);
+    if(!(this->iterator) && !(event_iter.iterator)) {
+        return false;
+    }
+    if(!(this->iterator) || !(event_iter.iterator)) {
+        return true;
+    }
+    return !(this->iterator->getData() == event_iter.iterator->getData());
 }

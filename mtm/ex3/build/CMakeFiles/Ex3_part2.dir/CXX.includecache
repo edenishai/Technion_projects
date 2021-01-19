@@ -24,10 +24,6 @@ string
 iostream
 -
 
-C:/Users/100ba/source/Technion_projects/mtm/ex3/partB/base_event.cpp
-base_event.h
-C:/Users/100ba/source/Technion_projects/mtm/ex3/partB/base_event.h
-
 C:/Users/100ba/source/Technion_projects/mtm/ex3/partB/base_event.h
 ../partA/date_wrap.h
 C:/Users/100ba/source/Technion_projects/mtm/ex3/partA/date_wrap.h
@@ -41,10 +37,6 @@ iostream
 -
 stdbool.h
 -
-
-C:/Users/100ba/source/Technion_projects/mtm/ex3/partB/closed_event.cpp
-closed_event.h
-C:/Users/100ba/source/Technion_projects/mtm/ex3/partB/closed_event.h
 
 C:/Users/100ba/source/Technion_projects/mtm/ex3/partB/closed_event.h
 base_event.h
@@ -71,12 +63,14 @@ C:/Users/100ba/source/Technion_projects/mtm/ex3/partB/linked_list.h
 C:/Users/100ba/source/Technion_projects/mtm/ex3/partB/festival.cpp
 festival.h
 C:/Users/100ba/source/Technion_projects/mtm/ex3/partB/festival.h
-open_event.h
-C:/Users/100ba/source/Technion_projects/mtm/ex3/partB/open_event.h
 
 C:/Users/100ba/source/Technion_projects/mtm/ex3/partB/festival.h
 event_container.h
 C:/Users/100ba/source/Technion_projects/mtm/ex3/partB/event_container.h
+open_event.h
+C:/Users/100ba/source/Technion_projects/mtm/ex3/partB/open_event.h
+closed_event.h
+C:/Users/100ba/source/Technion_projects/mtm/ex3/partB/closed_event.h
 
 C:/Users/100ba/source/Technion_projects/mtm/ex3/partB/linked_list.h
 node.h
@@ -91,10 +85,8 @@ iostream
 -
 
 C:/Users/100ba/source/Technion_projects/mtm/ex3/partB/one_time_event.h
-
-C:/Users/100ba/source/Technion_projects/mtm/ex3/partB/open_event.cpp
-open_event.h
-C:/Users/100ba/source/Technion_projects/mtm/ex3/partB/open_event.h
+event_container.h
+C:/Users/100ba/source/Technion_projects/mtm/ex3/partB/event_container.h
 
 C:/Users/100ba/source/Technion_projects/mtm/ex3/partB/open_event.h
 base_event.h

@@ -19,8 +19,8 @@ namespace mtm {
         LinkedList<int> members_list;
     public:
         BaseEvent(const DateWrap date, const string name = "");
+        BaseEvent(const BaseEvent& event);
         ~BaseEvent() = default;
-        BaseEvent(const BaseEvent& event) = default;
         BaseEvent& operator=(const BaseEvent& event) = default;
         void registerParticipant(int student_id);
         void unregisterParticipant(int student_id);

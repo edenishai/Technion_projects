@@ -3,6 +3,12 @@ using mtm::BaseEvent;
 
 BaseEvent::BaseEvent(const DateWrap date, const string name):
     date(date), name(name), members_list() {
+        //Node<int>* head = members_list.getHead();
+        //head = NULL;
+}
+
+BaseEvent::BaseEvent(const BaseEvent& event):
+    date(event.date), name(event.name), members_list(event.members_list) {
 }
 
 void BaseEvent::registerParticipant(int student_id) {
@@ -27,11 +33,11 @@ void BaseEvent::unregisterParticipant(int student_id) {
 }
 
 ostream& BaseEvent::printShort(ostream& os) {
-    return os << name << " " << date;
+    return os << name << " " << date << "\n";
 }
 
 ostream& BaseEvent::printLong(ostream& os) {
-    return os << name << " " << date << members_list;
+    return os << name << " " << date << "\n" << members_list;
 }
 
 const DateWrap& BaseEvent::getDate() const {
@@ -39,11 +45,11 @@ const DateWrap& BaseEvent::getDate() const {
 }
 
 bool BaseEvent::operator>(const BaseEvent& event) const {
-    if(date < event.date) {
+    if(date > event.date) {
         return true;
     }
     if(date == event.date) {
-        if(name.compare(event.name) < 0) {
+        if(name.compare(event.name) > 0) {
             return true;
         }
     }

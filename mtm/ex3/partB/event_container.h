@@ -18,7 +18,6 @@ namespace mtm {
             EventIterator(Node<BaseEvent&>* node);
             EventIterator(const EventIterator& event_iter);
             ~EventIterator() = default;
-            BaseEvent& operator->();
             BaseEvent& operator*() const;
             EventIterator& operator=(const EventIterator& event_iter);
             EventIterator& operator++();

@@ -42,6 +42,7 @@ CMakeFiles/Ex3_part2.dir/partB/festival.cpp.obj: ../partA/date.h
 CMakeFiles/Ex3_part2.dir/partB/festival.cpp.obj: ../partA/date_wrap.h
 CMakeFiles/Ex3_part2.dir/partB/festival.cpp.obj: ../partA/exceptions.h
 CMakeFiles/Ex3_part2.dir/partB/festival.cpp.obj: ../partB/base_event.h
+CMakeFiles/Ex3_part2.dir/partB/festival.cpp.obj: ../partB/closed_event.h
 CMakeFiles/Ex3_part2.dir/partB/festival.cpp.obj: ../partB/event_container.h
 CMakeFiles/Ex3_part2.dir/partB/festival.cpp.obj: ../partB/festival.cpp
 CMakeFiles/Ex3_part2.dir/partB/festival.cpp.obj: ../partB/festival.h

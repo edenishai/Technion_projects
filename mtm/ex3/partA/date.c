@@ -91,7 +91,7 @@ Date dateCopy(Date date){
     if(!date){
         return NULL;
     }
-    return dateCreate(((Date)date)->day,findNumOfMonth(((Date)date)->month),((Date)date)->year);
+    return dateCreate(date->day,findNumOfMonth(date->month),date->year);
 }
 
 bool dateGet(Date date, int* day, int* month, int* year){
@@ -121,11 +121,11 @@ bool dateIsValid(Date date){
 
 //fixed
 int dateCompare(Date first_date, Date second_date){
-    if (!dateIsValid((Date)first_date) || !dateIsValid((Date)second_date)) {
+    if (!dateIsValid(first_date) || !dateIsValid(second_date)) {
         return 0;
     }
-    int date1=dateToDays((Date)first_date);
-    int date2=dateToDays((Date)second_date);
+    int date1=dateToDays(first_date);
+    int date2=dateToDays(second_date);
     return date1-date2;
 }
 
