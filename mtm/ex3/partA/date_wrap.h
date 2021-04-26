@@ -1,61 +1,61 @@
 #ifndef DATE_WRAP_H_
 #define DATE_WRAP_H_
 
-//#include "exceptions.h"
 #include <iostream>
 
-extern "C" {
- #include "date.h"
+extern "C" 
+{
+    #include "date.h"
 }
-using std::ostream;
 
-namespace mtm{
-class DateWrap{
-    Date date;
+namespace mtm
+{
 
-    static bool dateIsValid(int day,int month){
-        if(day<1||day>30||month<1||month>12){
-            return false;
-        }
-        return true;
-    }
+    const int MAX_DAY=30;
+    const int MIN_DAY=1;
+    const int MAX_MONTH=12;
+    const int MIN_MONTH=1;
 
-public:
+    class DateWrap
+    {
+        
+        Date date;
 
-    DateWrap(const int day,const int month,const int year);
-    DateWrap(const DateWrap& date_to_copy);
-//    DateWrap(int days);
-    int day() const;
-    int month() const;
-    int year() const;
-    friend ostream& operator<<(ostream& os,const DateWrap& date);
-    bool operator>(const DateWrap& cmp_date) const;
-    bool operator<(const DateWrap& cmp_date) const;//fix
-    DateWrap operator++(int);
-    DateWrap& operator=(const DateWrap& date_to_enter);
-    ~DateWrap();
-/*    int dateToInt()const;*/
-    DateWrap& operator+=(int days);
+        /**
+        * A static function to help us check if the date is valid or not.
+        */
+        static bool dateIsValid(int day,int month);
 
-//    friend DateWrap operator+(const DateWrap& date1,const DateWrap& date2);//    To check!!!
-};
+    public:
 
-bool operator==(const DateWrap& date1,const DateWrap& date2);
+        DateWrap(int day,int month,int year);
+        DateWrap(const DateWrap& date_to_copy);
+        ~DateWrap();
+        int day() const;
+        int month() const;
+        int year() const;
+        bool operator>(const DateWrap& cmp_date) const;
+        bool operator<(const DateWrap& cmp_date) const;
+        DateWrap operator++(int);
+        DateWrap& operator=(const DateWrap& date_to_enter);
+        DateWrap& operator+=(int days);
 
-bool operator>=(const DateWrap& date1,const DateWrap& date2);
+    };
 
-bool operator<=(const DateWrap& date1,const DateWrap& date2);
+    std::ostream& operator<<(std::ostream& os,const DateWrap& date);
 
-bool operator!=(const DateWrap& date1,const DateWrap& date2);
+    bool operator==(const DateWrap& date1,const DateWrap& date2);
 
-int dateToInt(DateWrap date);
+    bool operator>=(const DateWrap& date1,const DateWrap& date2);
 
-DateWrap operator+(int days,DateWrap date);
+    bool operator<=(const DateWrap& date1,const DateWrap& date2);
 
-DateWrap operator+(DateWrap date,int days);
+    bool operator!=(const DateWrap& date1,const DateWrap& date2);
 
-/*
-DateWrap operator+(const int, const DateWrap& date);
-*/
+    DateWrap operator+(int days,const DateWrap& date);
+
+    DateWrap operator+(const DateWrap& date,int days);
+
 }
-#endif
+
+#endif /* DATE_WRAP_H */

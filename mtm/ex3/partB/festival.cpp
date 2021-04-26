@@ -1,18 +1,21 @@
 #include "festival.h"
-using mtm::Festival;
 
-using mtm::DateMismatch;
+namespace mtm
+{
 
-Festival::Festival(DateWrap date):
-    EventContainer(), date(date) {
-}
+    Festival::Festival(const DateWrap& date):
+        EventContainer(), date(date) { }
 
-void Festival::add(const BaseEvent& event) {
-    const DateWrap& event_date = event.getDate();
-    if(event_date != date) {
-        throw DateMismatch();
+    void Festival::add(const BaseEvent& event) 
+    {
+        const DateWrap& event_date = event.getDate();
+        if(event_date != date) 
+        {
+            throw DateMismatch();
+        }
+        BaseEvent* copy = event.clone();
+        pointers_vector.add(copy);
+        this->events_list.insert(*copy);
     }
-    BaseEvent* copy = event.clone();
-    *copy = event;
-    this->events_list.insert(*copy);
+
 }

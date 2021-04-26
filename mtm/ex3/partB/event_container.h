@@ -3,17 +3,30 @@
 
 #include "base_event.h"
 #include "linked_list.h"
-using mtm::BaseEvent;
+#include "ptr_vector.h"
 
-namespace mtm {
-    class EventContainer {
+namespace mtm 
+{
+
+    class EventContainer 
+    {
+
     protected:
+
         LinkedList<BaseEvent&> events_list;
+        PtrVector pointers_vector;
+    
     public:
-        class EventIterator {
+
+        class EventIterator 
+        {
+        
         protected:
+        
             Node<BaseEvent&>* iterator;
+        
         public:
+        
             EventIterator();
             EventIterator(Node<BaseEvent&>* node);
             EventIterator(const EventIterator& event_iter);
@@ -24,16 +37,17 @@ namespace mtm {
             bool operator==(const EventIterator& event_iter) const;
             bool operator!=(const EventIterator& event_iter) const;
             friend class EventContainer;
-            //friend class Schedule;
+        
         };
 
         EventContainer();
+        ~EventContainer();
         virtual void add(const BaseEvent& event) = 0;
-
-        EventIterator begin();
+        EventIterator begin() const;
         EventIterator end();
-        EventIterator getNext();
+    
     };
+
 }
 
 #endif /* EVENT_CONTAINER_H */

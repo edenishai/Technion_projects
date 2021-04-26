@@ -1,47 +1,72 @@
 #include "exceptions.h"
 
-namespace mtm {
-    const string InvalidDate::what() {
+namespace mtm 
+{
+
+    using std::string; 
+
+    const string InvalidDate::what() 
+    {
         return string("InvalideDate");
     }
 
-    const string NegativeDays::what() {
+    const string NegativeDays::what() 
+    {
         return string("NegativeDays");
     }
 
-    const string DateMismatch::what() {
+    const string DateMismatch::what() 
+    {
         return string("DateMismatch");
     }
 
-    const string InvalidStudent::what() {
+    const string InvalidStudent::what() 
+    {
         return string("InvalidStudent");
     }
 
-    const string AlreadyRegistered::what() {
+    const string AlreadyRegistered::what() 
+    {
         return string("AlreadyRegistered");
     }
 
-    const string RegistrationBlocked::what() {
+    const string RegistrationBlocked::what() 
+    {
         return string("RegistrationBlocked");
     }
 
-    const string NotRegistered::what() {
+    const string NotRegistered::what() 
+    {
         return string("NotRegistered");
     }
 
-    const string AlreadyInvited::what() {
+    const string AlreadyInvited::what() 
+    {
         return string("AlreadyInvited");
     }
 
-    const string NotSupported::what() {
+    const string NotSupported::what() 
+    {
         return string("NotSupported");
     }
 
-    const string InvalidNumber::what() {
+    const string InvalidNumber::what() 
+    {
         return string("InvalidNumber");
     }
 
-    const string InvalidInterval::what() {
+    const string InvalidInterval::what() 
+    {
         return string("InvalidInterval");
+    }
+
+    const string EventAlreadyExists::what() 
+    {
+        return string("EventAlreadyExists");
+    } 
+
+    const string EventDoesNotExist::what() 
+    {
+        return string("EventDoesNotExist");
     }
 }
