@@ -10,7 +10,7 @@ namespace mtm{
     using std::ostream;
 
     /**
-     * A generic liked list for lists of events and members.
+     * A generic linked list for lists of events and members.
      */
     template<typename T>
     class LinkedList 
