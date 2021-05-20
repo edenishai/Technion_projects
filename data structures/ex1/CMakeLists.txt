@@ -1,11 +1,14 @@
-cmake_minimum_required(VERSION 3.0.0)
-project(hi VERSION 0.1.0)
+cmake_minimum_required(VERSION 3.17)
+project(Data_Struct_1_HW_1)
 
-include(CTest)
-enable_testing()
+set(CMAKE_CXX_STANDARD 11)
 
-add_executable(hi AVLTreeTest.cpp)
-
-set(CPACK_PROJECT_NAME ${PROJECT_NAME})
-set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
-include(CPack)
+add_executable(Data_Struct_1_HW_1 main.cpp
+        AVL_tree.h
+        car_element.h
+        CarDealershipManager.h
+        model_element.h
+        library.cpp
+        library.h
+        reset_car_element.h
+        sale_element.h)
