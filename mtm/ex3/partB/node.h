@@ -15,7 +15,7 @@ namespace mtm{
     public:
     
         Node(const T& data);
-        Node(const Node& node = NULL);
+        Node(const Node& node);
 
         /**
          * Returns the data of the node
