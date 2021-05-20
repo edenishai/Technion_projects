@@ -206,7 +206,7 @@ int main(){
 	tree.display();
 	tree.clear();
 	
-	/*
+	
 	std::vector<int> vector;
 	 for (int i=1; i<=100; i++) vector.push_back(i);
 
@@ -229,7 +229,6 @@ int main(){
 		 tree.display();
 		 std::cout << '\n';
 	}
-	*/
 
 	return 0;
 }

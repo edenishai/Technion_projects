@@ -61,7 +61,6 @@ CarElement::~CarElement()
 
 bool CarElement::operator==(const CarElement &other) const
 {
-    //todo: should we add check for car sales and cas models?
     if (this->typeID_ == other.typeID_
         && this->numOfModels_ == other.numOfModels_)
         return true;

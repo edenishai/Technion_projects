@@ -33,8 +33,8 @@ bool ModelElement::operator>(const ModelElement &other) const
             if (this->modelID_ > other.modelID_)
                 return true;
         }
-    } else
-        return false;
+    }
+    return false;
 }
 
 bool ModelElement::operator<(const ModelElement &other) const
@@ -48,8 +48,8 @@ bool ModelElement::operator<(const ModelElement &other) const
             if (this->modelID_ < other.modelID_)
                 return true;
         }
-    } else
-        return false;
+    }
+    return false;
 }
 
 bool ModelElement::operator==(const ModelElement &other) const
