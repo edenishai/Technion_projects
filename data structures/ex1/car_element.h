@@ -6,7 +6,8 @@
 
 class CarElement {
 public:
-    //to add compare and operators.
+    SaleElement *carSales_;
+
     CarElement(int typeID, int numOfModels);
 
     CarElement(int typeID) : typeID_(typeID)
@@ -14,20 +15,11 @@ public:
 
     ~CarElement();
 
-    void setCarSales(SaleElement *carSales)
-    { carSales_ = carSales; }
-
     int getTypeID() const
     { return typeID_; }
 
     int getNumOfModels() const
     { return numOfModels_; }
-
-    const SaleElement &getCarSales()
-    { return *carSales_; }
-
-    AVLNode<SaleElement> *getCarSalesParentNode()
-    { return (carSales_)->getContainerNode(); }
 
     ModelElement **getCarModels()
     { return carModels_; }
@@ -41,8 +33,9 @@ public:
 private:
     int typeID_;
     int numOfModels_;
-    SaleElement *carSales_;
-    ModelElement **carModels_;  //operator ==
+    
+    ModelElement **carModels_;
+
 };
 
 CarElement::CarElement(int typeID, int numOfModels) :
@@ -55,14 +48,14 @@ CarElement::CarElement(int typeID, int numOfModels) :
 
 CarElement::~CarElement()
 {
-    delete carSales_; //???
-    carSales_->getTypeID();
+    for (int i = 0; i < numOfModels_; i++)
+        delete carModels_[i];
+    delete[] carModels_;
 }
 
 bool CarElement::operator==(const CarElement &other) const
 {
-    if (this->typeID_ == other.typeID_
-        && this->numOfModels_ == other.numOfModels_)
+    if (this->typeID_ == other.typeID_)
         return true;
     return false;
 }

@@ -44,8 +44,7 @@ ResetCarElement::~ResetCarElement() {
 
 bool ResetCarElement::operator==(const ResetCarElement &other) const
 {
-    if (this->typeID_ == other.typeID_
-        && this->numOfModels_ == other.numOfModels_)
+    if (this->typeID_ == other.typeID_)
         return true;
     return false;
 }

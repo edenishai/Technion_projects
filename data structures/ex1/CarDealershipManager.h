@@ -48,7 +48,7 @@ StatusType CarDealershipManager::AddCarType(int typeID, int numOfModels) {
     }
     SaleElement* saleElement = new SaleElement(typeID);
     salesTree_.insert(*saleElement);
-    carElement->setCarSales(saleElement);
+    carElement->carSales_ = saleElement;
     carsTree_.insert(*carElement);
     resetCarsTree_.insert(*(new ResetCarElement(typeID, numOfModels)));
 
@@ -62,7 +62,7 @@ StatusType CarDealershipManager::RemoveCarType(int typeID) {
     if (!toDelete)
         return FAILURE;
     resetCarsTree_.remove(ResetCarElement(typeID));
-    salesTree_.remove(toDelete->getCarSales());
+    salesTree_.remove(*(toDelete->carSales_));
     ModelElement** carModels = toDelete->getCarModels();
     for (int i = 0; i < toDelete->getNumOfModels(); i++) {
         if (carModels[i])
