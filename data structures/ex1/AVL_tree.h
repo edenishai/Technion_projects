@@ -56,7 +56,7 @@ public:
 
     int currentSize() const;
 
-    void inorderNObjects(T **output_target, int n);
+    void inorderNObjects(T *output_target, int n);
 
 private:
     AVLNode<T> *root_;
@@ -89,7 +89,7 @@ private:
 
     T *find_aux(AVLNode<T> *root, const T &data) const;
 
-    void inorderNObjects_aux(AVLNode<T> *node, T **output_target, int *i, int *n);
+    void inorderNObjects_aux(AVLNode<T> *node, T *output_target, int *i, int *n);
 
 };
 
@@ -344,7 +344,7 @@ int AVLTree<T>::currentSize() const
 }
 
 template<class T>
-void AVLTree<T>::inorderNObjects(T **output_target, int n)
+void AVLTree<T>::inorderNObjects(T *output_target, int n)
 {
     int amount = n;
     int i = 0;
@@ -352,14 +352,14 @@ void AVLTree<T>::inorderNObjects(T **output_target, int n)
 }
 
 template<class T>
-void AVLTree<T>::inorderNObjects_aux(AVLNode<T> *node, T **output_target, int *i, int *n)
+void AVLTree<T>::inorderNObjects_aux(AVLNode<T> *node, T *output_target, int *i, int *n)
 {
     // return if the current node is empty
     if (node == nullptr || (*i) == (*n)) {
         return;
     }
     inorderNObjects_aux(node->left, output_target, &(++(*i)), n);
-    output_target[i] = node->getData();
+    output_target[(*i)] = node->getData();
     inorderNObjects_aux(node->right, output_target, &(++(*i)), n);
 }
 

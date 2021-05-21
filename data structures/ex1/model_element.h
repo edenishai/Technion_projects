@@ -3,6 +3,8 @@
 
 class ModelElement {
 public:
+    ModelElement();
+
     ModelElement(int typeID, int modelID);
 
     bool operator>(const ModelElement &other) const;
@@ -82,6 +84,11 @@ int ModelElement::getGrade() const
 int ModelElement::getModel() const
 {
     return this->modelID_;
+}
+
+ModelElement::ModelElement()
+{
+
 }
 
 

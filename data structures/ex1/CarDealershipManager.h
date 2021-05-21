@@ -111,39 +111,39 @@ StatusType CarDealershipManager::GetWorstModels(int numOfModels, int *types_targ
         return INVALID_INPUT;
     }
     //read from models
-    ModelElement** models_source = new ModelElement*[numOfModels];
+    ModelElement models_source[numOfModels];
     this->modelsTree_.inorderNObjects(models_source,numOfModels);
     int index = 0;
     for (int i = 0; i < numOfModels && index<numOfModels; i++) {
-        if (models_source[i]->getGrade() < 0) {
-            types_target[index] = models_source[i]->getTypeId();
-            models_target[index] = models_source[i]->getModel();
+        if (models_source[i].getGrade() < 0) {
+            types_target[index] = models_source[i].getTypeId();
+            models_target[index] = models_source[i].getModel();
             index++;
         } else
             break;
     }
 
     //read from reset
-    ResetCarElement** cars_source = new ResetCarElement*[numOfModels];
+    ResetCarElement cars_source[numOfModels];
     this->resetCarsTree_.inorderNObjects(cars_source,numOfModels);
     for (int i = 0; i < numOfModels && index<numOfModels; i++) {
         //read from subtree
-        int sub_model_amount = cars_source[i]->getCurrentNumOfModels();
-        AVLTree<ModelElement> sub_models = cars_source[i]->getModlesTree();
-        ModelElement* sub_models_source[numOfModels];
+        int sub_model_amount = cars_source[i].getCurrentNumOfModels();
+        AVLTree<ModelElement> sub_models = cars_source[i].getModlesTree();
+        ModelElement sub_models_source[numOfModels];
         sub_models.inorderNObjects(sub_models_source,numOfModels);
         for (int i = 0; i < sub_model_amount && index<numOfModels; i++)
         {
-            types_target[index] = sub_models_source[i]->getTypeId();
-            models_target[index] = sub_models_source[i]->getModel();
+            types_target[index] = sub_models_source[i].getTypeId();
+            models_target[index] = sub_models_source[i].getModel();
             index++;
         }
     }
 
     //reread from models
     for (int i = index; i < numOfModels && index<numOfModels; i++) {
-        types_target[index] = models_source[i]->getTypeId();
-        models_target[index] = models_source[i]->getModel();
+        types_target[index] = models_source[i].getTypeId();
+        models_target[index] = models_source[i].getModel();
         index++;
     }
     return SUCCESS;
