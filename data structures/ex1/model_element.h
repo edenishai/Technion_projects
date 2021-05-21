@@ -3,6 +3,8 @@
 
 class ModelElement {
 public:
+    ModelElement();
+
     ModelElement(int typeID, int modelID);
 
     bool operator>(const ModelElement &other) const;
@@ -10,6 +12,12 @@ public:
     bool operator<(const ModelElement &other) const;
 
     bool operator==(const ModelElement &other) const;
+
+    int getTypeId() const;
+
+    int getGrade() const;
+
+    int getModel() const;
 
 private:
     int typeID_;
@@ -62,5 +70,26 @@ bool ModelElement::operator==(const ModelElement &other) const
     } else
         return false;
 }
+
+int ModelElement::getTypeId() const
+{
+    return this->typeID_;
+}
+
+int ModelElement::getGrade() const
+{
+    return this->grade_;
+}
+
+int ModelElement::getModel() const
+{
+    return this->modelID_;
+}
+
+ModelElement::ModelElement()
+{
+
+}
+
 
 #endif /* MODEL_ELEMENT_H */
