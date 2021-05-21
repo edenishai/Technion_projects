@@ -8,6 +8,9 @@
 #include "model_element.h"
 #include "library.h"
 
+const int SELL_POINTS = 10;
+const int COMPLAINT_POINTS = 100;
+
 class CarDealershipManager {
 public:
     CarDealershipManager();
@@ -31,11 +34,11 @@ private:
     AVLTree<CarElement> carsTree_;
     AVLTree<ModelElement> modelsTree_;
     AVLTree<SaleElement> salesTree_;
-    SaleElement* maxSales_;
+
 };
 
 CarDealershipManager::CarDealershipManager():
-    resetCarsTree_(), carsTree_(), modelsTree_(), salesTree_(), maxSales_(NULL) {}
+    resetCarsTree_(), carsTree_(), modelsTree_(), salesTree_() {}
 
 //toDo: null check
 StatusType CarDealershipManager::AddCarType(int typeID, int numOfModels)
@@ -65,18 +68,16 @@ StatusType CarDealershipManager::RemoveCarType(int typeID)
         return FAILURE;
     resetCarsTree_.remove(ResetCarElement(typeID));
     salesTree_.remove(*(toDelete->carSales_));
-    ModelElement **carModels = toDelete->getCarModels();
+    ModelElement **carModels = toDelete->carModels_;
     for (int i = 0; i < toDelete->getNumOfModels(); i++) {
         if (carModels[i])
             modelsTree_.remove(*(carModels[i]));
     }
     carsTree_.remove(*toDelete);
-    maxSales_ = salesTree_.findMax();
     
     return SUCCESS;
 }
 
-//toDo
 StatusType CarDealershipManager::SellCar(int typeID, int modelID) 
 {
     if (typeID <= 0 || modelID < 0)
@@ -85,16 +86,34 @@ StatusType CarDealershipManager::SellCar(int typeID, int modelID)
     if (!carType)
         return FAILURE;
     ResetCarElement* resetCarType = resetCarsTree_.find(ResetCarElement(typeID, modelID));
+    ModelElement* resetModelType = NULL;
     if (resetCarType) {
-        resetCarType->resetModelsTree_.remove(ModelElement(typeID, modelID));
-        if (resetCarType->resetModelsTree_.currentSize() == 0)
-            resetCarsTree_.remove(*resetCarType);
+        resetModelType = resetCarType->resetModelsTree_.find(ModelElement(typeID, modelID));
+        if (resetModelType) {
+            ModelElement* newModel = new ModelElement(typeID, modelID, SELL_POINTS);
+            carType->carModels_[modelID] = newModel;
+            modelsTree_.insert(*newModel);
+            SaleElement* saleElement = new SaleElement(typeID, modelID, SELL_POINTS);
+            if (*saleElement > *(carType->carSales_)) {
+                salesTree_.remove(*(carType->carSales_));
+                carType->carSales_ = saleElement;
+                salesTree_.insert(*saleElement);
+            }
+        }
     }
-    else {
-        
-    }
-    //SaleElement saleElement(typeID, modelID, );
+    else if (!resetCarType || !resetModelType) {
+        ModelElement* newModel = new ModelElement(typeID, modelID, carType->carModels_[modelID]->getGrade()+SELL_POINTS);
+        modelsTree_.remove(*(carType->carModels_[modelID]));
+        carType->carModels_[modelID] = newModel;
+        modelsTree_.insert(*newModel);
 
+        SaleElement* saleElement = new SaleElement(typeID, modelID, carType->carSales_->getSales()+SELL_POINTS);
+        if (*saleElement > *(carType->carSales_)) {
+            salesTree_.remove(*(carType->carSales_));
+            carType->carSales_ = saleElement;
+            salesTree_.insert(*saleElement);
+        }
+    }
     return SUCCESS;
 }
 
@@ -115,12 +134,12 @@ StatusType CarDealershipManager::GetBestSellerModelByType(int typeID, int *model
 
     if (typeID > 0) {
         CarElement* car_element = this->carsTree_.find(CarElement(typeID));
-        SaleElement *best_seller_model = car_element->getBestSeller();
+        SaleElement *best_seller_model = car_element->carSales_;
         *modelID = best_seller_model->getModelId();
     } else
     {
         CarElement &car_element = this->carsTree_.getMostRight();
-        SaleElement *best_seller_model = car_element.getBestSeller();
+        SaleElement *best_seller_model = car_element.carSales_;
         *modelID = best_seller_model->getModelId();
     }
     return SUCCESS;

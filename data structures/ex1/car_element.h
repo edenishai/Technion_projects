@@ -8,6 +8,8 @@ class CarElement {
 public:
     SaleElement *carSales_;
 
+    ModelElement **carModels_;
+
     CarElement(int typeID, int numOfModels);
 
     CarElement(int typeID) : typeID_(typeID)
@@ -21,22 +23,15 @@ public:
     int getNumOfModels() const
     { return numOfModels_; }
 
-    ModelElement **getCarModels()
-    { return carModels_; }
-
     bool operator>(const CarElement &other) const;
 
     bool operator<(const CarElement &other) const;
 
     bool operator==(const CarElement &other) const;
 
-    SaleElement *getBestSeller();
-
 private:
     int typeID_;
     int numOfModels_;
-
-    ModelElement **carModels_;
 
 };
 
@@ -70,11 +65,6 @@ bool CarElement::operator>(const CarElement &other) const
 bool CarElement::operator<(const CarElement &other) const
 {
     return this->typeID_ < other.typeID_;
-}
-
-SaleElement *CarElement::getBestSeller()
-{
-    return carSales_;
 }
 
 #endif /* CAR_ELEMENT_H */

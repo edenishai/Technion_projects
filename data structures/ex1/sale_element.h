@@ -13,12 +13,14 @@ public:
     int getTypeID() const
     { return typeID_; }
 
+    int getSales() const
+    { return sales_; }
+
     bool operator>(const SaleElement &other) const;
 
     bool operator<(const SaleElement &other) const;
 
     bool operator==(const SaleElement &other) const;
-
 
     int getModelId() const;
 

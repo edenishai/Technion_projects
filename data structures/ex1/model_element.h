@@ -5,7 +5,7 @@ class ModelElement {
 public:
     ModelElement();
 
-    ModelElement(int typeID, int modelID);
+    ModelElement(int typeID, int modelID, int grade = 0);
 
     ~ModelElement() = default;
 
@@ -24,12 +24,11 @@ public:
 private:
     int typeID_;
     int modelID_;
-    int sales_;
     int grade_;
 };
 
-ModelElement::ModelElement(int typeID, int modelID) :
-        typeID_(typeID), modelID_(modelID), sales_(0), grade_(0)
+ModelElement::ModelElement(int typeID, int modelID, int grade) :
+    typeID_(typeID), modelID_(modelID), grade_(0)
 {}
 
 bool ModelElement::operator>(const ModelElement &other) const
@@ -84,7 +83,7 @@ int ModelElement::getModel() const
 {
     return this->modelID_;
 }
-
+//default?
 ModelElement::ModelElement()
 {
 
