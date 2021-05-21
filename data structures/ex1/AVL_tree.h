@@ -120,8 +120,11 @@ void AVLTree<T>::insert(const T &data)
 template<class T>
 void AVLTree<T>::remove(const T &data)
 {
+    if (find(data))
+        --current_size_;
     root_ = remove_aux(data, root_);
-    --current_size_;
+    last_right_ = findMax_aux(root_);
+    last_left_ = findMin_aux(root_);
 }
 
 template<class T>

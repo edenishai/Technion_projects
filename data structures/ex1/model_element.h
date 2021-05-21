@@ -5,7 +5,9 @@ class ModelElement {
 public:
     ModelElement();
 
-    ModelElement(int typeID, int modelID);
+    ModelElement(int typeID, int modelID, int grade = 0);
+
+    ~ModelElement() = default;
 
     bool operator>(const ModelElement &other) const;
 
@@ -26,12 +28,11 @@ public:
 private:
     int typeID_;
     int modelID_;
-    int sales_;
     int grade_;
 };
 
-ModelElement::ModelElement(int typeID, int modelID) :
-        typeID_(typeID), modelID_(modelID), sales_(0), grade_(0)
+ModelElement::ModelElement(int typeID, int modelID, int grade) :
+    typeID_(typeID), modelID_(modelID), grade_(0)
 {}
 
 bool ModelElement::operator>(const ModelElement &other) const
@@ -67,12 +68,9 @@ bool ModelElement::operator<(const ModelElement &other) const
 bool ModelElement::operator==(const ModelElement &other) const
 {
     if (this->typeID_ == other.typeID_
-        && this->modelID_ == other.modelID_
-        && this->sales_ == other.sales_
-        && this->grade_ == other.grade_) {
+        && this->modelID_ == other.modelID_)
         return true;
-    } else
-        return false;
+    return false;
 }
 
 int ModelElement::getTypeId() const
@@ -89,7 +87,7 @@ int ModelElement::getModel() const
 {
     return this->modelID_;
 }
-
+//default?
 ModelElement::ModelElement()
 {
 
