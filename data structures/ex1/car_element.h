@@ -28,7 +28,9 @@ public:
     bool operator<(const CarElement &other) const;
 
     bool operator==(const CarElement &other) const;
-
+  
+    SaleElement *getBestSeller();
+    ModelElement *getModel(int i);
 private:
     int typeID_;
     int numOfModels_;
@@ -67,4 +69,19 @@ bool CarElement::operator<(const CarElement &other) const
     return this->typeID_ < other.typeID_;
 }
 
+SaleElement *CarElement::getBestSeller()
+{
+    return carSales_;
+}
+
+ModelElement *CarElement::getModel(int i)
+{
+    if(i>numOfModels_)
+        return nullptr;
+    return carModels_[i];
+}
+
+}
+=======
 #endif /* CAR_ELEMENT_H */
+

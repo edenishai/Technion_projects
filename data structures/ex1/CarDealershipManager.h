@@ -122,7 +122,22 @@ StatusType CarDealershipManager::MakeComplaint(int typeID, int modelID, int t)
 {
     if (typeID <= 0 || modelID < 0)
         return INVALID_INPUT;
-    //...
+
+    CarElement *car = this->carsTree_.find(CarElement(typeID));
+    if (car == nullptr)
+        return FAILURE;
+
+    ModelElement *model_old = car->getModel(modelID);
+    if (model_old == nullptr)
+        return FAILURE;
+
+    //out with the old
+    ModelElement *model_new = model_old->clone();
+    modelsTree_.remove(*model_old);
+    //in with the new :)
+    model_new->reciveComplaint(t);
+    modelsTree_.insert(*model_new);
+
     return SUCCESS;
 }
 
@@ -133,11 +148,11 @@ StatusType CarDealershipManager::GetBestSellerModelByType(int typeID, int *model
         return INVALID_INPUT;
 
     if (typeID > 0) {
-        CarElement* car_element = this->carsTree_.find(CarElement(typeID));
-        SaleElement *best_seller_model = car_element->carSales_;
+        CarElement *car_element = this->carsTree_.find(CarElement(typeID));
+        SaleElement *best_seller_model = car_element->getBestSeller()
+
         *modelID = best_seller_model->getModelId();
-    } else
-    {
+    } else {
         CarElement &car_element = this->carsTree_.getMostRight();
         SaleElement *best_seller_model = car_element.carSales_;
         *modelID = best_seller_model->getModelId();
@@ -163,7 +178,7 @@ StatusType CarDealershipManager::GetWorstModels(int numOfModels, int *types_targ
         } else
             break;
     }
-
+    //todo:add care for object with grade zero
     //read from reset
     ResetCarElement cars_source[numOfModels];
     this->resetCarsTree_.inorderNObjects(cars_source, numOfModels);
