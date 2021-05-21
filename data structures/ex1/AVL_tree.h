@@ -60,7 +60,7 @@ public:
 
     T& getMostRight();
 
-    void getInOrder(T* array, int size) const;
+    int getInOrder(T* array, int size) const;
 
 private:
     AVLNode<T> *root_;
@@ -389,10 +389,11 @@ void AVLTree<T>::inorderNObjects_aux(AVLNode<T> *node, T *output_target, int *i,
 }
 
 template<class T>
-void AVLTree<T>::getInOrder(T* array, int size) const 
+int AVLTree<T>::getInOrder(T* array, int size) const 
 {
     size = min(size, this->current_size_);
     getInOrder(root_, array, size);
+    return size;
 }
 
 template<class T>

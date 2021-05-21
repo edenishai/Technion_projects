@@ -32,7 +32,7 @@ private:
     AVLTree<ModelElement> modelsTree_;
     AVLTree<SaleElement> salesTree_;
 
-    void merge(int a[], int na, int b[], int nb, int c[]);
+    void merge(ModelElement a[], int na, ModelElement b[], int nb, ModelElement c[]);
 };
 
 #endif /* CAR_DEALERSHIP_MANAGER_H */

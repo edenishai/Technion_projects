@@ -62,6 +62,9 @@ StatusType CarDealershipManager::SellCar(int typeID, int modelID)
                 carType->carSales_ = saleElement;
                 salesTree_.insert(*saleElement);
             }
+            resetCarType->resetModelsTree_.remove(*resetModelType);
+            if (resetCarType->resetModelsTree_.currentSize() == 0) 
+                resetCarsTree_.remove(*resetCarType);
         }
     }
     else if (!resetCarType || !resetModelType) {
@@ -122,48 +125,28 @@ StatusType CarDealershipManager::GetBestSellerModelByType(int typeID, int *model
     return SUCCESS;
 }
 
-//TODO:ADD check we have enough elements in total + check memory fail
 StatusType CarDealershipManager::GetWorstModels(int numOfModels, int *types_target, int *models_target)
 {
     if (numOfModels <= 0) {
         return INVALID_INPUT;
     }
-    //read from models
     ModelElement models_source[numOfModels];
-    this->modelsTree_.getInOrder(models_source, numOfModels);
+    int models = modelsTree_.getInOrder(models_source, numOfModels);
     
-    //to replace with merge (added)
-
-    for (int i = 0, j = 0 ; i < numOfModels && j < numOfModels; i++, j++) {
-        if (models_source[i].getGrade() < 0) {
-            types_target[j] = models_source[i].getTypeId();
-            models_target[j] = models_source[i].getModel();
-            //index++;
-        } else
-            break;
+    ResetCarElement reset_cars[numOfModels];
+    ModelElement reset_models_source[numOfModels];
+    int cars = resetCarsTree_.getInOrder(reset_cars, numOfModels);
+    int reset_models, i;
+    for (reset_models = i = 0; reset_models <= numOfModels && i < resetCarsTree_.currentSize() && i < numOfModels; ++i) {
+        reset_models += reset_cars[i].resetModelsTree_.getInOrder(reset_models_source+reset_models, numOfModels);
     }
-    //todo:add care for object with grade zero
-    //read from reset
-    ResetCarElement cars_source[numOfModels];
-    this->resetCarsTree_.getInOrder(cars_source, numOfModels);
-    for (int i = 0; i < numOfModels && index < numOfModels; i++) {
-        //read from subtree
-        int sub_model_amount = cars_source[i].getCurrentNumOfModels();
-        AVLTree<ModelElement> sub_models = cars_source[i].getModlesTree();
-        ModelElement sub_models_source[numOfModels];
-        sub_models.getInOrder(sub_models_source, numOfModels);
-        for (int i = 0; i < sub_model_amount && index < numOfModels; i++) {
-            types_target[index] = sub_models_source[i].getTypeId();
-            models_target[index] = sub_models_source[i].getModel();
-            index++;
-        }
-    }
+    reset_models = std::min(reset_models, numOfModels);
+    ModelElement all_models_source[std::min(models+reset_models, numOfModels)];
+    merge(models_source, models, reset_models_source, reset_models, all_models_source);
 
-    //reread from models
-    for (int i = index; i < numOfModels && index < numOfModels; i++) {
-        types_target[index] = models_source[i].getTypeId();
-        models_target[index] = models_source[i].getModel();
-        index++;
+    for (int i = 0; i < numOfModels && i < std::min(models+reset_models, numOfModels); i++) {
+        types_target[i] = all_models_source[i].getTypeId();
+        models_target[i] = all_models_source[i].getModel();
     }
     return SUCCESS;
 }
@@ -176,12 +159,13 @@ CarDealershipManager::~CarDealershipManager()
     this->salesTree_.clear();
 }
 
-void CarDealershipManager::merge(int a[], int na, int b[], int nb, int c[])
+void CarDealershipManager::merge(ModelElement a[], int na, ModelElement b[], int nb, ModelElement c[])
 {
     int ia, ib, ic;
     for(ia = ib = ic = 0; (ia < na) && (ib < nb); ic++) {
         if(a[ia] < b[ib]) {
             c[ic] = a[ia];
+            ia++;
         }
         else {
             c[ic] = b[ib];
@@ -191,4 +175,3 @@ void CarDealershipManager::merge(int a[], int na, int b[], int nb, int c[])
     for(;ia < na; ia++, ic++) c[ic] = a[ia];
     for(;ib < nb; ib++, ic++) c[ic] = b[ib];
 }
-
