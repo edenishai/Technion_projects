@@ -9,10 +9,7 @@ class ResetCarElement {
 public:
     AVLTree<ModelElement> resetModelsTree_;
 
-    ResetCarElement(int typeID, int numOfModels);
-
-    ResetCarElement(int typeID) : typeID_(typeID)
-    {}
+    ResetCarElement(int typeID, int numOfModels = 0);
 
     ResetCarElement()
     {}

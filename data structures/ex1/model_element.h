@@ -98,9 +98,8 @@ ModelElement *ModelElement::clone()
     ModelElement* to_return = new ModelElement();
     to_return->modelID_ = this->modelID_;
     to_return->typeID_ = this->typeID_;
-    to_return->sales_ = this->sales_;
     to_return->grade_ = this->grade_;
-     return to_return;
+    return to_return;
 }
 
 void ModelElement::reciveComplaint(int months)

@@ -81,7 +81,6 @@ ModelElement *CarElement::getModel(int i)
     return carModels_[i];
 }
 
-}
-=======
+
 #endif /* CAR_ELEMENT_H */
 

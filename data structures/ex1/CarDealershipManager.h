@@ -149,7 +149,7 @@ StatusType CarDealershipManager::GetBestSellerModelByType(int typeID, int *model
 
     if (typeID > 0) {
         CarElement *car_element = this->carsTree_.find(CarElement(typeID));
-        SaleElement *best_seller_model = car_element->getBestSeller()
+        SaleElement *best_seller_model = car_element->carSales_;
 
         *modelID = best_seller_model->getModelId();
     } else {
