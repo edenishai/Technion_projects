@@ -8,9 +8,6 @@
 #include "model_element.h"
 #include "library.h"
 
-const int SELL_POINTS = 10;
-const int COMPLAINT_POINTS = 100;
-
 class CarDealershipManager {
 public:
     CarDealershipManager();
@@ -35,6 +32,7 @@ private:
     AVLTree<ModelElement> modelsTree_;
     AVLTree<SaleElement> salesTree_;
 
+    void merge(int a[], int na, int b[], int nb, int c[]);
 };
 
 #endif /* CAR_DEALERSHIP_MANAGER_H */

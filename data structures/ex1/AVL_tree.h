@@ -35,7 +35,7 @@ private:
 template<class T>
 class AVLTree {
 public:
-    AVLTree() : root_(NULL)
+    AVLTree() : root_(NULL), current_size_(0)
     {}
 
     ~AVLTree();
@@ -60,6 +60,8 @@ public:
 
     T& getMostRight();
 
+    void getInOrder(T* array, int size) const;
+
 private:
     AVLNode<T> *root_;
 
@@ -68,6 +70,8 @@ private:
     AVLNode<T>* last_right_;
 
     AVLNode<T>* last_left_;
+
+    void getInOrder(AVLNode<T> *root, T* array, int size) const;
 
     AVLNode<T> *remove_aux(const T &data, AVLNode<T> *node);
 
@@ -110,6 +114,8 @@ AVLTree<T>::~AVLTree()
 template<class T>
 void AVLTree<T>::insert(const T &data)
 {
+    if (find(data))
+        --current_size_;
     root_ = insert_aux(data, root_);
     ++current_size_;
     this->last_right_ = findMax_aux(root_);
@@ -380,6 +386,23 @@ void AVLTree<T>::inorderNObjects_aux(AVLNode<T> *node, T *output_target, int *i,
     inorderNObjects_aux(node->left, output_target, &(++(*i)), n);
     output_target[(*i)] = node->getData();
     inorderNObjects_aux(node->right, output_target, &(++(*i)), n);
+}
+
+template<class T>
+void AVLTree<T>::getInOrder(T* array, int size) const 
+{
+    size = min(size, this->current_size_);
+    getInOrder(root_, array, size);
+}
+
+template<class T>
+void AVLTree<T>::getInOrder(AVLNode<T> *root, T* array, int size) const
+{
+    if (root && size > 0) {
+        getInOrder(root->left, array, size-1);
+        array[size-1] = root->getData();
+        getInOrder(root->right, array, size-1);
+    }
 }
 
 #endif /* AVL_TREE_H */

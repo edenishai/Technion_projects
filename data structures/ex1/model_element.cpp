@@ -1,7 +1,7 @@
 #include "model_element.h"
 
 ModelElement::ModelElement(int typeID, int modelID, int grade) :
-    typeID_(typeID), modelID_(modelID), grade_(0)
+    typeID_(typeID), modelID_(modelID), grade_(grade)
 {}
 
 bool ModelElement::operator>(const ModelElement &other) const
@@ -9,10 +9,10 @@ bool ModelElement::operator>(const ModelElement &other) const
     if (this->grade_ > other.grade_)
         return true;
     else if (this->grade_ == other.grade_) {
-        if (this->typeID_ > other.typeID_)
+        if (this->typeID_ < other.typeID_)
             return true;
         else if (this->typeID_ == other.typeID_) {
-            if (this->modelID_ > other.modelID_)
+            if (this->modelID_ < other.modelID_)
                 return true;
         }
     }
@@ -24,10 +24,10 @@ bool ModelElement::operator<(const ModelElement &other) const
     if (this->grade_ < other.grade_)
         return true;
     else if (this->grade_ == other.grade_) {
-        if (this->typeID_ < other.typeID_)
+        if (this->typeID_ > other.typeID_)
             return true;
         else if (this->typeID_ == other.typeID_) {
-            if (this->modelID_ < other.modelID_)
+            if (this->modelID_ > other.modelID_)
                 return true;
         }
     }
@@ -73,5 +73,5 @@ ModelElement *ModelElement::clone()
 
 void ModelElement::reciveComplaint(int months)
 {
-    grade_ -= (100/months);
+    grade_ -= (COMPLAINT_POINTS/months);
 }

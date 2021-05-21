@@ -1,6 +1,9 @@
 #ifndef MODEL_ELEMENT_H
 #define MODEL_ELEMENT_H
 
+const int SELL_POINTS = 10;
+const int COMPLAINT_POINTS = 100;
+
 class ModelElement {
 public:
     ModelElement();

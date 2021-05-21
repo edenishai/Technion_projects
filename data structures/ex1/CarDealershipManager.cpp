@@ -116,9 +116,8 @@ StatusType CarDealershipManager::GetBestSellerModelByType(int typeID, int *model
 
         *modelID = best_seller_model->getModelId();
     } else {
-        CarElement &car_element = this->carsTree_.getMostRight();
-        SaleElement *best_seller_model = car_element.carSales_;
-        *modelID = best_seller_model->getModelId();
+        SaleElement &best_seller_model = this->salesTree_.getMostRight();
+        *modelID = best_seller_model.getModelId();
     }
     return SUCCESS;
 }
@@ -131,26 +130,28 @@ StatusType CarDealershipManager::GetWorstModels(int numOfModels, int *types_targ
     }
     //read from models
     ModelElement models_source[numOfModels];
-    this->modelsTree_.inorderNObjects(models_source, numOfModels);
-    int index = 0;
-    for (int i = 0; i < numOfModels && index < numOfModels; i++) {
+    this->modelsTree_.getInOrder(models_source, numOfModels);
+    
+    //to replace with merge (added)
+
+    for (int i = 0, j = 0 ; i < numOfModels && j < numOfModels; i++, j++) {
         if (models_source[i].getGrade() < 0) {
-            types_target[index] = models_source[i].getTypeId();
-            models_target[index] = models_source[i].getModel();
-            index++;
+            types_target[j] = models_source[i].getTypeId();
+            models_target[j] = models_source[i].getModel();
+            //index++;
         } else
             break;
     }
     //todo:add care for object with grade zero
     //read from reset
     ResetCarElement cars_source[numOfModels];
-    this->resetCarsTree_.inorderNObjects(cars_source, numOfModels);
+    this->resetCarsTree_.getInOrder(cars_source, numOfModels);
     for (int i = 0; i < numOfModels && index < numOfModels; i++) {
         //read from subtree
         int sub_model_amount = cars_source[i].getCurrentNumOfModels();
         AVLTree<ModelElement> sub_models = cars_source[i].getModlesTree();
         ModelElement sub_models_source[numOfModels];
-        sub_models.inorderNObjects(sub_models_source, numOfModels);
+        sub_models.getInOrder(sub_models_source, numOfModels);
         for (int i = 0; i < sub_model_amount && index < numOfModels; i++) {
             types_target[index] = sub_models_source[i].getTypeId();
             models_target[index] = sub_models_source[i].getModel();
@@ -173,5 +174,21 @@ CarDealershipManager::~CarDealershipManager()
     this->carsTree_.clear();
     this->modelsTree_.clear();
     this->salesTree_.clear();
+}
+
+void CarDealershipManager::merge(int a[], int na, int b[], int nb, int c[])
+{
+    int ia, ib, ic;
+    for(ia = ib = ic = 0; (ia < na) && (ib < nb); ic++) {
+        if(a[ia] < b[ib]) {
+            c[ic] = a[ia];
+        }
+        else {
+            c[ic] = b[ib];
+            ib++;
+        }
+    }
+    for(;ia < na; ia++, ic++) c[ic] = a[ia];
+    for(;ib < nb; ib++, ic++) c[ic] = b[ib];
 }
 
