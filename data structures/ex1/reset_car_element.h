@@ -7,7 +7,8 @@
 
 class ResetCarElement {
 public:
-    //to add compare and operators.
+    AVLTree<ModelElement> resetModelsTree_;
+
     ResetCarElement(int typeID, int numOfModels);
 
     ResetCarElement(int typeID): typeID_(typeID) 
@@ -26,21 +27,24 @@ public:
 private:
     int typeID_;
     int numOfModels_;
-    AVLTree<ModelElement> resetModelsTree_;
+    
 };
 
 //to fix:the complexity should be O(numOfModels).
 ResetCarElement::ResetCarElement(int typeID, int numOfModels):
-    typeID_(typeID), numOfModels_(numOfModels), resetModelsTree_() {
-        for (int i = 0; i < numOfModels; i++) {
-            ModelElement* newModel = new ModelElement(typeID, i);
-            resetModelsTree_.insert(*newModel);
-        }
+    typeID_(typeID), numOfModels_(numOfModels), resetModelsTree_() 
+{
+    for (int i = 0; i < numOfModels; i++) {
+        ModelElement* newModel = new ModelElement(typeID, i);
+        resetModelsTree_.insert(*newModel);
+    }
 }
 
-ResetCarElement::~ResetCarElement() {
+ResetCarElement::~ResetCarElement() 
+{
     resetModelsTree_.clear();
 }
+
 
 bool ResetCarElement::operator==(const ResetCarElement &other) const
 {

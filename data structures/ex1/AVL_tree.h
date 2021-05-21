@@ -54,6 +54,8 @@ public:
 
     T *findMin() const;
 
+    bool isEmpty() const;
+
 private:
     AVLNode<T> *root_;
 
@@ -82,7 +84,7 @@ private:
     int height(AVLNode<T> *node) const;
 
     T *find_aux(AVLNode<T> *root, const T &data) const;
-
+    
 };
 
 template<class T>
@@ -118,6 +120,11 @@ template<class T>
 void AVLTree<T>::display() const
 {
     printInOrder(root_);
+}
+
+template<class T>
+bool AVLTree<T>::isEmpty() const {
+    return root_ == NULL;
 }
 
 template<class T>

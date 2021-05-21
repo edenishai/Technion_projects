@@ -5,6 +5,8 @@ class ModelElement {
 public:
     ModelElement(int typeID, int modelID);
 
+    ~ModelElement() = default;
+
     bool operator>(const ModelElement &other) const;
 
     bool operator<(const ModelElement &other) const;
@@ -55,12 +57,9 @@ bool ModelElement::operator<(const ModelElement &other) const
 bool ModelElement::operator==(const ModelElement &other) const
 {
     if (this->typeID_ == other.typeID_
-        && this->modelID_ == other.modelID_
-        && this->sales_ == other.sales_
-        && this->grade_ == other.grade_) {
+        && this->modelID_ == other.modelID_)
         return true;
-    } else
-        return false;
+    return false;
 }
 
 #endif /* MODEL_ELEMENT_H */

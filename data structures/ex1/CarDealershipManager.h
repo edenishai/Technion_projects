@@ -31,11 +31,11 @@ private:
     AVLTree<CarElement> carsTree_;
     AVLTree<ModelElement> modelsTree_;
     AVLTree<SaleElement> salesTree_;
-    SaleElement* maxSales;
+    SaleElement* maxSales_;
 };
 
 CarDealershipManager::CarDealershipManager():
-    resetCarsTree_(), carsTree_(), modelsTree_(), salesTree_(), maxSales(NULL) {}
+    resetCarsTree_(), carsTree_(), modelsTree_(), salesTree_(), maxSales_(NULL) {}
 
 //toDo: null check
 StatusType CarDealershipManager::AddCarType(int typeID, int numOfModels) {
@@ -69,16 +69,30 @@ StatusType CarDealershipManager::RemoveCarType(int typeID) {
             modelsTree_.remove(*(carModels[i]));
     }
     carsTree_.remove(*toDelete);
-    maxSales = salesTree_.findMax();
+    maxSales_ = salesTree_.findMax();
     
     return SUCCESS;
 }
 
 //toDo
-StatusType CarDealershipManager::SellCar(int typeID, int modelID) {
+StatusType CarDealershipManager::SellCar(int typeID, int modelID) 
+{
     if (typeID <= 0 || modelID < 0)
         return INVALID_INPUT;
-    //...
+    CarElement* carType = carsTree_.find(CarElement(typeID));
+    if (!carType)
+        return FAILURE;
+    ResetCarElement* resetCarType = resetCarsTree_.find(ResetCarElement(typeID, modelID));
+    if (resetCarType) {
+        resetCarType->resetModelsTree_.remove(ModelElement(typeID, modelID));
+        if (resetCarType->resetModelsTree_.isEmpty())
+            resetCarsTree_.remove(*resetCarType);
+    }
+    else {
+        
+    }
+    //SaleElement saleElement(typeID, modelID, );
+
     return SUCCESS;
 }
 
