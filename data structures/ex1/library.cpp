@@ -49,6 +49,6 @@ StatusType GetWorstModels(void *DS, int numOfModels, int *types, int *models) {
 }
 
 void Quit(void** DS) {
-    ((CarDealershipManager*)DS)->Quit();
+    delete DS;
 }
 

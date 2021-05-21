@@ -33,7 +33,7 @@ public:
 private:
     int typeID_;
     int numOfModels_;
-    
+
     ModelElement **carModels_;
 
 };

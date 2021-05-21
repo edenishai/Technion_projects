@@ -54,8 +54,14 @@ public:
 
     T *findMin() const;
 
+    int currentSize() const;
+
+    void inorderNObjects(T **output_target, int n);
+
 private:
     AVLNode<T> *root_;
+
+    int current_size_;
 
     AVLNode<T> *remove_aux(const T &data, AVLNode<T> *node);
 
@@ -68,7 +74,7 @@ private:
     AVLNode<T> *RL_Rotate(AVLNode<T> *node);
 
     int balanceFactor(AVLNode<T> *node) const;
-
+//todo: used for debugging
     void printInOrder(AVLNode<T> *root) const;
 
     AVLNode<T> *insert_aux(const T &data, AVLNode<T> *node);
@@ -82,6 +88,8 @@ private:
     int height(AVLNode<T> *node) const;
 
     T *find_aux(AVLNode<T> *root, const T &data) const;
+
+    void inorderNObjects_aux(AVLNode<T> *node, T **output_target, int *i, int *n);
 
 };
 
@@ -97,12 +105,14 @@ template<class T>
 void AVLTree<T>::insert(const T &data)
 {
     root_ = insert_aux(data, root_);
+    ++current_size_;
 }
 
 template<class T>
 void AVLTree<T>::remove(const T &data)
 {
     root_ = remove_aux(data, root_);
+    --current_size_;
 }
 
 template<class T>
@@ -112,6 +122,7 @@ void AVLTree<T>::clear()
         deepRemoveNode(root_);
     }
     root_ = NULL;
+    current_size_ = 0;
 }
 
 template<class T>
@@ -324,6 +335,32 @@ T *AVLTree<T>::findMin() const
 {
     AVLNode<T> *minNode = findMin(root_);
     return &(minNode->getData());
+}
+
+template<class T>
+int AVLTree<T>::currentSize() const
+{
+    return current_size_;
+}
+
+template<class T>
+void AVLTree<T>::inorderNObjects(T **output_target, int n)
+{
+    int amount = n;
+    int i = 0;
+    inorderNObjects_aux(root_, output_target, &i, &n);
+}
+
+template<class T>
+void AVLTree<T>::inorderNObjects_aux(AVLNode<T> *node, T **output_target, int *i, int *n)
+{
+    // return if the current node is empty
+    if (node == nullptr || (*i) == (*n)) {
+        return;
+    }
+    inorderNObjects_aux(node->left, output_target, &(++(*i)), n);
+    output_target[i] = node->getData();
+    inorderNObjects_aux(node->right, output_target, &(++(*i)), n);
 }
 
 #endif /* AVL_TREE_H */

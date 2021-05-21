@@ -20,33 +20,35 @@ public:
 
     StatusType MakeComplaint(int typeID, int modelID, int t);
 
-    StatusType GetBestSellerModelByType(int typeID, int * modelID);
+    StatusType GetBestSellerModelByType(int typeID, int *modelID);
 
     StatusType GetWorstModels(int numOfModels, int *types, int *models);
 
-    void Quit();
+    ~CarDealershipManager();
 
 private:
     AVLTree<ResetCarElement> resetCarsTree_;
     AVLTree<CarElement> carsTree_;
     AVLTree<ModelElement> modelsTree_;
     AVLTree<SaleElement> salesTree_;
-    SaleElement* maxSales;
+    SaleElement *maxSales;
 };
 
-CarDealershipManager::CarDealershipManager():
-    resetCarsTree_(), carsTree_(), modelsTree_(), salesTree_(), maxSales(NULL) {}
+CarDealershipManager::CarDealershipManager() :
+        resetCarsTree_(), carsTree_(), modelsTree_(), salesTree_(), maxSales(NULL)
+{}
 
 //toDo: null check
-StatusType CarDealershipManager::AddCarType(int typeID, int numOfModels) {
+StatusType CarDealershipManager::AddCarType(int typeID, int numOfModels)
+{
     if (numOfModels <= 0 || typeID <= 0)
         return INVALID_INPUT;
-    CarElement* carElement = new CarElement(typeID, numOfModels);
+    CarElement *carElement = new CarElement(typeID, numOfModels);
     if (carsTree_.find(*carElement) != NULL) {
         delete carElement;
         return FAILURE;
     }
-    SaleElement* saleElement = new SaleElement(typeID);
+    SaleElement *saleElement = new SaleElement(typeID);
     salesTree_.insert(*saleElement);
     carElement->carSales_ = saleElement;
     carsTree_.insert(*carElement);
@@ -55,27 +57,29 @@ StatusType CarDealershipManager::AddCarType(int typeID, int numOfModels) {
     return SUCCESS;
 }
 
-StatusType CarDealershipManager::RemoveCarType(int typeID) {
+StatusType CarDealershipManager::RemoveCarType(int typeID)
+{
     if (typeID <= 0)
         return INVALID_INPUT;
-    CarElement* toDelete = carsTree_.find(CarElement(typeID));
+    CarElement *toDelete = carsTree_.find(CarElement(typeID));
     if (!toDelete)
         return FAILURE;
     resetCarsTree_.remove(ResetCarElement(typeID));
     salesTree_.remove(*(toDelete->carSales_));
-    ModelElement** carModels = toDelete->getCarModels();
+    ModelElement **carModels = toDelete->getCarModels();
     for (int i = 0; i < toDelete->getNumOfModels(); i++) {
         if (carModels[i])
             modelsTree_.remove(*(carModels[i]));
     }
     carsTree_.remove(*toDelete);
     maxSales = salesTree_.findMax();
-    
+
     return SUCCESS;
 }
 
 //toDo
-StatusType CarDealershipManager::SellCar(int typeID, int modelID) {
+StatusType CarDealershipManager::SellCar(int typeID, int modelID)
+{
     if (typeID <= 0 || modelID < 0)
         return INVALID_INPUT;
     //...
@@ -83,7 +87,8 @@ StatusType CarDealershipManager::SellCar(int typeID, int modelID) {
 }
 
 //toDo
-StatusType CarDealershipManager::MakeComplaint(int typeID, int modelID, int t) {
+StatusType CarDealershipManager::MakeComplaint(int typeID, int modelID, int t)
+{
     if (typeID <= 0 || modelID < 0)
         return INVALID_INPUT;
     //...
@@ -91,25 +96,66 @@ StatusType CarDealershipManager::MakeComplaint(int typeID, int modelID, int t) {
 }
 
 //toDo
-StatusType CarDealershipManager::GetBestSellerModelByType(int typeID, int * modelID) {
+StatusType CarDealershipManager::GetBestSellerModelByType(int typeID, int *modelID)
+{
     if (typeID < 0)
         return INVALID_INPUT;
     //...
     return SUCCESS;
 }
 
-//toDo
-StatusType CarDealershipManager::GetWorstModels(int numOfModels, int *types, int *models) {
+//TODO:ADD check we have enough elements in total
+StatusType CarDealershipManager::GetWorstModels(int numOfModels, int *types_target, int *models_target)
+{
     if (numOfModels <= 0) {
         return INVALID_INPUT;
     }
-    //...
+    //read from models
+    ModelElement** models_source = new ModelElement*[numOfModels];
+    this->modelsTree_.inorderNObjects(models_source,numOfModels);
+    int index = 0;
+    for (int i = 0; i < numOfModels && index<numOfModels; i++) {
+        if (models_source[i]->getGrade() < 0) {
+            types_target[index] = models_source[i]->getTypeId();
+            models_target[index] = models_source[i]->getModel();
+            index++;
+        } else
+            break;
+    }
+
+    //read from reset
+    ResetCarElement** cars_source = new ResetCarElement*[numOfModels];
+    this->resetCarsTree_.inorderNObjects(cars_source,numOfModels);
+    for (int i = 0; i < numOfModels && index<numOfModels; i++) {
+        //read from subtree
+        int sub_model_amount = cars_source[i]->getCurrentNumOfModels();
+        AVLTree<ModelElement> sub_models = cars_source[i]->getModlesTree();
+        ModelElement* sub_models_source[numOfModels];
+        sub_models.inorderNObjects(sub_models_source,numOfModels);
+        for (int i = 0; i < sub_model_amount && index<numOfModels; i++)
+        {
+            types_target[index] = sub_models_source[i]->getTypeId();
+            models_target[index] = sub_models_source[i]->getModel();
+            index++;
+        }
+    }
+
+    //reread from models
+    for (int i = index; i < numOfModels && index<numOfModels; i++) {
+        types_target[index] = models_source[i]->getTypeId();
+        models_target[index] = models_source[i]->getModel();
+        index++;
+    }
     return SUCCESS;
 }
 
-//toDo
-void CarDealershipManager::Quit() {
-    //...
+CarDealershipManager::~CarDealershipManager()
+{
+    this->resetCarsTree_.clear();
+    this->carsTree_.clear();
+    this->modelsTree_.clear();
+    this->salesTree_.clear();
 }
+
 
 #endif /* CAR_DEALERSHIP_MANAGER_H */
