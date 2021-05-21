@@ -11,18 +11,26 @@ public:
 
     ResetCarElement(int typeID, int numOfModels);
 
-    ResetCarElement(int typeID): typeID_(typeID) 
+    ResetCarElement(int typeID) : typeID_(typeID)
+    {}
+
+    ResetCarElement()
     {}
 
     ~ResetCarElement();
 
-    int getTypeID() const { return typeID_; }
+    int getTypeID() const
+    { return typeID_; }
 
     bool operator>(const ResetCarElement &other) const;
 
     bool operator<(const ResetCarElement &other) const;
 
     bool operator==(const ResetCarElement &other) const;
+
+    AVLTree<ModelElement> getModlesTree();
+
+    int getCurrentNumOfModels();
 
 private:
     int typeID_;
@@ -31,16 +39,16 @@ private:
 };
 
 //to fix:the complexity should be O(numOfModels).
-ResetCarElement::ResetCarElement(int typeID, int numOfModels):
-    typeID_(typeID), numOfModels_(numOfModels), resetModelsTree_() 
+ResetCarElement::ResetCarElement(int typeID, int numOfModels) :
+        typeID_(typeID), numOfModels_(numOfModels), resetModelsTree_()
 {
     for (int i = 0; i < numOfModels; i++) {
-        ModelElement* newModel = new ModelElement(typeID, i);
+        ModelElement *newModel = new ModelElement(typeID, i);
         resetModelsTree_.insert(*newModel);
     }
 }
 
-ResetCarElement::~ResetCarElement() 
+ResetCarElement::~ResetCarElement()
 {
     resetModelsTree_.clear();
 }
@@ -61,6 +69,16 @@ bool ResetCarElement::operator>(const ResetCarElement &other) const
 bool ResetCarElement::operator<(const ResetCarElement &other) const
 {
     return this->typeID_ < other.typeID_;
+}
+
+AVLTree<ModelElement> ResetCarElement::getModlesTree()
+{
+    return this->resetModelsTree_;
+}
+
+int ResetCarElement::getCurrentNumOfModels()
+{
+    return this->resetModelsTree_.currentSize();
 }
 
 #endif /* RESET_CAR_ELEMENT_H */

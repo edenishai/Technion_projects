@@ -54,10 +54,20 @@ public:
 
     T *findMin() const;
 
-    bool isEmpty() const;
+    int currentSize() const;
+
+    void inorderNObjects(T *output_target, int n);
+
+    T& getMostRight();
 
 private:
     AVLNode<T> *root_;
+
+    int current_size_;
+
+    AVLNode<T>* last_right_;
+
+    AVLNode<T>* last_left_;
 
     AVLNode<T> *remove_aux(const T &data, AVLNode<T> *node);
 
@@ -70,21 +80,23 @@ private:
     AVLNode<T> *RL_Rotate(AVLNode<T> *node);
 
     int balanceFactor(AVLNode<T> *node) const;
-
+//todo: used for debugging
     void printInOrder(AVLNode<T> *root) const;
 
     AVLNode<T> *insert_aux(const T &data, AVLNode<T> *node);
 
     void deepRemoveNode(AVLNode<T> *node);
 
-    AVLNode<T> *findMin(AVLNode<T> *node) const;
+    AVLNode<T> *findMin_aux(AVLNode<T> *node) const;
 
-    AVLNode<T> *findMax(AVLNode<T> *node) const;
+    AVLNode<T> *findMax_aux(AVLNode<T> *node) const;
 
     int height(AVLNode<T> *node) const;
 
     T *find_aux(AVLNode<T> *root, const T &data) const;
-    
+
+    void inorderNObjects_aux(AVLNode<T> *node, T *output_target, int *i, int *n);
+
 };
 
 template<class T>
@@ -99,12 +111,17 @@ template<class T>
 void AVLTree<T>::insert(const T &data)
 {
     root_ = insert_aux(data, root_);
+    ++current_size_;
+    this->last_right_ = findMax_aux(root_);
+    this->last_left_ = findMin_aux(root_);
+
 }
 
 template<class T>
 void AVLTree<T>::remove(const T &data)
 {
     root_ = remove_aux(data, root_);
+    --current_size_;
 }
 
 template<class T>
@@ -114,17 +131,13 @@ void AVLTree<T>::clear()
         deepRemoveNode(root_);
     }
     root_ = NULL;
+    current_size_ = 0;
 }
 
 template<class T>
 void AVLTree<T>::display() const
 {
     printInOrder(root_);
-}
-
-template<class T>
-bool AVLTree<T>::isEmpty() const {
-    return root_ == NULL;
 }
 
 template<class T>
@@ -251,25 +264,25 @@ AVLNode<T> *AVLTree<T>::LR_Rotate(AVLNode<T> *node)
 }
 
 template<class T>
-AVLNode<T> *AVLTree<T>::findMin(AVLNode<T> *node) const
+AVLNode<T> *AVLTree<T>::findMin_aux(AVLNode<T> *node) const
 {
     if (node == NULL)
         return NULL;
     else if (node->left == NULL)
         return node;
     else
-        return findMin(node->left);
+        return findMin_aux(node->left);
 }
 
 template<class T>
-AVLNode<T> *AVLTree<T>::findMax(AVLNode<T> *node) const
+AVLNode<T> *AVLTree<T>::findMax_aux(AVLNode<T> *node) const
 {
     if (node == NULL)
         return NULL;
     else if (node->right == NULL)
         return node;
     else
-        return findMax(node->right);
+        return findMax_aux(node->right);
 }
 
 template<class T>
@@ -286,7 +299,7 @@ AVLNode<T> *AVLTree<T>::remove_aux(const T &data, AVLNode<T> *node)
         //after finding
         //if 2 sons
     else if (node->left && node->right) {
-        temp = findMin(node->right);
+        temp = findMin_aux(node->right);
         node->getData() = temp->getData();
         node->right = remove_aux(node->getData(), node->right);
     }
@@ -322,15 +335,48 @@ AVLNode<T> *AVLTree<T>::remove_aux(const T &data, AVLNode<T> *node)
 template<class T>
 T *AVLTree<T>::findMax() const
 {
-    AVLNode<T> *maxNode = findMax(root_);
+    AVLNode<T> *maxNode = findMax_aux(root_);
     return &(maxNode->getData());
 }
 
 template<class T>
 T *AVLTree<T>::findMin() const
 {
-    AVLNode<T> *minNode = findMin(root_);
+    AVLNode<T> *minNode = findMin_aux(root_);
     return &(minNode->getData());
+}
+
+template<class T>
+int AVLTree<T>::currentSize() const
+{
+    return current_size_;
+}
+
+template<class T>
+T& AVLTree<T>::getMostRight()
+{
+    return this->last_right_->getData();
+}
+
+template<class T>
+void AVLTree<T>::inorderNObjects(T *output_target, int n)
+{
+    int amount = n;
+    int i = 0;
+    //todo:fix in order to be O(n)
+    inorderNObjects_aux(root_, output_target, &i, &n);
+}
+
+template<class T>
+void AVLTree<T>::inorderNObjects_aux(AVLNode<T> *node, T *output_target, int *i, int *n)
+{
+    // return if the current node is empty
+    if (node == nullptr || (*i) == (*n)) {
+        return;
+    }
+    inorderNObjects_aux(node->left, output_target, &(++(*i)), n);
+    output_target[(*i)] = node->getData();
+    inorderNObjects_aux(node->right, output_target, &(++(*i)), n);
 }
 
 #endif /* AVL_TREE_H */

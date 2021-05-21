@@ -20,6 +20,8 @@ public:
     bool operator==(const SaleElement &other) const;
 
 
+    int getModelId() const;
+
 private:
     int typeID_;
     int modelID_;
@@ -70,6 +72,11 @@ bool SaleElement::operator==(const SaleElement &other) const
     return this->typeID_ == other.typeID_
            && this->modelID_ == other.modelID_
            && this->sales_ == other.sales_;
+}
+
+int SaleElement::getModelId() const
+{
+    return this->modelID_;
 }
 
 #endif /* SALE_ELEMENT_H */
