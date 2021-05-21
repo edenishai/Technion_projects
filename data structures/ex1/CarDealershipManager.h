@@ -100,11 +100,21 @@ StatusType CarDealershipManager::GetBestSellerModelByType(int typeID, int *model
 {
     if (typeID < 0)
         return INVALID_INPUT;
-    //...
+
+    if (typeID > 0) {
+        CarElement* car_element = this->carsTree_.find(CarElement(typeID));
+        SaleElement *best_seller_model = car_element->getBestSeller();
+        *modelID = best_seller_model->getModelId();
+    } else
+    {
+        CarElement &car_element = this->carsTree_.getMostRight();
+        SaleElement *best_seller_model = car_element.getBestSeller();
+        *modelID = best_seller_model->getModelId();
+    }
     return SUCCESS;
 }
 
-//TODO:ADD check we have enough elements in total
+//TODO:ADD check we have enough elements in total + check memory fail
 StatusType CarDealershipManager::GetWorstModels(int numOfModels, int *types_target, int *models_target)
 {
     if (numOfModels <= 0) {
@@ -112,9 +122,9 @@ StatusType CarDealershipManager::GetWorstModels(int numOfModels, int *types_targ
     }
     //read from models
     ModelElement models_source[numOfModels];
-    this->modelsTree_.inorderNObjects(models_source,numOfModels);
+    this->modelsTree_.inorderNObjects(models_source, numOfModels);
     int index = 0;
-    for (int i = 0; i < numOfModels && index<numOfModels; i++) {
+    for (int i = 0; i < numOfModels && index < numOfModels; i++) {
         if (models_source[i].getGrade() < 0) {
             types_target[index] = models_source[i].getTypeId();
             models_target[index] = models_source[i].getModel();
@@ -125,15 +135,14 @@ StatusType CarDealershipManager::GetWorstModels(int numOfModels, int *types_targ
 
     //read from reset
     ResetCarElement cars_source[numOfModels];
-    this->resetCarsTree_.inorderNObjects(cars_source,numOfModels);
-    for (int i = 0; i < numOfModels && index<numOfModels; i++) {
+    this->resetCarsTree_.inorderNObjects(cars_source, numOfModels);
+    for (int i = 0; i < numOfModels && index < numOfModels; i++) {
         //read from subtree
         int sub_model_amount = cars_source[i].getCurrentNumOfModels();
         AVLTree<ModelElement> sub_models = cars_source[i].getModlesTree();
         ModelElement sub_models_source[numOfModels];
-        sub_models.inorderNObjects(sub_models_source,numOfModels);
-        for (int i = 0; i < sub_model_amount && index<numOfModels; i++)
-        {
+        sub_models.inorderNObjects(sub_models_source, numOfModels);
+        for (int i = 0; i < sub_model_amount && index < numOfModels; i++) {
             types_target[index] = sub_models_source[i].getTypeId();
             models_target[index] = sub_models_source[i].getModel();
             index++;
@@ -141,7 +150,7 @@ StatusType CarDealershipManager::GetWorstModels(int numOfModels, int *types_targ
     }
 
     //reread from models
-    for (int i = index; i < numOfModels && index<numOfModels; i++) {
+    for (int i = index; i < numOfModels && index < numOfModels; i++) {
         types_target[index] = models_source[i].getTypeId();
         models_target[index] = models_source[i].getModel();
         index++;

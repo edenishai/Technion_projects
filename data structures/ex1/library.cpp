@@ -26,7 +26,7 @@ StatusType SellCar(void *DS, int typeID, int modelID) {
     }
     return ((CarDealershipManager*)DS)->SellCar(typeID, modelID);
 }
-//is t between 0-12? if so: to add check
+//todo :is t between 0-12? if so: to add check
 StatusType MakeComplaint(void *DS, int typeID, int modelID, int t) {
     if (!DS || typeID <= 0 || modelID < 0) {
         return INVALID_INPUT;
