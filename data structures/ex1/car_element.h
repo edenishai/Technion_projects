@@ -12,8 +12,7 @@ public:
 
     CarElement(int typeID, int numOfModels);
 
-    CarElement(int typeID) : typeID_(typeID)
-    {}
+    CarElement(int typeID);
 
     ~CarElement();
 
