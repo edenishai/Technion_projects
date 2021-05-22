@@ -20,6 +20,7 @@ StatusType CarDealershipManager::AddCarType(int typeID, int numOfModels)
     carsTree_.insert(*carElement);
     resetCarsTree_.insert(*(new ResetCarElement(typeID, numOfModels)));
 
+    checkTrees();
     return SUCCESS;
 }
 
@@ -39,7 +40,7 @@ StatusType CarDealershipManager::RemoveCarType(int typeID)
             modelsTree_.remove(*(carModels[i]));
     }
     carsTree_.remove(*toDelete);
-
+    checkTrees();
     return SUCCESS;
 }
 
@@ -82,6 +83,7 @@ StatusType CarDealershipManager::SellCar(int typeID, int modelID)
             salesTree_.insert(*saleElement);
         }
     }
+    checkTrees();
     return SUCCESS;
 }
 
@@ -105,6 +107,7 @@ StatusType CarDealershipManager::MakeComplaint(int typeID, int modelID, int t)
     //in with the new :)
     model_new->reciveComplaint(t);
     modelsTree_.insert(*model_new);
+    checkTrees();
 
     return SUCCESS;
 }
@@ -124,6 +127,7 @@ StatusType CarDealershipManager::GetBestSellerModelByType(int typeID, int *model
         SaleElement &best_seller_model = this->salesTree_.getMostRight();
         *modelID = best_seller_model.getModelId();
     }
+    checkTrees();
     return SUCCESS;
 }
 
@@ -152,6 +156,7 @@ StatusType CarDealershipManager::GetWorstModels(int numOfModels, int *types_targ
         types_target[i] = all_models_source[i].getTypeId();
         models_target[i] = all_models_source[i].getModel();
     }
+    checkTrees();
     return SUCCESS;
 }
 
@@ -174,4 +179,16 @@ void CarDealershipManager::merge(ModelElement a[], int na, ModelElement b[], int
     }
     for (; ia < na; ia++, ic++) c[ic] = a[ia];
     for (; ib < nb; ib++, ic++) c[ic] = b[ib];
+}
+
+void CarDealershipManager::checkTrees()
+{
+    if(!this->carsTree_.checkTree())
+        cout<<"-------------------carsTree NOT OK - " ;
+    if(!this->modelsTree_.checkTree())
+        cout<<"-------------------modelsTree_ NOT OK - " ;
+    if(!this->salesTree_.checkTree())
+        cout<<"-------------------salesTree_ NOT OK - " ;
+    if(!this->resetCarsTree_.checkTree())
+        cout<<"-------------------resetCarsTree_ NOT OK - " ;
 }

@@ -4,16 +4,29 @@
 ResetCarElement::ResetCarElement(int typeID, int numOfModels) :
         typeID_(typeID), numOfModels_(numOfModels), resetModelsTree_()
 {
-    ModelElement arr[numOfModels];
-    for (int i = 0; i < numOfModels; i++) {
-        arr[i] = ModelElement(typeID, i);
+
+    if (numOfModels > 0) {
+        ModelElement arr[numOfModels];
+        for (int i = 0; i < numOfModels; i++) {
+            arr[i] = ModelElement(typeID, i);
+        }
+        this->resetModelsTree_.buildOrdered(arr, numOfModels);
+        checkTree();
     }
-    this->resetModelsTree_.buildOrdered(arr,numOfModels);
+
 }
+
+ResetCarElement::ResetCarElement()
+{
+
+}
+
 
 ResetCarElement::~ResetCarElement()
 {
+    checkTree();
     resetModelsTree_.clear();
+
 }
 
 
@@ -42,4 +55,10 @@ AVLTree<ModelElement> ResetCarElement::getModlesTree()
 int ResetCarElement::getCurrentNumOfModels()
 {
     return this->resetModelsTree_.currentSize();
+}
+
+void ResetCarElement::checkTree()
+{
+    if (!this->resetModelsTree_.checkTree())
+        cout << "***************reset SUB tree NOT OK";
 }

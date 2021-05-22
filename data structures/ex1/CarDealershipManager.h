@@ -33,6 +33,8 @@ private:
     AVLTree<SaleElement> salesTree_;
 
     void merge(ModelElement a[], int na, ModelElement b[], int nb, ModelElement c[]);
+
+    void checkTrees();
 };
 
 #endif /* CAR_DEALERSHIP_MANAGER_H */
