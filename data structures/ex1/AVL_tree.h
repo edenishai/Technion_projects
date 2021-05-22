@@ -31,11 +31,10 @@ private:
 
 };
 
-
 template<class T>
 class AVLTree {
 public:
-    AVLTree() : root_(NULL), current_size_(0)
+    AVLTree() : root_(NULL), current_size_(0) 
     {}
 
     ~AVLTree();
@@ -115,7 +114,7 @@ template<class T>
 void AVLTree<T>::insert(const T &data)
 {
     if (find(data))
-        --current_size_;
+        return;
     root_ = insert_aux(data, root_);
     ++current_size_;
     this->last_right_ = findMax_aux(root_);
