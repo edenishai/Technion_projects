@@ -11,8 +11,7 @@ public:
 
     ResetCarElement(int typeID, int numOfModels = 0);
 
-    ResetCarElement()
-    {}
+    ResetCarElement();
 
     ~ResetCarElement();
 
@@ -28,6 +27,8 @@ public:
     AVLTree<ModelElement> getModlesTree();
 
     int getCurrentNumOfModels();
+
+    void checkTree();
 
 private:
     int typeID_;

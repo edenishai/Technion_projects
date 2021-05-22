@@ -64,6 +64,8 @@ public:
 
     int getInOrder(T *array, int size) const;
 
+    bool checkTree();
+
 private:
     AVLNode<T> *root_;
 
@@ -85,6 +87,8 @@ private:
 
     AVLNode<T> *RL_Rotate(AVLNode<T> *node);
 
+
+
     int balanceFactor(AVLNode<T> *node) const;
 
 //todo: used for debugging
@@ -105,6 +109,8 @@ private:
     void inorderNObjects_aux(AVLNode<T> *node, T *output_target, int *i, int *n);
 
     AVLNode<T> *buildOrdered_aux(T *data, int start, int end,int height);
+
+    bool checkTree_aux(AVLNode<T>* node , int h);
 };
 
 template<class T>
@@ -414,6 +420,7 @@ void AVLTree<T>::buildOrdered(T *data, int range)
 {
     int height = log(range) / log(2);
     this->root_ = buildOrdered_aux(data, 0, range - 1, height);
+    this->current_size_ = range;
 }
 
 template<class T>
@@ -429,6 +436,35 @@ AVLNode<T> *AVLTree<T>::buildOrdered_aux(T *data, int start, int end, int height
     root->right = buildOrdered_aux(data, middle + 1, end, height - 1);
 
     return root;
+}
+
+template<class T>
+bool AVLTree<T>::checkTree()
+{
+    if(this->current_size_==0)
+    {
+        return root_ == nullptr;
+    }
+    int height = log(current_size_)/log(2);
+    return checkTree_aux(root_,height);
+}
+
+template<class T>
+bool AVLTree<T>::checkTree_aux(AVLNode<T>* node , int h)
+{
+    if(node == nullptr)
+    {
+        return true;
+    }
+    if(h==0)
+    {
+        if(node->right) return false;
+        if(node->left) return false;
+        return true;
+    }
+    //h>0
+    return checkTree_aux(node->right,h-1)&&checkTree_aux(node->left,h-1);
+
 }
 
 #endif /* AVL_TREE_H */

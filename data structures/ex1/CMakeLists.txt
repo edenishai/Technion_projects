@@ -3,7 +3,7 @@ project(Data_Struct_1_HW_1)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_executable(Data_Struct_1_HW_1 
+add_executable(Data_Struct_1_HW_1
         main.cpp
         AVL_tree.h
         car_element.h
