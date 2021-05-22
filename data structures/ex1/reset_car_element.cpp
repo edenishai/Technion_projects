@@ -4,10 +4,11 @@
 ResetCarElement::ResetCarElement(int typeID, int numOfModels) :
         typeID_(typeID), numOfModels_(numOfModels), resetModelsTree_()
 {
+    ModelElement arr[numOfModels];
     for (int i = 0; i < numOfModels; i++) {
-        ModelElement *newModel = new ModelElement(typeID, i);
-        resetModelsTree_.insert(*newModel);
+        arr[i] = ModelElement(typeID, i);
     }
+    this->resetModelsTree_.buildOrdered(arr,numOfModels);
 }
 
 ResetCarElement::~ResetCarElement()
