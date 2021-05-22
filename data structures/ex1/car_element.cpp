@@ -10,9 +10,12 @@ CarElement::CarElement(int typeID, int numOfModels) :
 
 CarElement::~CarElement()
 {
-    for (int i = 0; i < numOfModels_; i++)
-        delete carModels_[i];
-    delete[] carModels_;
+    if (carModels_) {
+        for (int i = 0; i < numOfModels_; i++)
+            if (carModels_[i]) { delete carModels_[i]; }
+
+        delete[] carModels_;
+    }
 }
 
 bool CarElement::operator==(const CarElement &other) const
@@ -39,7 +42,12 @@ SaleElement *CarElement::getBestSeller()
 
 ModelElement *CarElement::getModel(int i)
 {
-    if(i>numOfModels_)
+    if (i > numOfModels_)
         return nullptr;
     return carModels_[i];
+}
+
+CarElement::CarElement(int typeID) : typeID_(typeID)
+{
+    carModels_ = nullptr;
 }
