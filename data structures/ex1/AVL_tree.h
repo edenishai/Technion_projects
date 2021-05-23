@@ -421,14 +421,12 @@ int AVLTree<T>::getInOrder(T *array, int size) const
 template<class T>
 void AVLTree<T>::getInOrder(AVLNode<T> *root, T *array, int size, int *i) const
 {
-    if (*i < size) {
-        if (root) {
-            getInOrder(root->left, array, size, &(++(*i)));
-            array[*i-size] = root->getData();
-            getInOrder(root->right, array, size, &(++(*i)));
+    if (root) {
+        if (*i < size) {
+            getInOrder(root->left, array, size, i);
+            array[(*i)++] = root->getData();
+            getInOrder(root->right, array, size, i);
         }
-        else
-            &(--(*i));
     }
 }
 
