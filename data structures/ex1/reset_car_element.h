@@ -20,7 +20,7 @@ public:
     ResetCarElement();
 
     ~ResetCarElement() 
-    { delete &(this->resetModelsTree_); }
+    {}
 
     int getTypeID() const
     { return typeID_; }
