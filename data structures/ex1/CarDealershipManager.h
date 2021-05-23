@@ -24,6 +24,8 @@ public:
 
     StatusType GetWorstModels(int numOfModels, int *types, int *models);
 
+    void Quit();
+
     ~CarDealershipManager();
 
 private:

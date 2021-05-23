@@ -13,22 +13,24 @@ ResetCarElement::ResetCarElement(int typeID, int numOfModels) :
         this->resetModelsTree_.buildOrdered(arr, numOfModels);
         checkTree();
     }
-
 }
 
-ResetCarElement::ResetCarElement()
+ResetCarElement::ResetCarElement(int typeID, int numOfModels, AVLTree<ModelElement> modelsTree) :
+    typeID_(typeID), numOfModels_(numOfModels), resetModelsTree_(modelsTree) 
 {
-
+    if (numOfModels > 0) {
+        ModelElement arr[numOfModels];
+        for (int i = 0; i < numOfModels; i++) {
+            arr[i] = ModelElement(typeID, i);
+        }
+        this->resetModelsTree_.buildOrdered(arr, numOfModels);
+        checkTree();
+    }
 }
 
-
-ResetCarElement::~ResetCarElement()
-{
-    checkTree();
-    resetModelsTree_.clear();
-
-}
-
+ResetCarElement::ResetCarElement() :
+    typeID_(0), numOfModels_(0), resetModelsTree_()
+{}
 
 bool ResetCarElement::operator==(const ResetCarElement &other) const
 {

@@ -3,7 +3,7 @@
 CarElement::CarElement(int typeID, int numOfModels) :
         typeID_(typeID), numOfModels_(numOfModels), carSales_(nullptr), carModels_(new ModelElement *[numOfModels])
 {
-    for (int i; i < numOfModels; i++) {
+    for (int i = 0; i < numOfModels; i++) {
         carModels_[i] = nullptr;
     }
 }

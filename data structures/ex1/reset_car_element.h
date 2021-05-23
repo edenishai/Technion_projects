@@ -11,9 +11,16 @@ public:
 
     ResetCarElement(int typeID, int numOfModels = 0);
 
+    ResetCarElement(int typeID, int numOfModels, AVLTree<ModelElement> modelsTree);
+
+    ResetCarElement(const ResetCarElement& other) : 
+        typeID_(other.typeID_), numOfModels_(other.numOfModels_), resetModelsTree_(other.resetModelsTree_)
+    {}
+
     ResetCarElement();
 
-    ~ResetCarElement();
+    ~ResetCarElement() 
+    { delete &(this->resetModelsTree_); }
 
     int getTypeID() const
     { return typeID_; }

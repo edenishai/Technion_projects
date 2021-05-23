@@ -13,12 +13,19 @@ public:
     AVLNode *right;
     int height;
 
-    AVLNode() = default;
+    AVLNode() :
+        data_(), left(NULL), right(NULL), height(0)
+    {}
+
+    AVLNode(const AVLNode& other) : 
+        data_(other.data_), left(other.left), right(other.right), height(other.height)
+    {}
 
     explicit AVLNode(const T &data) : data_(data), left(NULL), right(NULL), height(0)
     {}
 
-    ~AVLNode() = default;
+    ~AVLNode()
+    { left = NULL, right = NULL; }
 
     T &getData()
     { return data_; }
@@ -35,7 +42,12 @@ private:
 template<class T>
 class AVLTree {
 public:
-    AVLTree() : root_(NULL), current_size_(0) 
+    AVLTree() : root_(NULL), current_size_(0), last_right_(NULL), last_left_(NULL)
+    {}
+
+    AVLTree(const AVLTree& other) : 
+        root_(other.root_), current_size_(other.current_size_),
+            last_right_(other.last_right_), last_left_(other.last_left_)
     {}
 
     ~AVLTree();
@@ -75,7 +87,7 @@ private:
 
     AVLNode<T> *last_left_;
 
-    void getInOrder(AVLNode<T> *root, T *array, int size) const;
+    void getInOrder(AVLNode<T> *root, T *array, int size, int *i) const;
 
     AVLNode<T> *remove_aux(const T &data, AVLNode<T> *node);
 
@@ -147,8 +159,7 @@ void AVLTree<T>::clear()
     if (root_) {
         deepRemoveNode(root_);
     }
-    root_ = NULL;
-    current_size_ = 0;
+    this->root_ = NULL;
 }
 
 template<class T>
@@ -163,7 +174,7 @@ void AVLTree<T>::deepRemoveNode(AVLNode<T> *node)
     if (node) {
         deepRemoveNode(node->left);
         deepRemoveNode(node->right);
-        delete node;
+        this->remove(node->getData());
     }
 }
 
@@ -328,7 +339,8 @@ AVLNode<T> *AVLTree<T>::remove_aux(const T &data, AVLNode<T> *node)
             node = node->right;
         else if (node->right == NULL)
             node = node->left;
-        delete temp;
+        else if (node->left == NULL && node->right == NULL)
+            delete temp;
     }
     if (node == NULL)
         return node;
@@ -401,17 +413,22 @@ template<class T>
 int AVLTree<T>::getInOrder(T *array, int size) const
 {
     size = min(size, this->current_size_);
-    getInOrder(root_, array, size);
+    int i = 0;
+    getInOrder(root_, array, size, &i);
     return size;
 }
 
 template<class T>
-void AVLTree<T>::getInOrder(AVLNode<T> *root, T *array, int size) const
+void AVLTree<T>::getInOrder(AVLNode<T> *root, T *array, int size, int *i) const
 {
-    if (root && size > 0) {
-        getInOrder(root->left, array, size - 1);
-        array[size - 1] = root->getData();
-        getInOrder(root->right, array, size - 1);
+    if (*i < size) {
+        if (root) {
+            getInOrder(root->left, array, size, &(++(*i)));
+            array[*i-size] = root->getData();
+            getInOrder(root->right, array, size, &(++(*i)));
+        }
+        else
+            &(--(*i));
     }
 }
 

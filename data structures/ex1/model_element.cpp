@@ -9,10 +9,10 @@ bool ModelElement::operator>(const ModelElement &other) const
     if (this->grade_ > other.grade_)
         return true;
     else if (this->grade_ == other.grade_) {
-        if (this->typeID_ < other.typeID_)
+        if (this->typeID_ > other.typeID_)
             return true;
         else if (this->typeID_ == other.typeID_) {
-            if (this->modelID_ < other.modelID_)
+            if (this->modelID_ > other.modelID_)
                 return true;
         }
     }
@@ -24,10 +24,10 @@ bool ModelElement::operator<(const ModelElement &other) const
     if (this->grade_ < other.grade_)
         return true;
     else if (this->grade_ == other.grade_) {
-        if (this->typeID_ > other.typeID_)
+        if (this->typeID_ < other.typeID_)
             return true;
         else if (this->typeID_ == other.typeID_) {
-            if (this->modelID_ > other.modelID_)
+            if (this->modelID_ < other.modelID_)
                 return true;
         }
     }

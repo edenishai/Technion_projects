@@ -1,0 +1,6 @@
+{
+    "cmake.sourceDirectory": "${workspaceFolder}/data structures/ex1",
+    "files.associations": {
+        "new": "cpp"
+    }
+}

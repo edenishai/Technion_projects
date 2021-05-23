@@ -10,6 +10,8 @@ public:
 
     ModelElement(int typeID, int modelID, int grade = 0);
 
+    ModelElement(const ModelElement& other) = default;
+
     ~ModelElement() = default;
 
     bool operator>(const ModelElement &other) const;
