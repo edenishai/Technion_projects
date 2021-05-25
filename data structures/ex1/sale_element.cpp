@@ -49,3 +49,8 @@ int SaleElement::getModelId() const
 {
     return this->modelID_;
 }
+
+void SaleElement::flatDelete()
+{
+
+}

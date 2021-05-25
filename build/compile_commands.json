@@ -1,0 +1,37 @@
+[
+{
+  "directory": "C:/Users/100ba/source/Technion_projects/build",
+  "command": "C:\\TDM-GCC-64\\bin\\x86_64-w64-mingw32-g++.exe   -g -std=gnu++11 -o CMakeFiles\\Data_Struct_1_HW_1.dir\\main.cpp.obj -c \"C:\\Users\\100ba\\source\\Technion_projects\\data structures\\ex1\\main.cpp\"",
+  "file": "C:/Users/100ba/source/Technion_projects/data structures/ex1/main.cpp"
+},
+{
+  "directory": "C:/Users/100ba/source/Technion_projects/build",
+  "command": "C:\\TDM-GCC-64\\bin\\x86_64-w64-mingw32-g++.exe   -g -std=gnu++11 -o CMakeFiles\\Data_Struct_1_HW_1.dir\\car_element.cpp.obj -c \"C:\\Users\\100ba\\source\\Technion_projects\\data structures\\ex1\\car_element.cpp\"",
+  "file": "C:/Users/100ba/source/Technion_projects/data structures/ex1/car_element.cpp"
+},
+{
+  "directory": "C:/Users/100ba/source/Technion_projects/build",
+  "command": "C:\\TDM-GCC-64\\bin\\x86_64-w64-mingw32-g++.exe   -g -std=gnu++11 -o CMakeFiles\\Data_Struct_1_HW_1.dir\\CarDealershipManager.cpp.obj -c \"C:\\Users\\100ba\\source\\Technion_projects\\data structures\\ex1\\CarDealershipManager.cpp\"",
+  "file": "C:/Users/100ba/source/Technion_projects/data structures/ex1/CarDealershipManager.cpp"
+},
+{
+  "directory": "C:/Users/100ba/source/Technion_projects/build",
+  "command": "C:\\TDM-GCC-64\\bin\\x86_64-w64-mingw32-g++.exe   -g -std=gnu++11 -o CMakeFiles\\Data_Struct_1_HW_1.dir\\model_element.cpp.obj -c \"C:\\Users\\100ba\\source\\Technion_projects\\data structures\\ex1\\model_element.cpp\"",
+  "file": "C:/Users/100ba/source/Technion_projects/data structures/ex1/model_element.cpp"
+},
+{
+  "directory": "C:/Users/100ba/source/Technion_projects/build",
+  "command": "C:\\TDM-GCC-64\\bin\\x86_64-w64-mingw32-g++.exe   -g -std=gnu++11 -o CMakeFiles\\Data_Struct_1_HW_1.dir\\library.cpp.obj -c \"C:\\Users\\100ba\\source\\Technion_projects\\data structures\\ex1\\library.cpp\"",
+  "file": "C:/Users/100ba/source/Technion_projects/data structures/ex1/library.cpp"
+},
+{
+  "directory": "C:/Users/100ba/source/Technion_projects/build",
+  "command": "C:\\TDM-GCC-64\\bin\\x86_64-w64-mingw32-g++.exe   -g -std=gnu++11 -o CMakeFiles\\Data_Struct_1_HW_1.dir\\reset_car_element.cpp.obj -c \"C:\\Users\\100ba\\source\\Technion_projects\\data structures\\ex1\\reset_car_element.cpp\"",
+  "file": "C:/Users/100ba/source/Technion_projects/data structures/ex1/reset_car_element.cpp"
+},
+{
+  "directory": "C:/Users/100ba/source/Technion_projects/build",
+  "command": "C:\\TDM-GCC-64\\bin\\x86_64-w64-mingw32-g++.exe   -g -std=gnu++11 -o CMakeFiles\\Data_Struct_1_HW_1.dir\\sale_element.cpp.obj -c \"C:\\Users\\100ba\\source\\Technion_projects\\data structures\\ex1\\sale_element.cpp\"",
+  "file": "C:/Users/100ba/source/Technion_projects/data structures/ex1/sale_element.cpp"
+}
+]

@@ -6,11 +6,11 @@ const int COMPLAINT_POINTS = 100;
 
 class ModelElement {
 public:
-    ModelElement();
+    ModelElement(int typeID = 0, int modelID = 0, int grade = 0);
 
-    ModelElement(int typeID, int modelID, int grade = 0);
-
-    ModelElement(const ModelElement& other) = default;
+    ModelElement(const ModelElement& other) :
+        typeID_(other.typeID_), modelID_(other.modelID_), grade_(other.grade_)
+    {}
 
     ~ModelElement() = default;
 
@@ -29,6 +29,9 @@ public:
     ModelElement *clone();
 
     void reciveComplaint(int months);
+
+    void flatDelete();
+
 
 private:
     int typeID_;

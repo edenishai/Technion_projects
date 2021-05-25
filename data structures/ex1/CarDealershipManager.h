@@ -24,18 +24,17 @@ public:
 
     StatusType GetWorstModels(int numOfModels, int *types, int *models);
 
-    void Quit();
-
     ~CarDealershipManager();
 
+
 private:
-    AVLTree<ResetCarElement> resetCarsTree_;
-    AVLTree<CarElement> carsTree_;
-    AVLTree<ModelElement> modelsTree_;
-    AVLTree<SaleElement> salesTree_;
+    AVLTree<ResetCarElement>* resetCarsTree_;
+    AVLTree<CarElement>* carsTree_;
+    AVLTree<ModelElement>* modelsTree_;
+    AVLTree<SaleElement>* salesTree_;
 
-    void merge(ModelElement a[], int na, ModelElement b[], int nb, ModelElement c[]);
-
+    static void merge(ModelElement a[], int na, ModelElement b[], int nb, ModelElement c[]);
+    int upper_bound; // upper
     void checkTrees();
 };
 

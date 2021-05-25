@@ -6,7 +6,8 @@
 
 class CarElement {
 public:
-    SaleElement *carSales_;
+
+    SaleElement **carSales_;
 
     ModelElement **carModels_;
 
@@ -29,10 +30,23 @@ public:
     bool operator==(const CarElement &other) const;
   
     SaleElement *getBestSeller();
+
     ModelElement *getModel(int i);
+
+    void connectModelElement(ModelElement* m,int index);
+
+    void connectSaleElement(SaleElement* m,int index);
+
+    void clear();
+
+    void flatDelete();
+
+
 private:
     int typeID_;
     int numOfModels_;
+    int best_seller_ = 0;
+
 
 };
 

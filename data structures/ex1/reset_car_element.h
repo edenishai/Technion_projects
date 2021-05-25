@@ -7,20 +7,15 @@
 
 class ResetCarElement {
 public:
-    AVLTree<ModelElement> resetModelsTree_;
+    AVLTree<ModelElement>* resetModelsTree_;
 
     ResetCarElement(int typeID, int numOfModels = 0);
 
-    ResetCarElement(int typeID, int numOfModels, AVLTree<ModelElement> modelsTree);
-
-    ResetCarElement(const ResetCarElement& other) : 
-        typeID_(other.typeID_), numOfModels_(other.numOfModels_), resetModelsTree_(other.resetModelsTree_)
-    {}
-
     ResetCarElement();
 
-    ~ResetCarElement() 
-    {}
+   // ResetCarElement(const ResetCarElement& other);
+
+    ~ResetCarElement();
 
     int getTypeID() const
     { return typeID_; }
@@ -31,7 +26,9 @@ public:
 
     bool operator==(const ResetCarElement &other) const;
 
-    AVLTree<ModelElement> getModlesTree();
+   // ResetCarElement& operator=(const ResetCarElement& other);
+
+    void flatDelete();
 
     int getCurrentNumOfModels();
 
@@ -40,7 +37,7 @@ public:
 private:
     int typeID_;
     int numOfModels_;
-    
+
 };
 
 #endif /* RESET_CAR_ELEMENT_H */

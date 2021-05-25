@@ -56,11 +56,6 @@ int ModelElement::getModel() const
 {
     return this->modelID_;
 }
-//default?
-ModelElement::ModelElement()
-{
-
-}
 
 ModelElement *ModelElement::clone()
 {
@@ -74,4 +69,9 @@ ModelElement *ModelElement::clone()
 void ModelElement::reciveComplaint(int months)
 {
     grade_ -= (COMPLAINT_POINTS/months);
+}
+
+void ModelElement::flatDelete()
+{
+
 }

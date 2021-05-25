@@ -3,10 +3,7 @@
 
 class SaleElement {
 public:
-    SaleElement(int typeID) : typeID_(typeID), modelID_(0), sales_(0)
-    {}
-
-    SaleElement(int typeID, int modelID, int sales);
+    SaleElement(int typeID = 0, int modelID = 0, int sales = 0);
 
     SaleElement(const SaleElement &element); 
 
@@ -23,6 +20,9 @@ public:
     bool operator==(const SaleElement &other) const;
 
     int getModelId() const;
+
+    void flatDelete();
+
 
 private:
     int typeID_;
