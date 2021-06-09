@@ -2,6 +2,8 @@
 #define CAR_AGENCIES_MANAGER_H
 
 #include "library2.h"
+#include "union_find.h"
+#include "agency_type.h"
 
 class CarAgenciesManager {
 public:
@@ -18,7 +20,7 @@ public:
     ~CarAgenciesManager();
 
 private:
-
+    UnionFind<AgencyType>* agencies_;
 
 };
 
