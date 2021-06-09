@@ -4,7 +4,7 @@
 
 void *Init()
 {
-    CarAgenciesManager *DS = new CarAgenciesManager();
+    auto *DS = new CarAgenciesManager();
     return (void*)DS;
 }
 
@@ -42,7 +42,7 @@ StatusType GetIthSoldType(void *DS, int agencyID, int i, int* res)
 
 void Quit(void** DS)
 {
-    CarAgenciesManager *toDelete = static_cast<CarAgenciesManager*>(*DS);
+    auto* toDelete = static_cast<CarAgenciesManager*>(*DS);
     delete toDelete;
     *DS = NULL;
 }
