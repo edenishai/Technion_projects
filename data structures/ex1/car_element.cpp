@@ -14,12 +14,6 @@ CarElement::CarElement(int typeID) :
 CarElement::~CarElement()
 {
     if (carModels_) {
-        /*
-        for (int i = 0; i < numOfModels_; i++) {
-            if (carSales_[i]) { delete carSales_[i]; }
-            if (carModels_[i]) { delete carModels_[i]; }
-        }
-        */
         delete[] carSales_;
         delete[] carModels_;
     }
@@ -82,34 +76,3 @@ void CarElement::flatDelete()
     this->carModels_ = nullptr;
     this->carSales_ = nullptr;
 }
-/*
-CarElement &CarElement::operator=(const CarElement &other)
-{
-    if (this == &other)
-        return *this;
-
-    delete this;
-
-    this->numOfModels_ = other.numOfModels_;
-    this->typeID_ = other.typeID_;
-    this->carModels_ = new ModelElement *[numOfModels_];
-    this->carSales_ = new SaleElement *[numOfModels_];
-    for (int i = 0; i < numOfModels_; ++i) {
-        this->carSales_[i] = other.carSales_[i];
-        this->carModels_[i] = other.carModels_[i];
-    }
-    return *this;
-}
-
-CarElement::CarElement(const CarElement &other)
-{
-    this->numOfModels_ = other.numOfModels_;
-    this->typeID_ = other.typeID_;
-    this->carModels_ = new ModelElement *[numOfModels_];
-    this->carSales_ = new SaleElement *[numOfModels_];
-    for (int i = 0; i < numOfModels_; ++i) {
-        this->carSales_[i] = other.carSales_[i];
-        this->carModels_[i] = other.carModels_[i];
-    }
-}
-*/
