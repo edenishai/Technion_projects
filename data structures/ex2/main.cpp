@@ -33,16 +33,37 @@ int main(int argc, const char**argv) {
     ///////////////////////////////////////// good so far
 
     UnionFind<AgencyType>* u = new UnionFind<AgencyType>();
-    AgencyType* c = new AgencyType();
-    u->Makeset(c);
-    c = nullptr;
 
-    AgencyType* d = new AgencyType();
-    u->Makeset(d);
-    d = nullptr;
+    AgencyType* na = nullptr;
+    for (int i = 0; i < 10; ++i) {
+        na = new AgencyType();
+        u->Makeset(na);
+        na = nullptr;
+    }
+
+
+    std::cout << "part 1: \n";
+    u->Union(0,1);
+    u->print();
+
+    std::cout << "part 2: \n";
+    u->Union(2,3);
+    u->print();
+
+    std::cout << "part 3: \n";
+    u->Union(3,4);
+    u->print();
+
+    std::cout << "part 4: \n";
+    u->Union(1,2);
+    u->print();
+
+    std::cout << "part 5: \n";
+    std::cout<< "the root parent is: " << u->FindIdentifier(1)<<"\n";
+    u->print();
 
     delete u;
-
+    std::cout << "\n end!";
     return 0 ;
 
 

@@ -84,11 +84,7 @@ void DynamicArray<T>::shrinkSize()
 template<class T>
 T &DynamicArray<T>::operator[](int index)
 {
-    if (index > count)
-        return nullptr;
-    else {
-        return *arr[index];
-    }
+    return *arr[index];
 }
 
 template<class T>
