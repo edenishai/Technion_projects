@@ -24,4 +24,34 @@ private:
 
 };
 
+CarAgenciesManager::CarAgenciesManager()
+{
+
+}
+
+StatusType CarAgenciesManager::AddAgency()
+{
+    return FAILURE;
+}
+
+StatusType CarAgenciesManager::SellCar(int agencyID, int typeID, int k)
+{
+    return FAILURE;
+}
+
+StatusType CarAgenciesManager::UniteAgencies(int agencyID1, int agencyID2)
+{
+    return FAILURE;
+}
+
+StatusType CarAgenciesManager::GetIthSoldType(int agencyID, int i, int *res)
+{
+    return FAILURE;
+}
+
+CarAgenciesManager::~CarAgenciesManager()
+{
+
+}
+
 #endif /* CAR_AGENCIES_MANAGER_H */
