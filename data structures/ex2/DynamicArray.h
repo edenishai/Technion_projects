@@ -101,7 +101,8 @@ template<class T>
 DynamicArray<T>::~DynamicArray()
 {
     for (int i = 0; i < count; ++i) {
-        delete arr[i];
+        T* t= arr[i];
+        delete t;
     }
     delete []arr;
 }

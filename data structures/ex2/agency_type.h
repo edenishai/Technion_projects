@@ -10,8 +10,11 @@ public:
 
     ~AgencyType()=default;
 
-private:
-   // AVLTree<CarType>* cars_;
+    void sellCar(int carType, int amount)
+    {
+        //todo: complete
+    }
+    // AVLTree<CarType>* cars_;
     //RankAVL<T, S>* sales_;
 };
 
