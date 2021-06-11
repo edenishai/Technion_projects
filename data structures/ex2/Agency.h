@@ -2,7 +2,7 @@
 #define AGENCY_TYPE_H
 
 #include "../ex1/AVL_tree.h"
-#include "Rank_tree.h"
+#include "Rank_Tree.h"
 #include "car_type.h"
 #include "sold_type.h"
 

@@ -3,7 +3,7 @@
 
 #include <iostream>
 #include "DynamicArray.h"
-#include "agency_type.h"
+#include "Agency.h"
 
 template<class T>
 class UnionFind {
