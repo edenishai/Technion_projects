@@ -9,7 +9,7 @@ class UFNode {
 public:
 
 private:
-    UFNode *_parent;
+    UFNode *parent_;
     int size_;
     T *data_;
 };
