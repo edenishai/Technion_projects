@@ -11,15 +11,20 @@ public:
 
     explicit SaleElement(int typeID,int sales = 0);
 
-    bool operator<(SaleElement& element);
+    bool operator<(const SaleElement& element) const;
 
-    bool operator==(SaleElement& element);
+    bool operator>(const SaleElement& element) const;
+
+    bool operator==(const SaleElement& element) const;
 
     int getSales();
 
     int getTypeId();
 
+    void flatDelete();
+
     ~SaleElement() = default;
+
 
 private:
     int typeID_;

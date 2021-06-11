@@ -6,12 +6,17 @@
 CarElement::CarElement(int typeID,int sales): typeID_(typeID), sales_(sales)
 {}
 
-bool CarElement::operator<(CarElement &element)
+bool CarElement::operator<(const CarElement &element) const
 {
     return this->typeID_<element.typeID_;
 }
 
-bool CarElement::operator==(CarElement &element)
+bool CarElement::operator>(const CarElement &element) const
+{
+    return this->typeID_>element.typeID_;
+}
+
+bool CarElement::operator==(const CarElement &element) const
 {
     return this->typeID_==element.typeID_;
 }
@@ -23,4 +28,9 @@ int CarElement::getSales()
 int CarElement::getTypeId()
 {
     return typeID_;
+}
+
+void CarElement::flatDelete()
+{
+
 }

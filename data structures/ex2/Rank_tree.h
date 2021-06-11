@@ -16,10 +16,10 @@ public:
     int size_;
 
     RTNode():
-        parent_(nullptr), left_(nullptr), right_(nullptr), height_(0), size_(1), data_(nullptr) {}
+            parent_(nullptr), left_(nullptr), right_(nullptr), height_(0), size_(1), data_(nullptr) {}
 
     explicit RTNode(T *data):
-        parent_(nullptr), left_(nullptr), right_(nullptr), height_(0), size_(1), data_(data) {}
+            parent_(nullptr), left_(nullptr), right_(nullptr), height_(0), size_(1), data_(data) {}
 
     ~RTNode() { delete data_; }
 
@@ -33,8 +33,8 @@ private:
 template<class T>
 class RankTree {
 public:
-    RankTree(): 
-        root_(nullptr), max_(nullptr), min_(nullptr) {}
+    RankTree():
+            root_(nullptr), max_(nullptr), min_(nullptr) {}
 
     ~RankTree() { clear(); }
 
@@ -53,7 +53,7 @@ public:
     T *findMax() const;
 
     T *findMin() const;
-    
+
     T *getMostRight() const; // O(1)
 
     int currentSize() const;

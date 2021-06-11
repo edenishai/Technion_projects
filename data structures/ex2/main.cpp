@@ -2,6 +2,7 @@
 #include "Dynamic_Array.h"
 #include "Agency.h"
 #include "Union_Find.h"
+#include "Rank_Tree.h"
 
 #ifdef __cplusplus
 
@@ -94,10 +95,9 @@ void test7()
 
 int main(int argc, const char **argv)
 {
-    //test1();
-    //test2();
+    test1();
+    test2();
     test3();
-
 
     return 0;
 

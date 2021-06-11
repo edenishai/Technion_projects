@@ -6,15 +6,19 @@ public:
 
     explicit CarElement(int typeID, int sales = 0);
 
-    bool operator<(CarElement& element);
+    bool operator<(const CarElement& element) const;
 
-    bool operator==(CarElement& element);
+    bool operator>(const CarElement& element) const;
+
+    bool operator==(const CarElement& element) const;
 
     int getSales();
 
     int getTypeId();
 
     ~CarElement() = default;
+
+    void flatDelete();
 
 private:
     int typeID_;
