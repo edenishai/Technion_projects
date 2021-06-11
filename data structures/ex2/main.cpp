@@ -14,7 +14,7 @@ public:
 };
 void test1()
 {
-    auto dar = new Dynamic_Array<Agency>();
+    auto dar = new DynamicArray<Agency>();
     dar->add(new Agency());
     dar->add(new Agency());
     delete dar;

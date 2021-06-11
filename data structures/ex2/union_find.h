@@ -151,7 +151,7 @@ void UnionFind<T>::Union(int n1, int n2, Unite unite)
     T &element1 = this->elements_[root1];
     T &element2 = this->elements_[root2];
 
-    T *new_element = unite(&element1, &element2);//todo: add unite
+    T *new_element = unite(element1, element2);//todo: add unite
 
 
     if (n1_size >= n2_size) {

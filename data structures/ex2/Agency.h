@@ -1,23 +1,27 @@
 #ifndef AGENCY_TYPE_H
 #define AGENCY_TYPE_H
 
-#include "../ex1/AVL_tree.h"
+//#include "../ex1/AVL_tree.h"
+#include "Car_Element.h"
 #include "Rank_Tree.h"
-#include "car_type.h"
-#include "sold_type.h"
-
-class AgencyType {
+#include "Sale_Element.h"
+class Agency {
 public:
-    AgencyType() =default;
+    Agency() =default;
 
-    ~AgencyType()=default;
+    ~Agency()=default;
 
     void sellCar(int carType, int amount)
     {
-        //todo: complete
+        CarElement to_find(carType);
+        CarElement* car = this->cars_->find(&to_find);
+        SaleElement to_remove(carType,car->getSales());
+        this->sales_->remove(&to_remove);
     }
-    AVLTree<CarType>* cars_;
-    RankTree<SoldType>* sales_;
+
+private:
+    RankTree<SaleElement,int>* sales_;
+    RankTree<CarElement,int>* cars_;
 };
 
 

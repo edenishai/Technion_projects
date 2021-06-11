@@ -2,8 +2,8 @@
 // Created by ASUS on 09/06/2021.
 //
 
-#ifndef DATA_STRUCT_1_HW_1_DYNAMICARRAY_H
-#define DATA_STRUCT_1_HW_1_DYNAMICARRAY_H
+#ifndef DATA_STRUCT_1_HW_1_DYNAMIC_ARRAY_H
+#define DATA_STRUCT_1_HW_1_DYNAMIC_ARRAY_H
 
 template<class T>
 class DynamicArray {
@@ -110,10 +110,10 @@ DynamicArray<T>::~DynamicArray()
 }
 
 template<class T>
-void DynamicArray<T>::replaceAt(int index,T *data)
+void DynamicArray<T>::replaceAt(int index, T *data)
 {
     delete arr[index];
     arr[index] = data;
 }
 
-#endif //DATA_STRUCT_1_HW_1_DYNAMICARRAY_H
+#endif //DATA_STRUCT_1_HW_1_DYNAMIC_ARRAY_H
