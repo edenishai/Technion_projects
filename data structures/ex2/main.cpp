@@ -1,18 +1,3 @@
-/***************************************************************************/
-/*                                                                         */
-/* 234218 Data DSs 1, Spring 2021                                          */
-/* Homework : Wet 1                                                        */
-/*                                                                         */
-/***************************************************************************/
-
-/***************************************************************************/
-/*                                                                         */
-/* File Name : main1.cpp                                                   */
-/*                                                                         */
-/* Holds the "int main()" function and the parser of the shell's           */
-/* command line.                                                           */
-/***************************************************************************/
-
 #include <iostream>
 #include "DynamicArray.h"
 #include "agency_type.h"
@@ -20,37 +5,91 @@
 
 #ifdef __cplusplus
 
-
-int main(int argc, const char**argv) {
-    DynamicArray<AgencyType>* dar = new DynamicArray<AgencyType>();
-    AgencyType* a = new AgencyType();
-    dar->add(a);
-    a = nullptr;
-    AgencyType* b = new AgencyType();
-    dar->add(b);
-    b = nullptr;
+class UniteIntFunc {
+public:
+    AgencyType* operator()(AgencyType*& a, AgencyType*& b)
+    {
+        return new AgencyType();
+    }
+};
+void test1()
+{
+    auto dar = new DynamicArray<AgencyType>();
+    dar->add(new AgencyType());
+    dar->add(new AgencyType());
     delete dar;
-    ///////////////////////////////////////// good so far
+}
 
-    UnionFind<AgencyType>* u = new UnionFind<AgencyType>();
-    AgencyType* c = new AgencyType();
-    u->Makeset(c);
-    c = nullptr;
+void test2()
+{
+    auto u = new UnionFind<AgencyType>();
 
-    AgencyType* d = new AgencyType();
-    u->Makeset(d);
-    d = nullptr;
+    //AgencyType *na = nullptr;
+    for (int i = 0; i < 5; ++i) {
+        //na = new AgencyType();
+        u->makeSet(new AgencyType());
+        //na = nullptr;
+        u->printElements();
+    }
+
+
+    std::cout << "part 1: unite 0,1\n";
+    u->Union(0, 1, UniteIntFunc());
+    u->print();
+
+    std::cout << "part 2: unite 2,3\n";
+    u->Union(2, 3, UniteIntFunc());
+    u->print();
+
+    std::cout << "part 3: unite 3,4\n";
+    u->Union(3, 4, UniteIntFunc());
+    u->print();
+
+    std::cout << "part 4: unite 1,2\n";
+    u->Union(1, 2, UniteIntFunc());
+    u->print();
+
+    std::cout << "part 5: \n";
+    std::cout << "the root parent is: " << u->findIdentifier(1) << "\n";
+    u->print();
+    u->printElements();
 
     delete u;
+    std::cout << "\n end!";
+}
 
-    return 0 ;
+void test3()
+{
+
+}
+
+void test4()
+{
+
+}
+
+void test5()
+{
+
+}
+
+void test6()
+{
+
+}
+
+void test7()
+{
+
+}
+
+int main(int argc, const char **argv)
+{
+    test1();
+    test2();
 
 
-
-
-
-
-
+    return 0;
 
 
 }

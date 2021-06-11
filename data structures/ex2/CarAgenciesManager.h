@@ -19,6 +19,14 @@ public:
 
     ~CarAgenciesManager();
 
+    class UniteAgencyFunc {
+    public:
+        AgencyType* operator()(AgencyType *&, AgencyType *&)
+        {
+            return new AgencyType();
+        }
+    };
+
 private:
     UnionFind<AgencyType>* agencies_;
 
@@ -26,21 +34,32 @@ private:
 
 CarAgenciesManager::CarAgenciesManager()
 {
-
+    agencies_ = new UnionFind<AgencyType>;
 }
 
 StatusType CarAgenciesManager::AddAgency()
 {
-    return FAILURE;
+    //todo: add try catch for memory leaks
+    auto na = new AgencyType();
+    agencies_->makeSet(na);
+    return SUCCESS;
 }
 
 StatusType CarAgenciesManager::SellCar(int agencyID, int typeID, int k)
 {
-    return FAILURE;
+    if(agencies_->findIdentifier(agencyID) == agencies_->NO_PARENT)
+    {
+        return FAILURE;
+    }
+    AgencyType& agency = agencies_->findElement(agencyID);
+    agency.sellCar(typeID,k);
+    return SUCCESS;
+
 }
 
 StatusType CarAgenciesManager::UniteAgencies(int agencyID1, int agencyID2)
 {
+    agencies_->Union(agencyID1,agencyID2,UniteAgencyFunc());
     return FAILURE;
 }
 
@@ -51,7 +70,7 @@ StatusType CarAgenciesManager::GetIthSoldType(int agencyID, int i, int *res)
 
 CarAgenciesManager::~CarAgenciesManager()
 {
-
+    delete agencies_;
 }
 
 #endif /* CAR_AGENCIES_MANAGER_H */
