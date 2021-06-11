@@ -2,7 +2,7 @@
 #define UNION_FIND_H
 
 #include <iostream>
-#include "DynamicArray.h"
+#include "Dynamic_Array.h"
 #include "Agency.h"
 
 template<class T>
