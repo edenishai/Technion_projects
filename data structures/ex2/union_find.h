@@ -29,7 +29,6 @@ public:
     const int NO_PARENT = -1;
 
 
-
 private:
     int elements_count;
     DynamicArray<T> elements_;
@@ -159,14 +158,12 @@ void UnionFind<T>::Union(int n1, int n2, Unite unite)
         this->parents[root2] = n1; //make n1 new root
         this->sizes[root2] = 0; // zero old root size
         this->sizes[root1] += (n2_size + 1); //update new root size
-        delete &(this->elements_[root1]);
-        this->elements_[root1] = *new_element; //update root contains united element
+        this->elements_.replaceAt(root1,new_element);//update root contains united element
     } else {
         this->parents[root1] = n2; //make n2 new root
         this->sizes[root1] = 0;// zero old root size
         this->sizes[root2] += (n1_size + 1);//update new root size
-        delete &(this->elements_[root2]);
-        this->elements_[root2] = *new_element;//update root contains united element
+        this->elements_.replaceAt(root2,new_element);//update root contains united element
     }
 }
 

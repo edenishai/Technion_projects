@@ -26,6 +26,8 @@ public:
 
     const T &operator[](int index) const;
 
+    void replaceAt(int index,T *data);
+
     ~DynamicArray();
 };
 
@@ -101,10 +103,17 @@ template<class T>
 DynamicArray<T>::~DynamicArray()
 {
     for (int i = 0; i < count; ++i) {
-        T* t= arr[i];
+        auto  t= arr[i];
         delete t;
     }
     delete []arr;
+}
+
+template<class T>
+void DynamicArray<T>::replaceAt(int index,T *data)
+{
+    delete arr[index];
+    arr[index] = data;
 }
 
 #endif //DATA_STRUCT_1_HW_1_DYNAMICARRAY_H

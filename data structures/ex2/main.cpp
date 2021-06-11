@@ -1,18 +1,3 @@
-/***************************************************************************/
-/*                                                                         */
-/* 234218 Data DSs 1, Spring 2021                                          */
-/* Homework : Wet 1                                                        */
-/*                                                                         */
-/***************************************************************************/
-
-/***************************************************************************/
-/*                                                                         */
-/* File Name : main1.cpp                                                   */
-/*                                                                         */
-/* Holds the "int main()" function and the parser of the shell's           */
-/* command line.                                                           */
-/***************************************************************************/
-
 #include <iostream>
 #include "DynamicArray.h"
 #include "agency_type.h"
@@ -22,15 +7,9 @@
 
 class UniteIntFunc {
 public:
-    AgencyType* operator()(AgencyType* a, AgencyType* b)
+    AgencyType* operator()(AgencyType*& a, AgencyType*& b)
     {
         return new AgencyType();
-    }
-};
-struct Del
-{
-    void operator()(AgencyType*& a){
-        delete a;
     }
 };
 void test1()

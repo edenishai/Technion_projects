@@ -21,8 +21,10 @@ public:
 
     class UniteAgencyFunc {
     public:
-        AgencyType* operator()(AgencyType *, AgencyType *)
-        {}
+        AgencyType* operator()(AgencyType *&, AgencyType *&)
+        {
+            return new AgencyType();
+        }
     };
 
 private:
