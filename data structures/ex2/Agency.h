@@ -20,8 +20,8 @@ public:
     }
 
 private:
-    RankTree<SaleElement,int>* sales_;
-    RankTree<CarElement,int>* cars_;
+    RankTree<SaleElement>* sales_;
+    RankTree<CarElement>* cars_;
 };
 
 

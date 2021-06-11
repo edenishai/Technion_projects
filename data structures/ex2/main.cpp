@@ -60,7 +60,16 @@ void test2()
 
 void test3()
 {
+    RankTree<int> tree;
+    tree.insert(new int(7));
+    tree.insert(new int(1));
+    tree.insert(new int(3));
+    tree.insert(new int(2));
+    tree.insert(new int(4));
+    tree.insert(new int(5));
+    tree.insert(new int(6));
 
+    int *a = tree.findByRank(3);
 }
 
 void test4()
@@ -85,8 +94,9 @@ void test7()
 
 int main(int argc, const char **argv)
 {
-    test1();
-    test2();
+    //test1();
+    //test2();
+    test3();
 
 
     return 0;
