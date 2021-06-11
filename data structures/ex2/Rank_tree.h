@@ -6,183 +6,244 @@
 
 using namespace std;
 
-template <class T, class S>
-class AVLNode {
+template<class T>
+class RTNode {
 public:
-    AVLNode *parent_;
-    AVLNode *left_;
-    AVLNode *right_;
+    RTNode *parent_;
+    RTNode *left_;
+    RTNode *right_;
     int height_;
-    int rank_;
+    int size_;
 
-    AVLNode() :
-        parent_(nullptr), left_(nullptr), right_(nullptr), height_(0), rank_(1)
-    {}
+    RTNode():
+        parent_(nullptr), left_(nullptr), right_(nullptr), height_(0), size_(1), data_(nullptr) {}
 
-    explicit AVLNode(T data) :
-        parent_(nullptr), left_(nullptr), right_(nullptr), height_(0), rank_(1), data_(data)
-    {}
+    explicit RTNode(T *data):
+        parent_(nullptr), left_(nullptr), right_(nullptr), height_(0), size_(1), data_(data) {}
 
-    ~AVLNode() = default;
+    ~RTNode() { delete data_; }
 
-    T *getData()
-    { return data_; }
-
-    void print() const
-    { T a = data_; }
-
+    T *getData() { return data_; }
 
 private:
-    T key_;
-    S data_;
+    T *data_;
 };
 
 
-template <class T, class S>
+template<class T>
 class RankTree {
 public:
-    RankTree() : root_(nullptr), currentSize_(0), min_(nullptr), max_(nullptr)
-    {}
+    RankTree(): 
+        root_(nullptr), max_(nullptr), min_(nullptr) {}
 
-    ~RankTree();
+    ~RankTree() { clear(); }
 
     void insert(T *data);
-
-    void buildOrdered(T **data_arr, int range);
 
     void remove(T *data);
 
     void clear();
 
-    void display() const;
+    void buildOrdered(T **data_arr, int range);
 
     T *find(const T *data) const;
+
+    T *findByRank(int i) const;
 
     T *findMax() const;
 
     T *findMin() const;
+    
+    T *getMostRight() const; // O(1)
 
     int currentSize() const;
 
-    T *getMostRight();
-
     int getInOrder(T *array, int size) const;
 
-    bool checkTree();
-
-
 private:
+    RTNode<T> *root_;
+    RTNode<T> *max_;
+    RTNode<T> *min_;
 
-    AVLNode<T, S> *root_;
+    RTNode<T> *LL_Rotate(RTNode<T> *node);
 
-    AVLNode<T, S> *max_;
+    RTNode<T> *RR_Rotate(RTNode<T> *node);
 
-    AVLNode<T, S> *min_;
+    RTNode<T> *LR_Rotate(RTNode<T> *node);
 
-    int currentSize_;
+    RTNode<T> *RL_Rotate(RTNode<T> *node);
 
-    void getInOrder(AVLNode<T, S> *root, T *array, int size, int *index) const;
+    RTNode<T> *insert_aux(T *data, RTNode<T> *node);
 
-    AVLNode<T, S> *remove_aux(T *data, AVLNode<T, S> *node);
+    RTNode<T> *remove_aux(T *data, RTNode<T> *node);
 
-    AVLNode<T, S> *LL_Rotate(AVLNode<T, S> *node);
+    void deepRemoveNode(RTNode<T> *node);
 
-    AVLNode<T, S> *RR_Rotate(AVLNode<T, S> *node);
+    RTNode<T> *buildOrdered_aux(T **data, int start, int end, int height);
 
-    AVLNode<T, S> *LR_Rotate(AVLNode<T, S> *node);
+    T *find_aux(RTNode<T> *root, const T *data) const;
 
-    AVLNode<T, S> *RL_Rotate(AVLNode<T, S> *node);
+    T *findByRank_aux(RTNode<T> *node, int range, int i) const;
 
-    int balanceFactor(AVLNode<T, S> *node) const;
+    RTNode<T> *findMax_aux(RTNode<T> *node) const;
 
-    void rankUpdate(AVLNode<T, S> *node);
+    RTNode<T> *findMin_aux(RTNode<T> *node) const;
 
-    int rankOfChild(AVLNode<T, S> *child) const;
+    int balanceFactor(RTNode<T> *node) const;
 
-    void printInOrder(AVLNode<T, S> *root) const;
+    int height(RTNode<T> *node) const;
 
-    AVLNode<T, S> *insert_aux(T *data, AVLNode<T, S> *node);
+    void sizeUpdate(RTNode<T> *node);
 
-    void deepRemoveNode(AVLNode<T, S> *node);
+    int size(RTNode<T> *child) const;
 
-    AVLNode<T, S> *findMin_aux(AVLNode<T, S> *node) const;
-
-    AVLNode<T, S> *findMax_aux(AVLNode<T, S> *node) const;
-
-    int height(AVLNode<T, S> *node) const;
-
-    T *find_aux(AVLNode<T, S> *root, const T *data) const;
-
-    AVLNode<T, S> *buildOrdered_aux(T **data, int start, int end, int height);
-
-    bool checkTree_aux(AVLNode<T, S> *node, int h);
+    void getInOrder(RTNode<T> *root, T *array, int size, int *index) const;
 };
 
-template<class T, class S>
-RankTree<T, S>::~RankTree()
-{
-    this->clear();
-}
-
-template<class T, class S>
-void RankTree<T, S>::insert(T *data)
+template<class T>
+void RankTree<T>::insert(T *data)
 {
     if (find(data))
         return;
     root_ = insert_aux(data, root_);
-    ++currentSize_;
-    this->max_ = findMax_aux(root_);
-    this->min_ = findMin_aux(root_);
-
+    max_ = findMax_aux(root_);
+    min_ = findMin_aux(root_);
 }
 
-template<class T, class S>
-void RankTree<T, S>::remove(T *data)
+template<class T>
+void RankTree<T>::remove(T *data)
 {
     if (find(data)) {
-        --currentSize_;
         root_ = remove_aux(data, root_);
         max_ = findMax_aux(root_);
         min_ = findMin_aux(root_);
     }
 }
 
-template<class T, class S>
-void RankTree<T, S>::clear()
+template<class T>
+void RankTree<T>::clear()
 {
     if (root_) {
         deepRemoveNode(root_);
     }
 }
 
-template<class T, class S>
-void RankTree<T, S>::display() const
+template<class T>
+void RankTree<T>::buildOrdered(T **data, int range)
 {
-    printInOrder(root_);
+    root_ = buildOrdered_aux(data, 0, range - 1, log(range) / log(2));
+    max_ = findMax_aux(root_);
+    min_ = findMin_aux(root_);
 }
 
-template<class T, class S>
-void RankTree<T, S>::deepRemoveNode(AVLNode<T, S> *node)
+template<class T>
+T *RankTree<T>::find(const T *data) const
 {
-    if (node) {
-        deepRemoveNode(node->left_);
-        deepRemoveNode(node->right_);
-        delete node;
+    T *d = find_aux(root_, data);
+    return d;
+}
+
+template<class T>
+T *RankTree<T>::findByRank(int i) const
+{
+    int size = currentSize();
+    if (size < ++i) {
+        return nullptr;
     }
+    return findByRank_aux(root_, size, i);
 }
 
-template<class T, class S>
-AVLNode<T, S> *RankTree<T, S>::insert_aux(T *data, AVLNode<T, S> *node)
+template<class T>
+T *RankTree<T>::findMax() const
+{
+    RTNode<T> *maxNode = findMax_aux(root_);
+    return maxNode->getData();
+}
+
+template<class T>
+T *RankTree<T>::findMin() const
+{
+    RTNode<T> *minNode = findMin_aux(root_);
+    return minNode->getData();
+}
+
+template<class T>
+T *RankTree<T>::getMostRight() const
+{
+    return max_->getData();
+}
+
+template<class T>
+int RankTree<T>::currentSize() const
+{
+    if (root_)
+        return root_->size_;
+    return 0;
+}
+
+template<class T>
+int RankTree<T>::getInOrder(T *array, int size) const
+{
+    size = min(size, currentSize());
+    int index = 0;
+    getInOrder(root_, array, size, &index);
+    return size;
+}
+
+template<class T>
+RTNode<T> *RankTree<T>::LL_Rotate(RTNode<T> *node)
+{
+    RTNode<T> *temp = node->left_;
+    temp->parent_ = node->parent_;
+    node->parent_ = temp;
+    node->left_ = temp->right_;
+    temp->right_ = node;
+    node->height_ = max(height(node->left_), height(node->right_)) + 1;
+    temp->height_ = max(height(temp->left_), height(temp->right_)) + 1;
+    sizeUpdate(node);
+    sizeUpdate(temp);
+    return temp;
+}
+
+template<class T>
+RTNode<T> *RankTree<T>::RR_Rotate(RTNode<T> *node)
+{
+    RTNode<T> *temp = node->right_;
+    temp->parent_ = node->parent_;
+    node->parent_ = temp;
+    node->right_ = temp->left_;
+    temp->left_ = node;
+    node->height_ = max(height(node->left_), height(node->right_)) + 1;
+    temp->height_ = max(height(temp->left_), height(temp->right_)) + 1;
+    sizeUpdate(node);
+    sizeUpdate(temp);
+    return temp;
+}
+
+template<class T>
+RTNode<T> *RankTree<T>::LR_Rotate(RTNode<T> *node)
+{
+    node->left_ = RR_Rotate(node->left_);
+    return LL_Rotate(node);
+}
+
+template<class T>
+RTNode<T> *RankTree<T>::RL_Rotate(RTNode<T> *node)
+{
+    node->right_ = LL_Rotate(node->right_);
+    return RR_Rotate(node);
+}
+
+template<class T>
+RTNode<T> *RankTree<T>::insert_aux(T *data, RTNode<T> *node)
 {
     // stop condition
-    if (node == NULL) {
-        node = new AVLNode<T, S>(data);
-        node->height_ = 0;
-        node->left_ = NULL;
-        node->right_ = NULL;
+    if (node == nullptr)
+        node = new RTNode<T>(data);
 
-    } else if (*data < *(node->getData())) {
+    else if (*data < *(node->getData())) {
         node->left_ = insert_aux(data, node->left_);
+        node->left_->parent_ = node;
         if (balanceFactor(node) == 2) {
             if (balanceFactor(node->left_) == -1)
                 node = LR_Rotate(node);
@@ -191,6 +252,7 @@ AVLNode<T, S> *RankTree<T, S>::insert_aux(T *data, AVLNode<T, S> *node)
         }
     } else if (*data > *(node->getData())) {
         node->right_ = insert_aux(data, node->right_);
+        node->right_->parent_ = node;
         if (balanceFactor(node) == -2) {
             if (balanceFactor(node->right_) == 1)
                 node = RL_Rotate(node);
@@ -198,147 +260,15 @@ AVLNode<T, S> *RankTree<T, S>::insert_aux(T *data, AVLNode<T, S> *node)
                 node = RR_Rotate(node);
         }
     }
-    node->height_ = max(height_(node->left_), height_(node->right_)) + 1;
+    node->height_ = max(height(node->left_), height(node->right_)) + 1;
+    sizeUpdate(node);
     return node;
 }
 
-template<class T, class S>
-void RankTree<T, S>::printInOrder(AVLNode<T, S> *root) const
+template<class T>
+RTNode<T> *RankTree<T>::remove_aux(T *data, RTNode<T> *node)
 {
-    if (root) {
-        printInOrder(root->left_);
-        root->print();
-        printInOrder(root->right_);
-    }
-}
-
-template<class T, class S>
-T *RankTree<T, S>::find_aux(AVLNode<T, S> *root, const T *data) const
-{
-    if (root) {
-        if (*(root->getData()) == *data) {
-            return root->getData();
-        } else if (*data < *(root->getData())) {
-            return find_aux(root->left_, data);
-        } else {
-            return find_aux(root->right_, data);
-        }
-    }
-    return nullptr;
-}
-
-template<class T, class S>
-T *RankTree<T, S>::find(const T *data) const
-{
-    T *d = find_aux(root_, data);
-    return d;
-}
-
-template<class T, class S>
-int RankTree<T, S>::height(AVLNode<T, S> *node) const
-{
-    return (node == NULL ? -1 : node->height_);
-}
-
-template<class T, class S>
-int RankTree<T, S>::balanceFactor(AVLNode<T, S> *node) const
-{
-    if (!node) {
-        return 0;
-    }
-    return height_(node->left_) - height_(node->right_);
-}
-
-template<class T, class S>
-AVLNode<T, S> *RankTree<T, S>::LL_Rotate(AVLNode<T, S> *node)
-{
-    AVLNode<T, S> *temp = node->left_;
-    temp->parent_ = node->parent_;
-    node->left_ = temp->right_;
-    if (node->parent_->right_ == node){
-        node->parent_->right_ = temp;
-    }
-    else{
-        assert(node->parent_->left_ == node);
-        node->parent_->left_ = temp;
-    }
-    node->parent_ = temp;
-    if(temp->right_ != nullptr){
-        temp->right_->parent_ = node;
-    }
-    temp->right_ = node;
-    node->height_ = max(height(node->left_), height(node->right_)) + 1;
-    temp->height_ = max(height(temp->left_), height(temp->right_)) + 1;
-    rankUpdate(node);
-    rankUpdate(temp);
-    return temp;
-}
-
-template<class T, class S>
-AVLNode<T, S> *RankTree<T, S>::RR_Rotate(AVLNode<T, S> *node)
-{
-    AVLNode<T, S> *temp = node->right_;
-    temp->parent_ = node->parent_;
-    node->right_ = temp->left_;
-    if (node->parent_->right_ == node){
-        node->parent_->right_ = temp;
-    }
-    else{
-        assert(node->parent_->left_ == node);
-        node->parent_->left_ = temp;
-    }
-    node->parent_ = temp;
-    if(temp->left_ != nullptr){
-        temp->left_->parent_ = node;
-    }
-    temp->left_ = node;
-    node->height_ = max(height(node->left_), height(node->right_)) + 1;
-    temp->height_ = max(height(temp->left_), height(temp->right_)) + 1;
-    rankUpdate(node);
-    rankUpdate(temp);
-    return temp;
-}
-
-template<class T, class S>
-AVLNode<T, S> *RankTree<T, S>::RL_Rotate(AVLNode<T, S> *node)
-{
-    node->right_ = LL_Rotate(node->right_);
-    return RR_Rotate(node);
-}
-
-template<class T, class S>
-AVLNode<T, S> *RankTree<T, S>::LR_Rotate(AVLNode<T, S> *node)
-{
-    node->left_ = RR_Rotate(node->left_);
-    return LL_Rotate(node);
-}
-
-template<class T, class S>
-AVLNode<T, S> *RankTree<T, S>::findMin_aux(AVLNode<T, S> *node) const
-{
-    if (node == NULL)
-        return NULL;
-    else if (node->left_ == NULL)
-        return node;
-    else
-        return findMin_aux(node->left_);
-}
-
-template<class T, class S>
-AVLNode<T, S> *RankTree<T, S>::findMax_aux(AVLNode<T, S> *node) const
-{
-    if (node == NULL)
-        return NULL;
-    else if (node->right_ == NULL)
-        return node;
-    else
-        return findMax_aux(node->right_);
-}
-
-template<class T, class S>
-AVLNode<T, S> *RankTree<T, S>::remove_aux(T *data, AVLNode<T, S> *node)
-{
-    AVLNode<T, S> *temp;
+    RTNode<T> *temp;
 
     if (node == NULL)
         return NULL;
@@ -380,90 +310,28 @@ AVLNode<T, S> *RankTree<T, S>::remove_aux(T *data, AVLNode<T, S> *node)
         else
             return RR_Rotate(node);
     }
+    sizeUpdate(node);
     return node;
 }
 
-template<class T, class S>
-T *RankTree<T, S>::findMax() const
+template<class T>
+void RankTree<T>::deepRemoveNode(RTNode<T> *node)
 {
-    AVLNode<T, S> *maxNode = findMax_aux(root_);
-    return maxNode->getData();
-}
-
-template<class T, class S>
-T *RankTree<T, S>::findMin() const
-{
-    AVLNode<T, S> *minNode = findMin_aux(root_);
-    return minNode->getData();
-}
-
-template<class T, class S>
-int RankTree<T, S>::currentSize() const
-{
-    return currentSize_;
-}
-
-template<class T, class S>
-T *RankTree<T, S>::getMostRight()
-{
-    return this->max_->getData();
-}
-
-template<class T, class S>
-void RankTree<T, S>::rankUpdate(AVLNode<T, S> *node)
-{
-    node->rank_ = 1 + rankOfChild(node->left_) + rankOfChild(node->right_);
-}
-
-template<class T, class S>
-int RankTree<T, S>::rankOfChild(AVLNode<T, S> *child) const
-{
-    if (child == NULL)
-    {
-        return 0;
-    }
-    else
-    {
-        return child->rank_;
+    if (node) {
+        deepRemoveNode(node->left_);
+        deepRemoveNode(node->right_);
+        delete node;
     }
 }
 
-template<class T, class S>
-int RankTree<T, S>::getInOrder(T *array, int size) const
-{
-    size = min(size, this->currentSize_);
-    int index = 0;
-    getInOrder(root_, array, size, &index);
-    return size;
-}
-
-template<class T, class S>
-void RankTree<T, S>::getInOrder(AVLNode<T, S> *root, T *array, int size, int *index) const
-{
-    if (root == nullptr || *index == size)
-        return;
-    getInOrder(root->left_, array, size, index);
-    array[*index] = *(root->getData());
-    (*index)++;
-    getInOrder(root->right_, array, size, index);
-}
-
-template<class T, class S>
-void RankTree<T, S>::buildOrdered(T **data, int range)
-{
-    int height_ = log(range) / log(2);
-    this->root_ = buildOrdered_aux(data, 0, range - 1, height_);
-    this->currentSize_ = range;
-}
-
-template<class T, class S>
-AVLNode<T, S> *RankTree<T, S>::buildOrdered_aux(T **data, int start, int end, int height)
+template<class T>
+RTNode<T> *RankTree<T>::buildOrdered_aux(T **data, int start, int end, int height)
 {
     if (start > end) { return nullptr; }
 
     int middle = (start + end) / 2;
     T *new_data = data[middle];
-    AVLNode<T, S> *root = new AVLNode<T, S>(new_data);
+    RTNode<T> *root = new RTNode<T>(new_data);
     root->height_ = height;
 
     root->left_ = buildOrdered_aux(data, start, middle - 1, height - 1);
@@ -472,30 +340,96 @@ AVLNode<T, S> *RankTree<T, S>::buildOrdered_aux(T **data, int start, int end, in
     return root;
 }
 
-template<class T, class S>
-bool RankTree<T, S>::checkTree()
+template<class T>
+T *RankTree<T>::find_aux(RTNode<T> *root, const T *data) const
 {
-    if (this->currentSize_ == 0) {
-        return root_ == nullptr;
+    if (root) {
+        if (*(root->getData()) == *data) {
+            return root->getData();
+        } else if (*data < *(root->getData())) {
+            return find_aux(root->left_, data);
+        } else {
+            return find_aux(root->right_, data);
+        }
     }
-    int height_ = log(currentSize_) / log(2);
-    return checkTree_aux(root_, height_);
+    return nullptr;
 }
 
-template<class T, class S>
-bool RankTree<T, S>::checkTree_aux(AVLNode<T, S> *node, int h)
-{
-    if (node == nullptr) {
-        return true;
-    }
-    if (h == 0) {
-        if (node->right_) return false;
-        if (node->left_) return false;
-        return true;
-    }
-    //h>0
-    return checkTree_aux(node->right_, h - 1) && checkTree_aux(node->left_, h - 1);
+template<class T>
+T *RankTree<T>::findByRank_aux(RTNode<T> *node, int range, int i) const {
+    if (!node)
+        return nullptr;
+    int leftSize = size(node->left_);
+    int rightSize = size(node->right_);
+    if (i <= leftSize)
+        return findByRank_aux(node->left_, leftSize, i);
+    else if (i >= range-rightSize+1)
+        return findByRank_aux(node->right_, rightSize, i-(range-rightSize));
+    else
+        return node->getData();
+}
 
+template<class T>
+RTNode<T> *RankTree<T>::findMax_aux(RTNode<T> *node) const
+{
+    if (node == NULL)
+        return NULL;
+    else if (node->right_ == NULL)
+        return node;
+    else
+        return findMax_aux(node->right_);
+}
+
+template<class T>
+RTNode<T> *RankTree<T>::findMin_aux(RTNode<T> *node) const
+{
+    if (node == NULL)
+        return NULL;
+    else if (node->left_ == NULL)
+        return node;
+    else
+        return findMin_aux(node->left_);
+}
+
+template<class T>
+int RankTree<T>::balanceFactor(RTNode<T> *node) const
+{
+    if (!node) {
+        return 0;
+    }
+    return height(node->left_) - height(node->right_);
+}
+
+template<class T>
+int RankTree<T>::height(RTNode<T> *node) const
+{
+    return (node == NULL ? -1 : node->height_);
+}
+
+template<class T>
+void RankTree<T>::sizeUpdate(RTNode<T> *node)
+{
+    node->size_ = 1 + size(node->left_) + size(node->right_);
+}
+
+template<class T>
+int RankTree<T>::size(RTNode<T> *child) const
+{
+    if (child == nullptr)
+        return 0;
+
+    return child->size_;
+}
+
+template<class T>
+void RankTree<T>::getInOrder(RTNode<T> *root, T *array, int size, int *index) const
+{
+    if (root == nullptr || *index == size)
+        return;
+    getInOrder(root->left_, array, size, index);
+    array[*index] = *(root->getData());
+    (*index)++;
+    getInOrder(root->right_, array, size, index);
 }
 
 

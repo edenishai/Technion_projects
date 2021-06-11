@@ -10,5 +10,7 @@ add_executable(DS1
         CarAgenciesManager.h
         union_find.h
         car_type.h
+        sold_type.h
+        Rank_tree.h
         agency_type.h
         DynamicArray.h)
