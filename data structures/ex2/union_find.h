@@ -111,15 +111,14 @@ T &UnionFind<T>::findElement(int identifier)
 {
     //Find Parent:
     int parent = this->parents[identifier];
-    int to_return_index = -1;
     if (parent == NO_PARENT) {    // if already root
-        to_return_index = identifier;
+        return this->elements_[identifier];
     }
-    while (to_return_index == -1 && this->parents[parent] != NO_PARENT) {
+    while (this->parents[parent] != NO_PARENT) {
         parent = this->parents[parent];
     }
-    to_return_index = parent;
-    T &to_return = this->elements_[parent];
+    int to_return_index = parent;
+    T &to_return = this->elements_[to_return_index];
 
     //Update Route:
     int temp;
@@ -151,7 +150,7 @@ void UnionFind<T>::Union(int n1, int n2, Unite unite)
     T &element1 = this->elements_[root1];
     T &element2 = this->elements_[root2];
 
-    T *new_element = unite(element1, element2);//todo: add unite
+    T *new_element = unite(element1, element2);
 
 
     if (n1_size >= n2_size) {

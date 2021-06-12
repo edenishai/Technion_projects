@@ -40,8 +40,8 @@ void Agency::sellCar(int carType, int amount)
         this->cars_->insert(new_car_element);
 
     } else { //first time sell
-        auto new_sale_element = new SaleElement(carType, car->getSales() + amount);
-        auto new_car_element = new CarElement(carType, car->getSales() + amount);
+        auto new_sale_element = new SaleElement(carType,  amount);
+        auto new_car_element = new CarElement(carType, amount);
 
         this->sales_->insert(new_sale_element);
         this->cars_->insert(new_car_element);
