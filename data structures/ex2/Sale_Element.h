@@ -8,7 +8,8 @@
 
 class SaleElement {
 public:
-    int sales_;
+
+    SaleElement() = default;
 
     explicit SaleElement(int typeID,int sales = 0);
 
@@ -24,11 +25,16 @@ public:
 
     void flatDelete();
 
+    void print();
+
+    SaleElement* clone();
+
     ~SaleElement() = default;
 
 
 private:
     int typeID_;
+    int sales_;
 };
 
 

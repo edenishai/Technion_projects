@@ -3,7 +3,8 @@
 
 class CarElement {
 public:
-    int sales_;
+
+    CarElement() = default;
 
     explicit CarElement(int typeID, int sales = 0);
 
@@ -17,12 +18,18 @@ public:
 
     int getTypeId();
 
+    void flatDelete();
+
+    CarElement* clone();
+
+    void print();
+
     ~CarElement() = default;
 
-    void flatDelete();
 
 private:
     int typeID_;
+    int sales_;
 };
 
 #endif /* CAR_ELEMENT_H */

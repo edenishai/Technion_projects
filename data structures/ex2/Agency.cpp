@@ -3,6 +3,22 @@
 //
 #include "Agency.h"
 
+Agency::Agency()
+{
+    this->cars_= new RankTree<CarElement>;
+    this->sales_= new RankTree<SaleElement>;
+
+}
+
+Agency::Agency(CarElement **cars, SaleElement **sales, int total_count)
+{
+    this->cars_= new RankTree<CarElement>;
+    this->cars_->buildOrdered(cars,total_count);
+
+    this->sales_= new RankTree<SaleElement>;
+    this->sales_->buildOrdered(sales,total_count);
+}
+
 void Agency::sellCar(int carType, int amount)
 {
 
@@ -24,10 +40,17 @@ void Agency::sellCar(int carType, int amount)
         this->cars_->insert(new_car_element);
 
     } else { //first time sell
-        auto new_sale_element = new SaleElement(carType, amount);
+        auto new_sale_element = new SaleElement(carType,  amount);
         auto new_car_element = new CarElement(carType, amount);
 
         this->sales_->insert(new_sale_element);
         this->cars_->insert(new_car_element);
     }
 }
+
+Agency::~Agency()
+{
+    delete cars_;
+    delete sales_;
+}
+

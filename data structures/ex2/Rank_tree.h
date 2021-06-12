@@ -327,17 +327,19 @@ void RankTree<T>::deepRemoveNode(RTNode<T> *node)
 template<class T>
 RTNode<T> *RankTree<T>::buildOrdered_aux(T **data, int start, int end, int height)
 {
-    if (start > end) { return nullptr; }
+    if (start > end)
+        return nullptr;
 
     int middle = (start + end) / 2;
     T *new_data = data[middle];
-    RTNode<T> *root = new RTNode<T>(new_data);
-    root->height_ = height;
+    RTNode<T> *node = new RTNode<T>(new_data);
+    node->height_ = height;
 
-    root->left_ = buildOrdered_aux(data, start, middle - 1, height - 1);
-    root->right_ = buildOrdered_aux(data, middle + 1, end, height - 1);
+    node->left_ = buildOrdered_aux(data, start, middle - 1, height - 1);
+    node->right_ = buildOrdered_aux(data, middle + 1, end, height - 1);
 
-    return root;
+    sizeUpdate(node);
+    return node;
 }
 
 template<class T>

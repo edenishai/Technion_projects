@@ -8,20 +8,22 @@
 
 class Agency {
 public:
-    Agency():
-        sales_(new RankTree<SaleElement>), cars_(new RankTree<CarElement>) {}
+    Agency();
 
-    ~Agency()
-    { 
-        delete sales_; 
-        delete cars_;
-    }
+    Agency(CarElement **cars, SaleElement **sales, int total_count);
 
     void sellCar(int carType, int amount);
 
+    ~Agency();
+
+
+
+    ///  vars
     RankTree<SaleElement> *sales_;
 
     RankTree<CarElement> *cars_;
+
+
 };
 
 
