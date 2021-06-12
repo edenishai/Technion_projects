@@ -7,9 +7,9 @@ add_executable(DS1
         main.cpp
         library2.h library2.cpp
         Car_Agencies_Manager.h Car_Agencies_Manager.cpp
-        Union_Find.h
+        union_find.h
         Dynamic_Array.h
         Car_Element.h Car_Element.cpp
         Agency.h Agency.cpp
-        Rank_Tree.h
+        Rank_tree.h
         Sale_Element.cpp Sale_Element.h)

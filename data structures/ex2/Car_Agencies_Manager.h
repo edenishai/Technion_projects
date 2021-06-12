@@ -2,7 +2,7 @@
 #define CAR_AGENCIES_MANAGER_H
 
 #include "library2.h"
-#include "Union_Find.h"
+#include "union_find.h"
 #include "Agency.h"
 
 class Car_Agencies_Manager {
@@ -23,7 +23,9 @@ public:
     public:
         Agency *operator()(Agency &a, Agency &b);
 
-        void merge(CarElement *a, int na, CarElement *b, int nb, CarElement *c);
+        void merge_cars(CarElement *a, int na, CarElement *b, int nb, CarElement *c);
+
+        void merge_sales(SaleElement *a, int na, SaleElement *b, int nb, SaleElement *c);
     };
 
 private:

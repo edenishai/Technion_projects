@@ -9,6 +9,8 @@
 class SaleElement {
 public:
 
+    SaleElement() = default;
+
     explicit SaleElement(int typeID,int sales = 0);
 
     bool operator<(const SaleElement& element) const;

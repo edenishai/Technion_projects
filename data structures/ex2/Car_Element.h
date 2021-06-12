@@ -4,6 +4,8 @@
 class CarElement {
 public:
 
+    CarElement() = default;
+
     explicit CarElement(int typeID, int sales = 0);
 
     bool operator<(const CarElement& element) const;

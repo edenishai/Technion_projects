@@ -65,14 +65,14 @@ int UnionFind<T>::findIdentifier(int identifier)
     }
     //Find Parent:
     int parent = this->parents[identifier];
-    int to_return = -1;
+
     if (parent == NO_PARENT) {    // if already root
-        to_return = identifier;
+        return identifier;
     }
-    while (to_return == -1 && this->parents[parent] != NO_PARENT) {
+    while (this->parents[parent] != NO_PARENT) {
         parent = this->parents[parent];
     }
-    to_return = parent;
+    int to_return = parent;
 
     //Update Route:
     int temp;
