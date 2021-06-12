@@ -25,6 +25,10 @@ public:
 
     void flatDelete();
 
+    void print();
+
+    SaleElement* clone();
+
     ~SaleElement() = default;
 
 

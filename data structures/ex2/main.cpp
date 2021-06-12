@@ -10,28 +10,39 @@ class UniteIntFunc {
 public:
     Agency* operator()(Agency& a, Agency& b)
     {
-        // unite sales into one array
-         SaleElement a_sales[a.sales_->currentSize()];
-         a.sales_->getInOrder(a_sales, a.sales_->currentSize());
-         SaleElement b_sales[b.sales_->currentSize()];
-         b.sales_->getInOrder(b_sales, b.sales_->currentSize());
+        int total_amount = a.cars_->currentSize() + b.cars_->currentSize();
 
-         SaleElement total_sales[a.sales_->currentSize()+b.sales_->currentSize()];
-         this->merge_sales(a_sales,a.sales_->currentSize(),b_sales,b.sales_->currentSize(),total_sales);
+        // Unite sales into one array
+        SaleElement a_sales[a.sales_->currentSize()];
+        a.sales_->getInOrder(a_sales, a.sales_->currentSize());
+        SaleElement b_sales[b.sales_->currentSize()];
+        b.sales_->getInOrder(b_sales, b.sales_->currentSize());
+
+        SaleElement total_sales[a.sales_->currentSize() + b.sales_->currentSize()];
+        this->merge_sales(a_sales, a.sales_->currentSize(), b_sales, b.sales_->currentSize(), total_sales);
+        //   copy elements
+        SaleElement* total_sales_copies[a.sales_->currentSize() + b.sales_->currentSize()];
+        for (int i = 0; i < total_amount; ++i) {
+            total_sales_copies[i] = total_sales[i].clone();
+        }
 
 
-        // unite cars into one array
+        // Unite cars into one array
         CarElement a_cars[a.cars_->currentSize()];
         a.cars_->getInOrder(a_cars, a.cars_->currentSize());
         CarElement b_cars[b.cars_->currentSize()];
         b.cars_->getInOrder(b_cars, b.cars_->currentSize());
 
-        CarElement total_cars[a.cars_->currentSize()+b.cars_->currentSize()];
-        this->merge_cars(a_cars,a.cars_->currentSize(),b_cars,b.cars_->currentSize(),total_cars);
+        CarElement total_cars[a.cars_->currentSize() + b.cars_->currentSize()];
+        this->merge_cars(a_cars, a.cars_->currentSize(), b_cars, b.cars_->currentSize(), total_cars);
 
-        int total_amount = a.cars_->currentSize()+b.cars_->currentSize();
-        auto to_return = new Agency(total_cars,total_sales,total_amount);
+        //   copy elements
+        CarElement* total_cars_copies[a.cars_->currentSize() + b.cars_->currentSize()];
+        for (int i = 0; i < total_amount; ++i) {
+            total_cars_copies[i] = total_cars[i].clone();
+        }
 
+        auto to_return = new Agency(total_cars_copies, total_sales_copies, total_amount);
         return to_return;
     }
     void merge_cars(CarElement *a, int na, CarElement *b, int nb, CarElement *c){

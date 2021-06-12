@@ -2,6 +2,7 @@
 // Created by ASUS on 11/06/2021.
 //
 
+#include <iostream>
 #include "Sale_Element.h"
 SaleElement::SaleElement(int typeID,int sales):typeID_(typeID),sales_(sales)
 {
@@ -48,5 +49,15 @@ bool SaleElement::operator>(const SaleElement &element) const
 void SaleElement::flatDelete()
 {
 
+}
+
+SaleElement *SaleElement::clone()
+{
+    return new SaleElement(this->typeID_,this->sales_);
+}
+
+void SaleElement::print()
+{
+    std::cout<<" ("<<this->typeID_<<" , "<< this->sales_<<") ";
 }
 

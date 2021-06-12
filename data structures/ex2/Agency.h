@@ -10,7 +10,7 @@ class Agency {
 public:
     Agency();
 
-    Agency(CarElement *cars, SaleElement *sales, int total_count);
+    Agency(CarElement **cars, SaleElement **sales, int total_count);
 
     void sellCar(int carType, int amount);
 

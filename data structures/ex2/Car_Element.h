@@ -18,9 +18,14 @@ public:
 
     int getTypeId();
 
+    void flatDelete();
+
+    CarElement* clone();
+
+    void print();
+
     ~CarElement() = default;
 
-    void flatDelete();
 
 private:
     int typeID_;

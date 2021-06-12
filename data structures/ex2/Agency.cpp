@@ -10,13 +10,13 @@ Agency::Agency()
 
 }
 
-Agency::Agency(CarElement *cars, SaleElement *sales, int total_count)
+Agency::Agency(CarElement **cars, SaleElement **sales, int total_count)
 {
     this->cars_= new RankTree<CarElement>;
-    this->cars_->buildOrdered(&cars,total_count);
+    this->cars_->buildOrdered(cars,total_count);
 
     this->sales_= new RankTree<SaleElement>;
-    this->sales_->buildOrdered(&sales,total_count);
+    this->sales_->buildOrdered(sales,total_count);
 }
 
 void Agency::sellCar(int carType, int amount)
