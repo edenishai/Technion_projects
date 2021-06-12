@@ -1,0 +1,77 @@
+Init
+AddAgency
+AddAgency
+GetIthSoldType -27 2
+GetIthSoldType 4939 3
+AddAgency
+GetIthSoldType 9636 9
+SellCar 0 2358 10
+AddAgency
+SellCar 2 6903 27
+AddAgency
+AddAgency
+AddAgency
+SellCar 1 7342 6
+AddAgency
+AddAgency
+SellCar 6 7560 11
+SellCar 0 2358 6
+SellCar 7 51 -24
+GetIthSoldType 5 1
+GetIthSoldType 0 0
+GetIthSoldType 1 0
+AddAgency
+AddAgency
+GetIthSoldType 6 0
+AddAgency
+SellCar 0 2358 9
+SellCar 8 9086 23
+SellCar 4 7067 27
+UniteAgencies 7 4
+AddAgency
+SellCar 10 4120 6
+SellCar 4 2198 8
+SellCar 12 6010 9
+SellCar 2 6903 13
+SellCar 10 4120 2
+AddAgency
+GetIthSoldType 0 0
+SellCar 7 7067 7
+SellCar 7 858 10
+GetIthSoldType 6 0
+GetIthSoldType 2 0
+GetIthSoldType 7 0
+SellCar 9 1403 7
+GetIthSoldType 6 0
+AddAgency
+SellCar 8 9086 7
+SellCar 12 6587 25
+AddAgency
+AddAgency
+UniteAgencies -19 -15
+SellCar 16 9957 11
+SellCar 10 7613 17
+GetIthSoldType 12 0
+SellCar 2 4803 10
+GetIthSoldType 4 0
+GetIthSoldType 16 0
+AddAgency
+GetIthSoldType 6 0
+UniteAgencies 3 1
+GetIthSoldType 10 0
+AddAgency
+SellCar 12 9223 22
+SellCar 8 8612 15
+SellCar 12 6587 14
+SellCar 11 7703 25
+SellCar 4945 1826 7
+SellCar -28 2621 15
+SellCar 0 36 7
+SellCar 17 703 1
+SellCar 8 1116 30
+SellCar 9 9291 2
+AddAgency
+SellCar 13 7833 4
+GetIthSoldType 2646 10
+SellCar 11 5617 6
+Quit

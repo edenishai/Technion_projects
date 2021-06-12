@@ -54,11 +54,13 @@ public:
 
     T *findMin() const;
 
-    T *getMostRight() const; // O(1)
+    T *getMax() const; // O(1)
+
+    T *getMin() const; // O(1)
 
     int currentSize() const;
 
-    int getInOrder(T *array, int size) const;
+    void getInOrder(T *array, int size) const;
 
 private:
     RTNode<T> *root_;
@@ -95,9 +97,9 @@ private:
 
     void sizeUpdate(RTNode<T> *node);
 
-    int size(RTNode<T> *child) const;
+    int size(RTNode<T> *node) const;
 
-    void getInOrder(RTNode<T> *root, T *array, int size, int *index) const;
+    void getInOrder(RTNode<T> *node, T *array, int size, int *index) const;
 };
 
 template<class T>
@@ -168,9 +170,15 @@ T *RankTree<T>::findMin() const
 }
 
 template<class T>
-T *RankTree<T>::getMostRight() const
+T *RankTree<T>::getMax() const
 {
     return max_->getData();
+}
+
+template<class T>
+T *RankTree<T>::getMin() const
+{
+    return min_->getData();
 }
 
 template<class T>
@@ -182,12 +190,11 @@ int RankTree<T>::currentSize() const
 }
 
 template<class T>
-int RankTree<T>::getInOrder(T *array, int size) const
+void RankTree<T>::getInOrder(T *array, int size) const
 {
     size = min(size, currentSize());
     int index = 0;
     getInOrder(root_, array, size, &index);
-    return size;
 }
 
 template<class T>
@@ -415,12 +422,12 @@ void RankTree<T>::sizeUpdate(RTNode<T> *node)
 }
 
 template<class T>
-int RankTree<T>::size(RTNode<T> *child) const
+int RankTree<T>::size(RTNode<T> *node) const
 {
-    if (child == nullptr)
+    if (node == nullptr)
         return 0;
 
-    return child->size_;
+    return node->size_;
 }
 
 template<class T>

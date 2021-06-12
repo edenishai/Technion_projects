@@ -1,0 +1,12 @@
+init done.
+SellCar: FAILURE
+AddAgency: SUCCESS
+AddAgency: SUCCESS
+GetIthSoldType: INVALID_INPUT
+SellCar: INVALID_INPUT
+SellCar: SUCCESS
+SellCar: FAILURE
+AddAgency: SUCCESS
+SellCar: SUCCESS
+AddAgency: SUCCESS
+quit done.

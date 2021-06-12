@@ -132,6 +132,9 @@ void test3()
     tree.insert(new int(5));
     tree.insert(new int(6));
 
+    int b[5];
+    tree.getInOrder(b, 5);
+
     int *a = tree.findByRank(3);
 }
 
@@ -188,10 +191,10 @@ void test7()
 
 int main(int argc, const char **argv)
 {
-    //test1(); //dynamic array
-    //test2(); //union find
-    //test3(); //rank tree leaks
-    //test4(); //leaks at selling cars - (only leaks)
+    test1(); //dynamic array
+    test2(); //union find
+    test3(); //rank tree leaks
+    test4(); //leaks at selling cars - (only leaks)
     test5();
     return 0;
 

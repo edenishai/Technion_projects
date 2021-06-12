@@ -1,0 +1,4 @@
+Init
+SellCar 5893 4844 10
+AddAgency
+Quit

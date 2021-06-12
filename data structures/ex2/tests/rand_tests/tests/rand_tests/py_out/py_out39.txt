@@ -1,0 +1,13 @@
+init done.
+AddAgency: SUCCESS
+AddAgency: SUCCESS
+AddAgency: SUCCESS
+UniteAgencies: SUCCESS
+SellCar: SUCCESS
+AddAgency: SUCCESS
+GetIthSoldType: 7618
+AddAgency: SUCCESS
+GetIthSoldType: FAILURE
+SellCar: SUCCESS
+UniteAgencies: INVALID_INPUT
+quit done.
