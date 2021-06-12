@@ -4,7 +4,7 @@ project(Data_Struct_1_HW_1)
 set(CMAKE_CXX_STANDARD 11)
 
 add_executable(DS1
-        main.cpp
+        main2.cpp
         library2.h library2.cpp
         Car_Agencies_Manager.h Car_Agencies_Manager.cpp
         Union_Find.h

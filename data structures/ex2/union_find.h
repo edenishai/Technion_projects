@@ -67,7 +67,8 @@ int UnionFind<T>::findIdentifier(int identifier)
     int parent = this->parents[identifier];
     int to_return = -1;
     if (parent == NO_PARENT) {    // if already root
-        to_return = identifier;
+        //to_return = identifier;
+        return identifier;
     }
     while (to_return == -1 && this->parents[parent] != NO_PARENT) {
         parent = this->parents[parent];
@@ -113,7 +114,8 @@ T &UnionFind<T>::findElement(int identifier)
     int parent = this->parents[identifier];
     int to_return_index = -1;
     if (parent == NO_PARENT) {    // if already root
-        to_return_index = identifier;
+        //to_return_index = identifier;
+        return elements_[identifier];
     }
     while (to_return_index == -1 && this->parents[parent] != NO_PARENT) {
         parent = this->parents[parent];

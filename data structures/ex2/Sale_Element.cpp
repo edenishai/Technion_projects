@@ -16,7 +16,7 @@ bool SaleElement::operator<(const SaleElement &element) const
         if(this->typeID_<element.typeID_) {
             return true;
         }
-    return true;
+    return false;
 }
 
 bool SaleElement::operator==(const SaleElement &element) const
@@ -42,7 +42,7 @@ bool SaleElement::operator>(const SaleElement &element) const
         if(this->typeID_>element.typeID_) {
             return true;
         }
-    return true;
+    return false;
 }
 
 void SaleElement::flatDelete()

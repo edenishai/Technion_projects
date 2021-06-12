@@ -35,7 +35,12 @@ StatusType Car_Agencies_Manager::UniteAgencies(int agencyID1, int agencyID2)
 
 StatusType Car_Agencies_Manager::GetIthSoldType(int agencyID, int i, int *res)
 {
-    return FAILURE;
+    Agency &agency = agencies_->findElement(agencyID);
+    auto *res_element = agency.sales_->findByRank(i);
+    if (res_element == nullptr)
+        return FAILURE;
+    *res = res_element->getTypeId();
+    return SUCCESS;
 }
 
 Car_Agencies_Manager::~Car_Agencies_Manager()

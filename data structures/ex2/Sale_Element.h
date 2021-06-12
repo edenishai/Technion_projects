@@ -8,6 +8,7 @@
 
 class SaleElement {
 public:
+    int sales_;
 
     explicit SaleElement(int typeID,int sales = 0);
 
@@ -28,7 +29,6 @@ public:
 
 private:
     int typeID_;
-    int sales_;
 };
 
 

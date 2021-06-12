@@ -8,12 +8,16 @@
 
 class Agency {
 public:
-    Agency() = default;
+    Agency():
+        sales_(new RankTree<SaleElement>), cars_(new RankTree<CarElement>) {}
 
-    ~Agency() = default;
+    ~Agency()
+    { 
+        delete sales_; 
+        delete cars_;
+    }
 
     void sellCar(int carType, int amount);
-
 
     RankTree<SaleElement> *sales_;
 

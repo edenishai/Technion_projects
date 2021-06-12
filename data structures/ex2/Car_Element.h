@@ -3,6 +3,7 @@
 
 class CarElement {
 public:
+    int sales_;
 
     explicit CarElement(int typeID, int sales = 0);
 
@@ -22,7 +23,6 @@ public:
 
 private:
     int typeID_;
-    int sales_;
 };
 
 #endif /* CAR_ELEMENT_H */
