@@ -1,1600 +1,1600 @@
-11.txt
-
-==14261== Memcheck, a memory error detector
-==14261== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==14261== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==14261== Command: /home/batelov/Technion_projects/build/DS1
-==14261== 
-==14261== 
-==14261== HEAP SUMMARY:
-==14261==     in use at exit: 0 bytes in 0 blocks
-==14261==   total heap usage: 258 allocs, 258 frees, 6,320 bytes allocated
-==14261== 
-==14261== All heap blocks were freed -- no leaks are possible
-==14261== 
-==14261== For lists of detected and suppressed errors, rerun with: -s
-==14261== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 1.txt
 
-==14270== Memcheck, a memory error detector
-==14270== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==14270== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==14270== Command: /home/batelov/Technion_projects/build/DS1
-==14270== 
-==14270== 
-==14270== HEAP SUMMARY:
-==14270==     in use at exit: 0 bytes in 0 blocks
-==14270==   total heap usage: 2,166 allocs, 2,166 frees, 52,264 bytes allocated
-==14270== 
-==14270== All heap blocks were freed -- no leaks are possible
-==14270== 
-==14270== For lists of detected and suppressed errors, rerun with: -s
-==14270== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-100.txt
-
-==14278== Memcheck, a memory error detector
-==14278== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==14278== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==14278== Command: /home/batelov/Technion_projects/build/DS1
-==14278== 
-==14278== 
-==14278== HEAP SUMMARY:
-==14278==     in use at exit: 0 bytes in 0 blocks
-==14278==   total heap usage: 2,866 allocs, 2,866 frees, 67,984 bytes allocated
-==14278== 
-==14278== All heap blocks were freed -- no leaks are possible
-==14278== 
-==14278== For lists of detected and suppressed errors, rerun with: -s
-==14278== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==21965== Memcheck, a memory error detector
+==21965== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==21965== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==21965== Command: /home/batelov/Technion_projects/data\ structures/build/DS1
+==21965== 
+==21965== 
+==21965== HEAP SUMMARY:
+==21965==     in use at exit: 0 bytes in 0 blocks
+==21965==   total heap usage: 2,166 allocs, 2,166 frees, 52,264 bytes allocated
+==21965== 
+==21965== All heap blocks were freed -- no leaks are possible
+==21965== 
+==21965== For lists of detected and suppressed errors, rerun with: -s
+==21965== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 10.txt
 
-==14293== Memcheck, a memory error detector
-==14293== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==14293== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==14293== Command: /home/batelov/Technion_projects/build/DS1
-==14293== 
-==14293== 
-==14293== HEAP SUMMARY:
-==14293==     in use at exit: 0 bytes in 0 blocks
-==14293==   total heap usage: 59 allocs, 59 frees, 1,216 bytes allocated
-==14293== 
-==14293== All heap blocks were freed -- no leaks are possible
-==14293== 
-==14293== For lists of detected and suppressed errors, rerun with: -s
-==14293== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-15.txt
+==21978== Memcheck, a memory error detector
+==21978== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==21978== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==21978== Command: /home/batelov/Technion_projects/data\ structures/build/DS1
+==21978== 
+==21978== 
+==21978== HEAP SUMMARY:
+==21978==     in use at exit: 0 bytes in 0 blocks
+==21978==   total heap usage: 59 allocs, 59 frees, 1,216 bytes allocated
+==21978== 
+==21978== All heap blocks were freed -- no leaks are possible
+==21978== 
+==21978== For lists of detected and suppressed errors, rerun with: -s
+==21978== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+100.txt
 
-==14300== Memcheck, a memory error detector
-==14300== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==14300== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==14300== Command: /home/batelov/Technion_projects/build/DS1
-==14300== 
-==14300== 
-==14300== HEAP SUMMARY:
-==14300==     in use at exit: 0 bytes in 0 blocks
-==14300==   total heap usage: 1,654 allocs, 1,654 frees, 39,112 bytes allocated
-==14300== 
-==14300== All heap blocks were freed -- no leaks are possible
-==14300== 
-==14300== For lists of detected and suppressed errors, rerun with: -s
-==14300== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==21992== Memcheck, a memory error detector
+==21992== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==21992== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==21992== Command: /home/batelov/Technion_projects/data\ structures/build/DS1
+==21992== 
+==21992== 
+==21992== HEAP SUMMARY:
+==21992==     in use at exit: 0 bytes in 0 blocks
+==21992==   total heap usage: 2,866 allocs, 2,866 frees, 67,984 bytes allocated
+==21992== 
+==21992== All heap blocks were freed -- no leaks are possible
+==21992== 
+==21992== For lists of detected and suppressed errors, rerun with: -s
+==21992== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+11.txt
+
+==22016== Memcheck, a memory error detector
+==22016== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==22016== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==22016== Command: /home/batelov/Technion_projects/data\ structures/build/DS1
+==22016== 
+==22016== 
+==22016== HEAP SUMMARY:
+==22016==     in use at exit: 0 bytes in 0 blocks
+==22016==   total heap usage: 258 allocs, 258 frees, 6,320 bytes allocated
+==22016== 
+==22016== All heap blocks were freed -- no leaks are possible
+==22016== 
+==22016== For lists of detected and suppressed errors, rerun with: -s
+==22016== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 12.txt
 
-==14308== Memcheck, a memory error detector
-==14308== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==14308== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==14308== Command: /home/batelov/Technion_projects/build/DS1
-==14308== 
-==14308== 
-==14308== HEAP SUMMARY:
-==14308==     in use at exit: 0 bytes in 0 blocks
-==14308==   total heap usage: 6,985 allocs, 6,985 frees, 176,064 bytes allocated
-==14308== 
-==14308== All heap blocks were freed -- no leaks are possible
-==14308== 
-==14308== For lists of detected and suppressed errors, rerun with: -s
-==14308== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==22031== Memcheck, a memory error detector
+==22031== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==22031== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==22031== Command: /home/batelov/Technion_projects/data\ structures/build/DS1
+==22031== 
+==22031== 
+==22031== HEAP SUMMARY:
+==22031==     in use at exit: 0 bytes in 0 blocks
+==22031==   total heap usage: 6,985 allocs, 6,985 frees, 176,064 bytes allocated
+==22031== 
+==22031== All heap blocks were freed -- no leaks are possible
+==22031== 
+==22031== For lists of detected and suppressed errors, rerun with: -s
+==22031== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 13.txt
 
-==14323== Memcheck, a memory error detector
-==14323== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==14323== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==14323== Command: /home/batelov/Technion_projects/build/DS1
-==14323== 
-==14323== 
-==14323== HEAP SUMMARY:
-==14323==     in use at exit: 0 bytes in 0 blocks
-==14323==   total heap usage: 1,772 allocs, 1,772 frees, 43,888 bytes allocated
-==14323== 
-==14323== All heap blocks were freed -- no leaks are possible
-==14323== 
-==14323== For lists of detected and suppressed errors, rerun with: -s
-==14323== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-18.txt
-
-==14374== Memcheck, a memory error detector
-==14374== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==14374== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==14374== Command: /home/batelov/Technion_projects/build/DS1
-==14374== 
-==14374== 
-==14374== HEAP SUMMARY:
-==14374==     in use at exit: 0 bytes in 0 blocks
-==14374==   total heap usage: 6,165 allocs, 6,165 frees, 156,368 bytes allocated
-==14374== 
-==14374== All heap blocks were freed -- no leaks are possible
-==14374== 
-==14374== For lists of detected and suppressed errors, rerun with: -s
-==14374== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==22058== Memcheck, a memory error detector
+==22058== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==22058== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==22058== Command: /home/batelov/Technion_projects/data\ structures/build/DS1
+==22058== 
+==22058== 
+==22058== HEAP SUMMARY:
+==22058==     in use at exit: 0 bytes in 0 blocks
+==22058==   total heap usage: 1,772 allocs, 1,772 frees, 43,888 bytes allocated
+==22058== 
+==22058== All heap blocks were freed -- no leaks are possible
+==22058== 
+==22058== For lists of detected and suppressed errors, rerun with: -s
+==22058== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 14.txt
 
-==14384== Memcheck, a memory error detector
-==14384== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==14384== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==14384== Command: /home/batelov/Technion_projects/build/DS1
-==14384== 
-==14384== 
-==14384== HEAP SUMMARY:
-==14384==     in use at exit: 0 bytes in 0 blocks
-==14384==   total heap usage: 4,517 allocs, 4,517 frees, 112,632 bytes allocated
-==14384== 
-==14384== All heap blocks were freed -- no leaks are possible
-==14384== 
-==14384== For lists of detected and suppressed errors, rerun with: -s
-==14384== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-19.txt
+==22072== Memcheck, a memory error detector
+==22072== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==22072== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==22072== Command: /home/batelov/Technion_projects/data\ structures/build/DS1
+==22072== 
+==22072== 
+==22072== HEAP SUMMARY:
+==22072==     in use at exit: 0 bytes in 0 blocks
+==22072==   total heap usage: 4,517 allocs, 4,517 frees, 112,632 bytes allocated
+==22072== 
+==22072== All heap blocks were freed -- no leaks are possible
+==22072== 
+==22072== For lists of detected and suppressed errors, rerun with: -s
+==22072== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+15.txt
 
-==14415== Memcheck, a memory error detector
-==14415== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==14415== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==14415== Command: /home/batelov/Technion_projects/build/DS1
-==14415== 
-==14415== 
-==14415== HEAP SUMMARY:
-==14415==     in use at exit: 0 bytes in 0 blocks
-==14415==   total heap usage: 733 allocs, 733 frees, 18,272 bytes allocated
-==14415== 
-==14415== All heap blocks were freed -- no leaks are possible
-==14415== 
-==14415== For lists of detected and suppressed errors, rerun with: -s
-==14415== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==22091== Memcheck, a memory error detector
+==22091== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==22091== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==22091== Command: /home/batelov/Technion_projects/data\ structures/build/DS1
+==22091== 
+==22091== 
+==22091== HEAP SUMMARY:
+==22091==     in use at exit: 0 bytes in 0 blocks
+==22091==   total heap usage: 1,654 allocs, 1,654 frees, 39,112 bytes allocated
+==22091== 
+==22091== All heap blocks were freed -- no leaks are possible
+==22091== 
+==22091== For lists of detected and suppressed errors, rerun with: -s
+==22091== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 16.txt
 
-==14507== Memcheck, a memory error detector
-==14507== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==14507== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==14507== Command: /home/batelov/Technion_projects/build/DS1
-==14507== 
-==14507== 
-==14507== HEAP SUMMARY:
-==14507==     in use at exit: 0 bytes in 0 blocks
-==14507==   total heap usage: 8,015 allocs, 8,015 frees, 191,976 bytes allocated
-==14507== 
-==14507== All heap blocks were freed -- no leaks are possible
-==14507== 
-==14507== For lists of detected and suppressed errors, rerun with: -s
-==14507== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==22130== Memcheck, a memory error detector
+==22130== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==22130== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==22130== Command: /home/batelov/Technion_projects/data\ structures/build/DS1
+==22130== 
+==22130== 
+==22130== HEAP SUMMARY:
+==22130==     in use at exit: 0 bytes in 0 blocks
+==22130==   total heap usage: 8,015 allocs, 8,015 frees, 191,976 bytes allocated
+==22130== 
+==22130== All heap blocks were freed -- no leaks are possible
+==22130== 
+==22130== For lists of detected and suppressed errors, rerun with: -s
+==22130== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 17.txt
 
-==14524== Memcheck, a memory error detector
-==14524== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==14524== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==14524== Command: /home/batelov/Technion_projects/build/DS1
-==14524== 
-==14524== 
-==14524== HEAP SUMMARY:
-==14524==     in use at exit: 0 bytes in 0 blocks
-==14524==   total heap usage: 3,402 allocs, 3,402 frees, 81,304 bytes allocated
-==14524== 
-==14524== All heap blocks were freed -- no leaks are possible
-==14524== 
-==14524== For lists of detected and suppressed errors, rerun with: -s
-==14524== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-21.txt
+==22170== Memcheck, a memory error detector
+==22170== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==22170== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==22170== Command: /home/batelov/Technion_projects/data\ structures/build/DS1
+==22170== 
+==22170== 
+==22170== HEAP SUMMARY:
+==22170==     in use at exit: 0 bytes in 0 blocks
+==22170==   total heap usage: 3,402 allocs, 3,402 frees, 81,304 bytes allocated
+==22170== 
+==22170== All heap blocks were freed -- no leaks are possible
+==22170== 
+==22170== For lists of detected and suppressed errors, rerun with: -s
+==22170== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+18.txt
 
-==14534== Memcheck, a memory error detector
-==14534== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==14534== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==14534== Command: /home/batelov/Technion_projects/build/DS1
-==14534== 
-==14534== 
-==14534== HEAP SUMMARY:
-==14534==     in use at exit: 0 bytes in 0 blocks
-==14534==   total heap usage: 1,710 allocs, 1,710 frees, 41,680 bytes allocated
-==14534== 
-==14534== All heap blocks were freed -- no leaks are possible
-==14534== 
-==14534== For lists of detected and suppressed errors, rerun with: -s
-==14534== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-20.txt
+==22186== Memcheck, a memory error detector
+==22186== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==22186== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==22186== Command: /home/batelov/Technion_projects/data\ structures/build/DS1
+==22186== 
+==22186== 
+==22186== HEAP SUMMARY:
+==22186==     in use at exit: 0 bytes in 0 blocks
+==22186==   total heap usage: 6,165 allocs, 6,165 frees, 156,368 bytes allocated
+==22186== 
+==22186== All heap blocks were freed -- no leaks are possible
+==22186== 
+==22186== For lists of detected and suppressed errors, rerun with: -s
+==22186== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+19.txt
 
-==14540== Memcheck, a memory error detector
-==14540== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==14540== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==14540== Command: /home/batelov/Technion_projects/build/DS1
-==14540== 
-==14540== 
-==14540== HEAP SUMMARY:
-==14540==     in use at exit: 0 bytes in 0 blocks
-==14540==   total heap usage: 2,274 allocs, 2,274 frees, 56,360 bytes allocated
-==14540== 
-==14540== All heap blocks were freed -- no leaks are possible
-==14540== 
-==14540== For lists of detected and suppressed errors, rerun with: -s
-==14540== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-22.txt
-
-==14549== Memcheck, a memory error detector
-==14549== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==14549== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==14549== Command: /home/batelov/Technion_projects/build/DS1
-==14549== 
-==14549== 
-==14549== HEAP SUMMARY:
-==14549==     in use at exit: 0 bytes in 0 blocks
-==14549==   total heap usage: 6,770 allocs, 6,770 frees, 163,608 bytes allocated
-==14549== 
-==14549== All heap blocks were freed -- no leaks are possible
-==14549== 
-==14549== For lists of detected and suppressed errors, rerun with: -s
-==14549== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==22208== Memcheck, a memory error detector
+==22208== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==22208== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==22208== Command: /home/batelov/Technion_projects/data\ structures/build/DS1
+==22208== 
+==22208== 
+==22208== HEAP SUMMARY:
+==22208==     in use at exit: 0 bytes in 0 blocks
+==22208==   total heap usage: 733 allocs, 733 frees, 18,272 bytes allocated
+==22208== 
+==22208== All heap blocks were freed -- no leaks are possible
+==22208== 
+==22208== For lists of detected and suppressed errors, rerun with: -s
+==22208== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 2.txt
 
-==14559== Memcheck, a memory error detector
-==14559== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==14559== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==14559== Command: /home/batelov/Technion_projects/build/DS1
-==14559== 
-==14559== 
-==14559== HEAP SUMMARY:
-==14559==     in use at exit: 0 bytes in 0 blocks
-==14559==   total heap usage: 355 allocs, 355 frees, 8,600 bytes allocated
-==14559== 
-==14559== All heap blocks were freed -- no leaks are possible
-==14559== 
-==14559== For lists of detected and suppressed errors, rerun with: -s
-==14559== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-24.txt
+==22217== Memcheck, a memory error detector
+==22217== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==22217== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==22217== Command: /home/batelov/Technion_projects/data\ structures/build/DS1
+==22217== 
+==22217== 
+==22217== HEAP SUMMARY:
+==22217==     in use at exit: 0 bytes in 0 blocks
+==22217==   total heap usage: 355 allocs, 355 frees, 8,600 bytes allocated
+==22217== 
+==22217== All heap blocks were freed -- no leaks are possible
+==22217== 
+==22217== For lists of detected and suppressed errors, rerun with: -s
+==22217== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+20.txt
 
-==14566== Memcheck, a memory error detector
-==14566== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==14566== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==14566== Command: /home/batelov/Technion_projects/build/DS1
-==14566== 
-==14566== 
-==14566== HEAP SUMMARY:
-==14566==     in use at exit: 0 bytes in 0 blocks
-==14566==   total heap usage: 217 allocs, 217 frees, 5,008 bytes allocated
-==14566== 
-==14566== All heap blocks were freed -- no leaks are possible
-==14566== 
-==14566== For lists of detected and suppressed errors, rerun with: -s
-==14566== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-27.txt
+==22233== Memcheck, a memory error detector
+==22233== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==22233== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==22233== Command: /home/batelov/Technion_projects/data\ structures/build/DS1
+==22233== 
+==22233== 
+==22233== HEAP SUMMARY:
+==22233==     in use at exit: 0 bytes in 0 blocks
+==22233==   total heap usage: 2,274 allocs, 2,274 frees, 56,360 bytes allocated
+==22233== 
+==22233== All heap blocks were freed -- no leaks are possible
+==22233== 
+==22233== For lists of detected and suppressed errors, rerun with: -s
+==22233== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+21.txt
 
-==14574== Memcheck, a memory error detector
-==14574== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==14574== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==14574== Command: /home/batelov/Technion_projects/build/DS1
-==14574== 
-==14574== 
-==14574== HEAP SUMMARY:
-==14574==     in use at exit: 0 bytes in 0 blocks
-==14574==   total heap usage: 3,314 allocs, 3,314 frees, 83,000 bytes allocated
-==14574== 
-==14574== All heap blocks were freed -- no leaks are possible
-==14574== 
-==14574== For lists of detected and suppressed errors, rerun with: -s
-==14574== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-25.txt
+==22247== Memcheck, a memory error detector
+==22247== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==22247== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==22247== Command: /home/batelov/Technion_projects/data\ structures/build/DS1
+==22247== 
+==22247== 
+==22247== HEAP SUMMARY:
+==22247==     in use at exit: 0 bytes in 0 blocks
+==22247==   total heap usage: 1,710 allocs, 1,710 frees, 41,680 bytes allocated
+==22247== 
+==22247== All heap blocks were freed -- no leaks are possible
+==22247== 
+==22247== For lists of detected and suppressed errors, rerun with: -s
+==22247== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+22.txt
 
-==14582== Memcheck, a memory error detector
-==14582== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==14582== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==14582== Command: /home/batelov/Technion_projects/build/DS1
-==14582== 
-==14582== 
-==14582== HEAP SUMMARY:
-==14582==     in use at exit: 0 bytes in 0 blocks
-==14582==   total heap usage: 15,772 allocs, 15,772 frees, 387,560 bytes allocated
-==14582== 
-==14582== All heap blocks were freed -- no leaks are possible
-==14582== 
-==14582== For lists of detected and suppressed errors, rerun with: -s
-==14582== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-28.txt
-
-==14595== Memcheck, a memory error detector
-==14595== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==14595== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==14595== Command: /home/batelov/Technion_projects/build/DS1
-==14595== 
-==14595== 
-==14595== HEAP SUMMARY:
-==14595==     in use at exit: 0 bytes in 0 blocks
-==14595==   total heap usage: 15,030 allocs, 15,030 frees, 361,152 bytes allocated
-==14595== 
-==14595== All heap blocks were freed -- no leaks are possible
-==14595== 
-==14595== For lists of detected and suppressed errors, rerun with: -s
-==14595== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==22269== Memcheck, a memory error detector
+==22269== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==22269== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==22269== Command: /home/batelov/Technion_projects/data\ structures/build/DS1
+==22269== 
+==22269== 
+==22269== HEAP SUMMARY:
+==22269==     in use at exit: 0 bytes in 0 blocks
+==22269==   total heap usage: 6,770 allocs, 6,770 frees, 163,608 bytes allocated
+==22269== 
+==22269== All heap blocks were freed -- no leaks are possible
+==22269== 
+==22269== For lists of detected and suppressed errors, rerun with: -s
+==22269== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 23.txt
 
-==14625== Memcheck, a memory error detector
-==14625== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==14625== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==14625== Command: /home/batelov/Technion_projects/build/DS1
-==14625== 
-==14625== 
-==14625== HEAP SUMMARY:
-==14625==     in use at exit: 0 bytes in 0 blocks
-==14625==   total heap usage: 5,986 allocs, 5,986 frees, 143,040 bytes allocated
-==14625== 
-==14625== All heap blocks were freed -- no leaks are possible
-==14625== 
-==14625== For lists of detected and suppressed errors, rerun with: -s
-==14625== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==22281== Memcheck, a memory error detector
+==22281== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==22281== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==22281== Command: /home/batelov/Technion_projects/data\ structures/build/DS1
+==22281== 
+==22281== 
+==22281== HEAP SUMMARY:
+==22281==     in use at exit: 0 bytes in 0 blocks
+==22281==   total heap usage: 5,986 allocs, 5,986 frees, 143,040 bytes allocated
+==22281== 
+==22281== All heap blocks were freed -- no leaks are possible
+==22281== 
+==22281== For lists of detected and suppressed errors, rerun with: -s
+==22281== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+24.txt
+
+==22298== Memcheck, a memory error detector
+==22298== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==22298== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==22298== Command: /home/batelov/Technion_projects/data\ structures/build/DS1
+==22298== 
+==22298== 
+==22298== HEAP SUMMARY:
+==22298==     in use at exit: 0 bytes in 0 blocks
+==22298==   total heap usage: 217 allocs, 217 frees, 5,008 bytes allocated
+==22298== 
+==22298== All heap blocks were freed -- no leaks are possible
+==22298== 
+==22298== For lists of detected and suppressed errors, rerun with: -s
+==22298== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+25.txt
+
+==22313== Memcheck, a memory error detector
+==22313== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==22313== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==22313== Command: /home/batelov/Technion_projects/data\ structures/build/DS1
+==22313== 
+==22313== 
+==22313== HEAP SUMMARY:
+==22313==     in use at exit: 0 bytes in 0 blocks
+==22313==   total heap usage: 15,772 allocs, 15,772 frees, 387,560 bytes allocated
+==22313== 
+==22313== All heap blocks were freed -- no leaks are possible
+==22313== 
+==22313== For lists of detected and suppressed errors, rerun with: -s
+==22313== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 26.txt
 
-==14631== Memcheck, a memory error detector
-==14631== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==14631== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==14631== Command: /home/batelov/Technion_projects/build/DS1
-==14631== 
-==14631== 
-==14631== HEAP SUMMARY:
-==14631==     in use at exit: 0 bytes in 0 blocks
-==14631==   total heap usage: 1,531 allocs, 1,531 frees, 37,728 bytes allocated
-==14631== 
-==14631== All heap blocks were freed -- no leaks are possible
-==14631== 
-==14631== For lists of detected and suppressed errors, rerun with: -s
-==14631== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==22329== Memcheck, a memory error detector
+==22329== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==22329== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==22329== Command: /home/batelov/Technion_projects/data\ structures/build/DS1
+==22329== 
+==22329== 
+==22329== HEAP SUMMARY:
+==22329==     in use at exit: 0 bytes in 0 blocks
+==22329==   total heap usage: 1,531 allocs, 1,531 frees, 37,728 bytes allocated
+==22329== 
+==22329== All heap blocks were freed -- no leaks are possible
+==22329== 
+==22329== For lists of detected and suppressed errors, rerun with: -s
+==22329== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+27.txt
+
+==22342== Memcheck, a memory error detector
+==22342== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==22342== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==22342== Command: /home/batelov/Technion_projects/data\ structures/build/DS1
+==22342== 
+==22342== 
+==22342== HEAP SUMMARY:
+==22342==     in use at exit: 0 bytes in 0 blocks
+==22342==   total heap usage: 3,314 allocs, 3,314 frees, 83,000 bytes allocated
+==22342== 
+==22342== All heap blocks were freed -- no leaks are possible
+==22342== 
+==22342== For lists of detected and suppressed errors, rerun with: -s
+==22342== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+28.txt
+
+==22375== Memcheck, a memory error detector
+==22375== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==22375== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==22375== Command: /home/batelov/Technion_projects/data\ structures/build/DS1
+==22375== 
+==22375== 
+==22375== HEAP SUMMARY:
+==22375==     in use at exit: 0 bytes in 0 blocks
+==22375==   total heap usage: 15,030 allocs, 15,030 frees, 361,152 bytes allocated
+==22375== 
+==22375== All heap blocks were freed -- no leaks are possible
+==22375== 
+==22375== For lists of detected and suppressed errors, rerun with: -s
+==22375== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 29.txt
 
-==14638== Memcheck, a memory error detector
-==14638== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==14638== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==14638== Command: /home/batelov/Technion_projects/build/DS1
-==14638== 
-==14638== 
-==14638== HEAP SUMMARY:
-==14638==     in use at exit: 0 bytes in 0 blocks
-==14638==   total heap usage: 5,413 allocs, 5,413 frees, 131,248 bytes allocated
-==14638== 
-==14638== All heap blocks were freed -- no leaks are possible
-==14638== 
-==14638== For lists of detected and suppressed errors, rerun with: -s
-==14638== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==22437== Memcheck, a memory error detector
+==22437== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==22437== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==22437== Command: /home/batelov/Technion_projects/data\ structures/build/DS1
+==22437== 
+==22437== 
+==22437== HEAP SUMMARY:
+==22437==     in use at exit: 0 bytes in 0 blocks
+==22437==   total heap usage: 5,413 allocs, 5,413 frees, 131,248 bytes allocated
+==22437== 
+==22437== All heap blocks were freed -- no leaks are possible
+==22437== 
+==22437== For lists of detected and suppressed errors, rerun with: -s
+==22437== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 3.txt
 
-==14647== Memcheck, a memory error detector
-==14647== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==14647== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==14647== Command: /home/batelov/Technion_projects/build/DS1
-==14647== 
-==14647== 
-==14647== HEAP SUMMARY:
-==14647==     in use at exit: 0 bytes in 0 blocks
-==14647==   total heap usage: 3,130 allocs, 3,130 frees, 76,408 bytes allocated
-==14647== 
-==14647== All heap blocks were freed -- no leaks are possible
-==14647== 
-==14647== For lists of detected and suppressed errors, rerun with: -s
-==14647== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-31.txt
-
-==14656== Memcheck, a memory error detector
-==14656== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==14656== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==14656== Command: /home/batelov/Technion_projects/build/DS1
-==14656== 
-==14656== 
-==14656== HEAP SUMMARY:
-==14656==     in use at exit: 0 bytes in 0 blocks
-==14656==   total heap usage: 7,919 allocs, 7,919 frees, 198,888 bytes allocated
-==14656== 
-==14656== All heap blocks were freed -- no leaks are possible
-==14656== 
-==14656== For lists of detected and suppressed errors, rerun with: -s
-==14656== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==22451== Memcheck, a memory error detector
+==22451== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==22451== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==22451== Command: /home/batelov/Technion_projects/data\ structures/build/DS1
+==22451== 
+==22451== 
+==22451== HEAP SUMMARY:
+==22451==     in use at exit: 0 bytes in 0 blocks
+==22451==   total heap usage: 3,130 allocs, 3,130 frees, 76,408 bytes allocated
+==22451== 
+==22451== All heap blocks were freed -- no leaks are possible
+==22451== 
+==22451== For lists of detected and suppressed errors, rerun with: -s
+==22451== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 30.txt
 
-==14663== Memcheck, a memory error detector
-==14663== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==14663== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==14663== Command: /home/batelov/Technion_projects/build/DS1
-==14663== 
-==14663== 
-==14663== HEAP SUMMARY:
-==14663==     in use at exit: 0 bytes in 0 blocks
-==14663==   total heap usage: 5,136 allocs, 5,136 frees, 123,280 bytes allocated
-==14663== 
-==14663== All heap blocks were freed -- no leaks are possible
-==14663== 
-==14663== For lists of detected and suppressed errors, rerun with: -s
-==14663== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==22466== Memcheck, a memory error detector
+==22466== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==22466== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==22466== Command: /home/batelov/Technion_projects/data\ structures/build/DS1
+==22466== 
+==22466== 
+==22466== HEAP SUMMARY:
+==22466==     in use at exit: 0 bytes in 0 blocks
+==22466==   total heap usage: 5,136 allocs, 5,136 frees, 123,280 bytes allocated
+==22466== 
+==22466== All heap blocks were freed -- no leaks are possible
+==22466== 
+==22466== For lists of detected and suppressed errors, rerun with: -s
+==22466== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+31.txt
+
+==22481== Memcheck, a memory error detector
+==22481== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==22481== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==22481== Command: /home/batelov/Technion_projects/data\ structures/build/DS1
+==22481== 
+==22481== 
+==22481== HEAP SUMMARY:
+==22481==     in use at exit: 0 bytes in 0 blocks
+==22481==   total heap usage: 7,919 allocs, 7,919 frees, 198,888 bytes allocated
+==22481== 
+==22481== All heap blocks were freed -- no leaks are possible
+==22481== 
+==22481== For lists of detected and suppressed errors, rerun with: -s
+==22481== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 32.txt
 
-==14674== Memcheck, a memory error detector
-==14674== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==14674== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==14674== Command: /home/batelov/Technion_projects/build/DS1
-==14674== 
-==14674== 
-==14674== HEAP SUMMARY:
-==14674==     in use at exit: 0 bytes in 0 blocks
-==14674==   total heap usage: 1,150 allocs, 1,150 frees, 27,128 bytes allocated
-==14674== 
-==14674== All heap blocks were freed -- no leaks are possible
-==14674== 
-==14674== For lists of detected and suppressed errors, rerun with: -s
-==14674== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==22497== Memcheck, a memory error detector
+==22497== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==22497== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==22497== Command: /home/batelov/Technion_projects/data\ structures/build/DS1
+==22497== 
+==22497== 
+==22497== HEAP SUMMARY:
+==22497==     in use at exit: 0 bytes in 0 blocks
+==22497==   total heap usage: 1,150 allocs, 1,150 frees, 27,128 bytes allocated
+==22497== 
+==22497== All heap blocks were freed -- no leaks are possible
+==22497== 
+==22497== For lists of detected and suppressed errors, rerun with: -s
+==22497== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 33.txt
 
-==14681== Memcheck, a memory error detector
-==14681== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==14681== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==14681== Command: /home/batelov/Technion_projects/build/DS1
-==14681== 
-==14681== 
-==14681== HEAP SUMMARY:
-==14681==     in use at exit: 0 bytes in 0 blocks
-==14681==   total heap usage: 217 allocs, 217 frees, 4,896 bytes allocated
-==14681== 
-==14681== All heap blocks were freed -- no leaks are possible
-==14681== 
-==14681== For lists of detected and suppressed errors, rerun with: -s
-==14681== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-35.txt
-
-==14688== Memcheck, a memory error detector
-==14688== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==14688== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==14688== Command: /home/batelov/Technion_projects/build/DS1
-==14688== 
-==14688== 
-==14688== HEAP SUMMARY:
-==14688==     in use at exit: 0 bytes in 0 blocks
-==14688==   total heap usage: 23,786 allocs, 23,786 frees, 587,728 bytes allocated
-==14688== 
-==14688== All heap blocks were freed -- no leaks are possible
-==14688== 
-==14688== For lists of detected and suppressed errors, rerun with: -s
-==14688== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==22513== Memcheck, a memory error detector
+==22513== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==22513== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==22513== Command: /home/batelov/Technion_projects/data\ structures/build/DS1
+==22513== 
+==22513== 
+==22513== HEAP SUMMARY:
+==22513==     in use at exit: 0 bytes in 0 blocks
+==22513==   total heap usage: 217 allocs, 217 frees, 4,896 bytes allocated
+==22513== 
+==22513== All heap blocks were freed -- no leaks are possible
+==22513== 
+==22513== For lists of detected and suppressed errors, rerun with: -s
+==22513== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 34.txt
 
-==14701== Memcheck, a memory error detector
-==14701== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==14701== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==14701== Command: /home/batelov/Technion_projects/build/DS1
-==14701== 
-==14701== 
-==14701== HEAP SUMMARY:
-==14701==     in use at exit: 0 bytes in 0 blocks
-==14701==   total heap usage: 1,613 allocs, 1,613 frees, 38,344 bytes allocated
-==14701== 
-==14701== All heap blocks were freed -- no leaks are possible
-==14701== 
-==14701== For lists of detected and suppressed errors, rerun with: -s
-==14701== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-37.txt
+==22529== Memcheck, a memory error detector
+==22529== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==22529== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==22529== Command: /home/batelov/Technion_projects/data\ structures/build/DS1
+==22529== 
+==22529== 
+==22529== HEAP SUMMARY:
+==22529==     in use at exit: 0 bytes in 0 blocks
+==22529==   total heap usage: 1,613 allocs, 1,613 frees, 38,344 bytes allocated
+==22529== 
+==22529== All heap blocks were freed -- no leaks are possible
+==22529== 
+==22529== For lists of detected and suppressed errors, rerun with: -s
+==22529== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+35.txt
 
-==14708== Memcheck, a memory error detector
-==14708== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==14708== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==14708== Command: /home/batelov/Technion_projects/build/DS1
-==14708== 
-==14708== 
-==14708== HEAP SUMMARY:
-==14708==     in use at exit: 0 bytes in 0 blocks
-==14708==   total heap usage: 10,267 allocs, 10,267 frees, 251,392 bytes allocated
-==14708== 
-==14708== All heap blocks were freed -- no leaks are possible
-==14708== 
-==14708== For lists of detected and suppressed errors, rerun with: -s
-==14708== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==22545== Memcheck, a memory error detector
+==22545== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==22545== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==22545== Command: /home/batelov/Technion_projects/data\ structures/build/DS1
+==22545== 
+==22545== 
+==22545== HEAP SUMMARY:
+==22545==     in use at exit: 0 bytes in 0 blocks
+==22545==   total heap usage: 23,786 allocs, 23,786 frees, 587,728 bytes allocated
+==22545== 
+==22545== All heap blocks were freed -- no leaks are possible
+==22545== 
+==22545== For lists of detected and suppressed errors, rerun with: -s
+==22545== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 36.txt
 
-==14715== Memcheck, a memory error detector
-==14715== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==14715== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==14715== Command: /home/batelov/Technion_projects/build/DS1
-==14715== 
-==14715== 
-==14715== HEAP SUMMARY:
-==14715==     in use at exit: 0 bytes in 0 blocks
-==14715==   total heap usage: 520 allocs, 520 frees, 12,048 bytes allocated
-==14715== 
-==14715== All heap blocks were freed -- no leaks are possible
-==14715== 
-==14715== For lists of detected and suppressed errors, rerun with: -s
-==14715== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-39.txt
+==22563== Memcheck, a memory error detector
+==22563== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==22563== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==22563== Command: /home/batelov/Technion_projects/data\ structures/build/DS1
+==22563== 
+==22563== 
+==22563== HEAP SUMMARY:
+==22563==     in use at exit: 0 bytes in 0 blocks
+==22563==   total heap usage: 520 allocs, 520 frees, 12,048 bytes allocated
+==22563== 
+==22563== All heap blocks were freed -- no leaks are possible
+==22563== 
+==22563== For lists of detected and suppressed errors, rerun with: -s
+==22563== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+37.txt
 
-==14728== Memcheck, a memory error detector
-==14728== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==14728== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==14728== Command: /home/batelov/Technion_projects/build/DS1
-==14728== 
-==14728== 
-==14728== HEAP SUMMARY:
-==14728==     in use at exit: 0 bytes in 0 blocks
-==14728==   total heap usage: 50 allocs, 50 frees, 1,048 bytes allocated
-==14728== 
-==14728== All heap blocks were freed -- no leaks are possible
-==14728== 
-==14728== For lists of detected and suppressed errors, rerun with: -s
-==14728== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==22580== Memcheck, a memory error detector
+==22580== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==22580== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==22580== Command: /home/batelov/Technion_projects/data\ structures/build/DS1
+==22580== 
+==22580== 
+==22580== HEAP SUMMARY:
+==22580==     in use at exit: 0 bytes in 0 blocks
+==22580==   total heap usage: 10,267 allocs, 10,267 frees, 251,392 bytes allocated
+==22580== 
+==22580== All heap blocks were freed -- no leaks are possible
+==22580== 
+==22580== For lists of detected and suppressed errors, rerun with: -s
+==22580== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 38.txt
 
-==14735== Memcheck, a memory error detector
-==14735== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==14735== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==14735== Command: /home/batelov/Technion_projects/build/DS1
-==14735== 
-==14735== 
-==14735== HEAP SUMMARY:
-==14735==     in use at exit: 0 bytes in 0 blocks
-==14735==   total heap usage: 9,570 allocs, 9,570 frees, 240,328 bytes allocated
-==14735== 
-==14735== All heap blocks were freed -- no leaks are possible
-==14735== 
-==14735== For lists of detected and suppressed errors, rerun with: -s
-==14735== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==22595== Memcheck, a memory error detector
+==22595== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==22595== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==22595== Command: /home/batelov/Technion_projects/data\ structures/build/DS1
+==22595== 
+==22595== 
+==22595== HEAP SUMMARY:
+==22595==     in use at exit: 0 bytes in 0 blocks
+==22595==   total heap usage: 9,570 allocs, 9,570 frees, 240,328 bytes allocated
+==22595== 
+==22595== All heap blocks were freed -- no leaks are possible
+==22595== 
+==22595== For lists of detected and suppressed errors, rerun with: -s
+==22595== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+39.txt
+
+==22615== Memcheck, a memory error detector
+==22615== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==22615== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==22615== Command: /home/batelov/Technion_projects/data\ structures/build/DS1
+==22615== 
+==22615== 
+==22615== HEAP SUMMARY:
+==22615==     in use at exit: 0 bytes in 0 blocks
+==22615==   total heap usage: 50 allocs, 50 frees, 1,048 bytes allocated
+==22615== 
+==22615== All heap blocks were freed -- no leaks are possible
+==22615== 
+==22615== For lists of detected and suppressed errors, rerun with: -s
+==22615== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 4.txt
 
-==14754== Memcheck, a memory error detector
-==14754== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==14754== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==14754== Command: /home/batelov/Technion_projects/build/DS1
-==14754== 
-==14754== 
-==14754== HEAP SUMMARY:
-==14754==     in use at exit: 0 bytes in 0 blocks
-==14754==   total heap usage: 14,074 allocs, 14,074 frees, 347,728 bytes allocated
-==14754== 
-==14754== All heap blocks were freed -- no leaks are possible
-==14754== 
-==14754== For lists of detected and suppressed errors, rerun with: -s
-==14754== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==22621== Memcheck, a memory error detector
+==22621== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==22621== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==22621== Command: /home/batelov/Technion_projects/data\ structures/build/DS1
+==22621== 
+==22621== 
+==22621== HEAP SUMMARY:
+==22621==     in use at exit: 0 bytes in 0 blocks
+==22621==   total heap usage: 14,074 allocs, 14,074 frees, 347,728 bytes allocated
+==22621== 
+==22621== All heap blocks were freed -- no leaks are possible
+==22621== 
+==22621== For lists of detected and suppressed errors, rerun with: -s
+==22621== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 40.txt
 
-==14793== Memcheck, a memory error detector
-==14793== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==14793== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==14793== Command: /home/batelov/Technion_projects/build/DS1
-==14793== 
-==14793== 
-==14793== HEAP SUMMARY:
-==14793==     in use at exit: 0 bytes in 0 blocks
-==14793==   total heap usage: 8,174 allocs, 8,174 frees, 197,936 bytes allocated
-==14793== 
-==14793== All heap blocks were freed -- no leaks are possible
-==14793== 
-==14793== For lists of detected and suppressed errors, rerun with: -s
-==14793== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-42.txt
-
-==14799== Memcheck, a memory error detector
-==14799== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==14799== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==14799== Command: /home/batelov/Technion_projects/build/DS1
-==14799== 
-==14799== 
-==14799== HEAP SUMMARY:
-==14799==     in use at exit: 0 bytes in 0 blocks
-==14799==   total heap usage: 242 allocs, 242 frees, 5,448 bytes allocated
-==14799== 
-==14799== All heap blocks were freed -- no leaks are possible
-==14799== 
-==14799== For lists of detected and suppressed errors, rerun with: -s
-==14799== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==22643== Memcheck, a memory error detector
+==22643== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==22643== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==22643== Command: /home/batelov/Technion_projects/data\ structures/build/DS1
+==22643== 
+==22643== 
+==22643== HEAP SUMMARY:
+==22643==     in use at exit: 0 bytes in 0 blocks
+==22643==   total heap usage: 8,174 allocs, 8,174 frees, 197,936 bytes allocated
+==22643== 
+==22643== All heap blocks were freed -- no leaks are possible
+==22643== 
+==22643== For lists of detected and suppressed errors, rerun with: -s
+==22643== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 41.txt
 
-==14810== Memcheck, a memory error detector
-==14810== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==14810== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==14810== Command: /home/batelov/Technion_projects/build/DS1
-==14810== 
-==14810== 
-==14810== HEAP SUMMARY:
-==14810==     in use at exit: 0 bytes in 0 blocks
-==14810==   total heap usage: 3,303 allocs, 3,303 frees, 80,592 bytes allocated
-==14810== 
-==14810== All heap blocks were freed -- no leaks are possible
-==14810== 
-==14810== For lists of detected and suppressed errors, rerun with: -s
-==14810== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==22653== Memcheck, a memory error detector
+==22653== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==22653== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==22653== Command: /home/batelov/Technion_projects/data\ structures/build/DS1
+==22653== 
+==22653== 
+==22653== HEAP SUMMARY:
+==22653==     in use at exit: 0 bytes in 0 blocks
+==22653==   total heap usage: 3,303 allocs, 3,303 frees, 80,592 bytes allocated
+==22653== 
+==22653== All heap blocks were freed -- no leaks are possible
+==22653== 
+==22653== For lists of detected and suppressed errors, rerun with: -s
+==22653== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+42.txt
+
+==22674== Memcheck, a memory error detector
+==22674== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==22674== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==22674== Command: /home/batelov/Technion_projects/data\ structures/build/DS1
+==22674== 
+==22674== 
+==22674== HEAP SUMMARY:
+==22674==     in use at exit: 0 bytes in 0 blocks
+==22674==   total heap usage: 242 allocs, 242 frees, 5,448 bytes allocated
+==22674== 
+==22674== All heap blocks were freed -- no leaks are possible
+==22674== 
+==22674== For lists of detected and suppressed errors, rerun with: -s
+==22674== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 43.txt
 
-==14818== Memcheck, a memory error detector
-==14818== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==14818== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==14818== Command: /home/batelov/Technion_projects/build/DS1
-==14818== 
-==14818== 
-==14818== HEAP SUMMARY:
-==14818==     in use at exit: 0 bytes in 0 blocks
-==14818==   total heap usage: 2,624 allocs, 2,624 frees, 62,408 bytes allocated
-==14818== 
-==14818== All heap blocks were freed -- no leaks are possible
-==14818== 
-==14818== For lists of detected and suppressed errors, rerun with: -s
-==14818== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==22684== Memcheck, a memory error detector
+==22684== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==22684== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==22684== Command: /home/batelov/Technion_projects/data\ structures/build/DS1
+==22684== 
+==22684== 
+==22684== HEAP SUMMARY:
+==22684==     in use at exit: 0 bytes in 0 blocks
+==22684==   total heap usage: 2,624 allocs, 2,624 frees, 62,408 bytes allocated
+==22684== 
+==22684== All heap blocks were freed -- no leaks are possible
+==22684== 
+==22684== For lists of detected and suppressed errors, rerun with: -s
+==22684== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 44.txt
 
-==14825== Memcheck, a memory error detector
-==14825== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==14825== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==14825== Command: /home/batelov/Technion_projects/build/DS1
-==14825== 
-==14825== 
-==14825== HEAP SUMMARY:
-==14825==     in use at exit: 0 bytes in 0 blocks
-==14825==   total heap usage: 219 allocs, 219 frees, 4,880 bytes allocated
-==14825== 
-==14825== All heap blocks were freed -- no leaks are possible
-==14825== 
-==14825== For lists of detected and suppressed errors, rerun with: -s
-==14825== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-46.txt
-
-==14832== Memcheck, a memory error detector
-==14832== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==14832== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==14832== Command: /home/batelov/Technion_projects/build/DS1
-==14832== 
-==14832== 
-==14832== HEAP SUMMARY:
-==14832==     in use at exit: 0 bytes in 0 blocks
-==14832==   total heap usage: 305 allocs, 305 frees, 7,248 bytes allocated
-==14832== 
-==14832== All heap blocks were freed -- no leaks are possible
-==14832== 
-==14832== For lists of detected and suppressed errors, rerun with: -s
-==14832== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==22704== Memcheck, a memory error detector
+==22704== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==22704== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==22704== Command: /home/batelov/Technion_projects/data\ structures/build/DS1
+==22704== 
+==22704== 
+==22704== HEAP SUMMARY:
+==22704==     in use at exit: 0 bytes in 0 blocks
+==22704==   total heap usage: 219 allocs, 219 frees, 4,880 bytes allocated
+==22704== 
+==22704== All heap blocks were freed -- no leaks are possible
+==22704== 
+==22704== For lists of detected and suppressed errors, rerun with: -s
+==22704== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 45.txt
 
-==14838== Memcheck, a memory error detector
-==14838== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==14838== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==14838== Command: /home/batelov/Technion_projects/build/DS1
-==14838== 
-==14838== 
-==14838== HEAP SUMMARY:
-==14838==     in use at exit: 0 bytes in 0 blocks
-==14838==   total heap usage: 7,091 allocs, 7,091 frees, 179,936 bytes allocated
-==14838== 
-==14838== All heap blocks were freed -- no leaks are possible
-==14838== 
-==14838== For lists of detected and suppressed errors, rerun with: -s
-==14838== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==22717== Memcheck, a memory error detector
+==22717== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==22717== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==22717== Command: /home/batelov/Technion_projects/data\ structures/build/DS1
+==22717== 
+==22717== 
+==22717== HEAP SUMMARY:
+==22717==     in use at exit: 0 bytes in 0 blocks
+==22717==   total heap usage: 7,091 allocs, 7,091 frees, 179,936 bytes allocated
+==22717== 
+==22717== All heap blocks were freed -- no leaks are possible
+==22717== 
+==22717== For lists of detected and suppressed errors, rerun with: -s
+==22717== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+46.txt
+
+==22754== Memcheck, a memory error detector
+==22754== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==22754== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==22754== Command: /home/batelov/Technion_projects/data\ structures/build/DS1
+==22754== 
+==22754== 
+==22754== HEAP SUMMARY:
+==22754==     in use at exit: 0 bytes in 0 blocks
+==22754==   total heap usage: 305 allocs, 305 frees, 7,248 bytes allocated
+==22754== 
+==22754== All heap blocks were freed -- no leaks are possible
+==22754== 
+==22754== For lists of detected and suppressed errors, rerun with: -s
+==22754== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 47.txt
 
-==14848== Memcheck, a memory error detector
-==14848== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==14848== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==14848== Command: /home/batelov/Technion_projects/build/DS1
-==14848== 
-==14848== 
-==14848== HEAP SUMMARY:
-==14848==     in use at exit: 0 bytes in 0 blocks
-==14848==   total heap usage: 18,672 allocs, 18,672 frees, 450,280 bytes allocated
-==14848== 
-==14848== All heap blocks were freed -- no leaks are possible
-==14848== 
-==14848== For lists of detected and suppressed errors, rerun with: -s
-==14848== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==22775== Memcheck, a memory error detector
+==22775== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==22775== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==22775== Command: /home/batelov/Technion_projects/data\ structures/build/DS1
+==22775== 
+==22775== 
+==22775== HEAP SUMMARY:
+==22775==     in use at exit: 0 bytes in 0 blocks
+==22775==   total heap usage: 18,672 allocs, 18,672 frees, 450,280 bytes allocated
+==22775== 
+==22775== All heap blocks were freed -- no leaks are possible
+==22775== 
+==22775== For lists of detected and suppressed errors, rerun with: -s
+==22775== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 48.txt
 
-==14875== Memcheck, a memory error detector
-==14875== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==14875== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==14875== Command: /home/batelov/Technion_projects/build/DS1
-==14875== 
-==14875== 
-==14875== HEAP SUMMARY:
-==14875==     in use at exit: 0 bytes in 0 blocks
-==14875==   total heap usage: 1,218 allocs, 1,218 frees, 29,912 bytes allocated
-==14875== 
-==14875== All heap blocks were freed -- no leaks are possible
-==14875== 
-==14875== For lists of detected and suppressed errors, rerun with: -s
-==14875== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==22798== Memcheck, a memory error detector
+==22798== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==22798== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==22798== Command: /home/batelov/Technion_projects/data\ structures/build/DS1
+==22798== 
+==22798== 
+==22798== HEAP SUMMARY:
+==22798==     in use at exit: 0 bytes in 0 blocks
+==22798==   total heap usage: 1,218 allocs, 1,218 frees, 29,912 bytes allocated
+==22798== 
+==22798== All heap blocks were freed -- no leaks are possible
+==22798== 
+==22798== For lists of detected and suppressed errors, rerun with: -s
+==22798== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 49.txt
 
-==14882== Memcheck, a memory error detector
-==14882== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==14882== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==14882== Command: /home/batelov/Technion_projects/build/DS1
-==14882== 
-==14882== 
-==14882== HEAP SUMMARY:
-==14882==     in use at exit: 0 bytes in 0 blocks
-==14882==   total heap usage: 1,770 allocs, 1,770 frees, 44,408 bytes allocated
-==14882== 
-==14882== All heap blocks were freed -- no leaks are possible
-==14882== 
-==14882== For lists of detected and suppressed errors, rerun with: -s
-==14882== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==22808== Memcheck, a memory error detector
+==22808== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==22808== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==22808== Command: /home/batelov/Technion_projects/data\ structures/build/DS1
+==22808== 
+==22808== 
+==22808== HEAP SUMMARY:
+==22808==     in use at exit: 0 bytes in 0 blocks
+==22808==   total heap usage: 1,770 allocs, 1,770 frees, 44,408 bytes allocated
+==22808== 
+==22808== All heap blocks were freed -- no leaks are possible
+==22808== 
+==22808== For lists of detected and suppressed errors, rerun with: -s
+==22808== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 5.txt
 
-==14889== Memcheck, a memory error detector
-==14889== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==14889== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==14889== Command: /home/batelov/Technion_projects/build/DS1
-==14889== 
-==14889== 
-==14889== HEAP SUMMARY:
-==14889==     in use at exit: 0 bytes in 0 blocks
-==14889==   total heap usage: 7,576 allocs, 7,576 frees, 186,136 bytes allocated
-==14889== 
-==14889== All heap blocks were freed -- no leaks are possible
-==14889== 
-==14889== For lists of detected and suppressed errors, rerun with: -s
-==14889== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==22820== Memcheck, a memory error detector
+==22820== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==22820== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==22820== Command: /home/batelov/Technion_projects/data\ structures/build/DS1
+==22820== 
+==22820== 
+==22820== HEAP SUMMARY:
+==22820==     in use at exit: 0 bytes in 0 blocks
+==22820==   total heap usage: 7,576 allocs, 7,576 frees, 186,136 bytes allocated
+==22820== 
+==22820== All heap blocks were freed -- no leaks are possible
+==22820== 
+==22820== For lists of detected and suppressed errors, rerun with: -s
+==22820== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 50.txt
 
-==14904== Memcheck, a memory error detector
-==14904== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==14904== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==14904== Command: /home/batelov/Technion_projects/build/DS1
-==14904== 
-==14904== 
-==14904== HEAP SUMMARY:
-==14904==     in use at exit: 0 bytes in 0 blocks
-==14904==   total heap usage: 2,404 allocs, 2,404 frees, 58,888 bytes allocated
-==14904== 
-==14904== All heap blocks were freed -- no leaks are possible
-==14904== 
-==14904== For lists of detected and suppressed errors, rerun with: -s
-==14904== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==22842== Memcheck, a memory error detector
+==22842== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==22842== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==22842== Command: /home/batelov/Technion_projects/data\ structures/build/DS1
+==22842== 
+==22842== 
+==22842== HEAP SUMMARY:
+==22842==     in use at exit: 0 bytes in 0 blocks
+==22842==   total heap usage: 2,404 allocs, 2,404 frees, 58,888 bytes allocated
+==22842== 
+==22842== All heap blocks were freed -- no leaks are possible
+==22842== 
+==22842== For lists of detected and suppressed errors, rerun with: -s
+==22842== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 51.txt
 
-==14914== Memcheck, a memory error detector
-==14914== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==14914== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==14914== Command: /home/batelov/Technion_projects/build/DS1
-==14914== 
-==14914== 
-==14914== HEAP SUMMARY:
-==14914==     in use at exit: 0 bytes in 0 blocks
-==14914==   total heap usage: 9,112 allocs, 9,112 frees, 217,984 bytes allocated
-==14914== 
-==14914== All heap blocks were freed -- no leaks are possible
-==14914== 
-==14914== For lists of detected and suppressed errors, rerun with: -s
-==14914== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-54.txt
-
-==14939== Memcheck, a memory error detector
-==14939== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==14939== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==14939== Command: /home/batelov/Technion_projects/build/DS1
-==14939== 
-==14939== 
-==14939== HEAP SUMMARY:
-==14939==     in use at exit: 0 bytes in 0 blocks
-==14939==   total heap usage: 687 allocs, 687 frees, 16,312 bytes allocated
-==14939== 
-==14939== All heap blocks were freed -- no leaks are possible
-==14939== 
-==14939== For lists of detected and suppressed errors, rerun with: -s
-==14939== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==22861== Memcheck, a memory error detector
+==22861== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==22861== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==22861== Command: /home/batelov/Technion_projects/data\ structures/build/DS1
+==22861== 
+==22861== 
+==22861== HEAP SUMMARY:
+==22861==     in use at exit: 0 bytes in 0 blocks
+==22861==   total heap usage: 9,112 allocs, 9,112 frees, 217,984 bytes allocated
+==22861== 
+==22861== All heap blocks were freed -- no leaks are possible
+==22861== 
+==22861== For lists of detected and suppressed errors, rerun with: -s
+==22861== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 52.txt
 
-==14948== Memcheck, a memory error detector
-==14948== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==14948== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==14948== Command: /home/batelov/Technion_projects/build/DS1
-==14948== 
-==14948== 
-==14948== HEAP SUMMARY:
-==14948==     in use at exit: 0 bytes in 0 blocks
-==14948==   total heap usage: 534 allocs, 534 frees, 12,720 bytes allocated
-==14948== 
-==14948== All heap blocks were freed -- no leaks are possible
-==14948== 
-==14948== For lists of detected and suppressed errors, rerun with: -s
-==14948== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==22877== Memcheck, a memory error detector
+==22877== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==22877== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==22877== Command: /home/batelov/Technion_projects/data\ structures/build/DS1
+==22877== 
+==22877== 
+==22877== HEAP SUMMARY:
+==22877==     in use at exit: 0 bytes in 0 blocks
+==22877==   total heap usage: 534 allocs, 534 frees, 12,720 bytes allocated
+==22877== 
+==22877== All heap blocks were freed -- no leaks are possible
+==22877== 
+==22877== For lists of detected and suppressed errors, rerun with: -s
+==22877== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 53.txt
 
-==14957== Memcheck, a memory error detector
-==14957== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==14957== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==14957== Command: /home/batelov/Technion_projects/build/DS1
-==14957== 
-==14957== 
-==14957== HEAP SUMMARY:
-==14957==     in use at exit: 0 bytes in 0 blocks
-==14957==   total heap usage: 7,891 allocs, 7,891 frees, 191,432 bytes allocated
-==14957== 
-==14957== All heap blocks were freed -- no leaks are possible
-==14957== 
-==14957== For lists of detected and suppressed errors, rerun with: -s
-==14957== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==22895== Memcheck, a memory error detector
+==22895== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==22895== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==22895== Command: /home/batelov/Technion_projects/data\ structures/build/DS1
+==22895== 
+==22895== 
+==22895== HEAP SUMMARY:
+==22895==     in use at exit: 0 bytes in 0 blocks
+==22895==   total heap usage: 7,891 allocs, 7,891 frees, 191,432 bytes allocated
+==22895== 
+==22895== All heap blocks were freed -- no leaks are possible
+==22895== 
+==22895== For lists of detected and suppressed errors, rerun with: -s
+==22895== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+54.txt
+
+==22911== Memcheck, a memory error detector
+==22911== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==22911== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==22911== Command: /home/batelov/Technion_projects/data\ structures/build/DS1
+==22911== 
+==22911== 
+==22911== HEAP SUMMARY:
+==22911==     in use at exit: 0 bytes in 0 blocks
+==22911==   total heap usage: 687 allocs, 687 frees, 16,312 bytes allocated
+==22911== 
+==22911== All heap blocks were freed -- no leaks are possible
+==22911== 
+==22911== For lists of detected and suppressed errors, rerun with: -s
+==22911== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 55.txt
 
-==14964== Memcheck, a memory error detector
-==14964== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==14964== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==14964== Command: /home/batelov/Technion_projects/build/DS1
-==14964== 
-==14964== 
-==14964== HEAP SUMMARY:
-==14964==     in use at exit: 0 bytes in 0 blocks
-==14964==   total heap usage: 26,203 allocs, 26,203 frees, 635,488 bytes allocated
-==14964== 
-==14964== All heap blocks were freed -- no leaks are possible
-==14964== 
-==14964== For lists of detected and suppressed errors, rerun with: -s
-==14964== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-59.txt
-
-==14972== Memcheck, a memory error detector
-==14972== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==14972== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==14972== Command: /home/batelov/Technion_projects/build/DS1
-==14972== 
-==14972== 
-==14972== HEAP SUMMARY:
-==14972==     in use at exit: 0 bytes in 0 blocks
-==14972==   total heap usage: 4,377 allocs, 4,377 frees, 109,816 bytes allocated
-==14972== 
-==14972== All heap blocks were freed -- no leaks are possible
-==14972== 
-==14972== For lists of detected and suppressed errors, rerun with: -s
-==14972== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==23039== Memcheck, a memory error detector
+==23039== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==23039== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==23039== Command: /home/batelov/Technion_projects/data\ structures/build/DS1
+==23039== 
+==23039== 
+==23039== HEAP SUMMARY:
+==23039==     in use at exit: 0 bytes in 0 blocks
+==23039==   total heap usage: 26,203 allocs, 26,203 frees, 635,488 bytes allocated
+==23039== 
+==23039== All heap blocks were freed -- no leaks are possible
+==23039== 
+==23039== For lists of detected and suppressed errors, rerun with: -s
+==23039== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 56.txt
 
-==15022== Memcheck, a memory error detector
-==15022== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==15022== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==15022== Command: /home/batelov/Technion_projects/build/DS1
-==15022== 
-==15022== 
-==15022== HEAP SUMMARY:
-==15022==     in use at exit: 0 bytes in 0 blocks
-==15022==   total heap usage: 5,910 allocs, 5,910 frees, 145,480 bytes allocated
-==15022== 
-==15022== All heap blocks were freed -- no leaks are possible
-==15022== 
-==15022== For lists of detected and suppressed errors, rerun with: -s
-==15022== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-58.txt
-
-==15030== Memcheck, a memory error detector
-==15030== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==15030== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==15030== Command: /home/batelov/Technion_projects/build/DS1
-==15030== 
-==15030== 
-==15030== HEAP SUMMARY:
-==15030==     in use at exit: 0 bytes in 0 blocks
-==15030==   total heap usage: 5,702 allocs, 5,702 frees, 137,104 bytes allocated
-==15030== 
-==15030== All heap blocks were freed -- no leaks are possible
-==15030== 
-==15030== For lists of detected and suppressed errors, rerun with: -s
-==15030== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==23067== Memcheck, a memory error detector
+==23067== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==23067== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==23067== Command: /home/batelov/Technion_projects/data\ structures/build/DS1
+==23067== 
+==23067== 
+==23067== HEAP SUMMARY:
+==23067==     in use at exit: 0 bytes in 0 blocks
+==23067==   total heap usage: 5,910 allocs, 5,910 frees, 145,480 bytes allocated
+==23067== 
+==23067== All heap blocks were freed -- no leaks are possible
+==23067== 
+==23067== For lists of detected and suppressed errors, rerun with: -s
+==23067== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 57.txt
 
-==15036== Memcheck, a memory error detector
-==15036== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==15036== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==15036== Command: /home/batelov/Technion_projects/build/DS1
-==15036== 
-==15036== 
-==15036== HEAP SUMMARY:
-==15036==     in use at exit: 0 bytes in 0 blocks
-==15036==   total heap usage: 12,029 allocs, 12,029 frees, 295,128 bytes allocated
-==15036== 
-==15036== All heap blocks were freed -- no leaks are possible
-==15036== 
-==15036== For lists of detected and suppressed errors, rerun with: -s
-==15036== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-62.txt
+==23085== Memcheck, a memory error detector
+==23085== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==23085== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==23085== Command: /home/batelov/Technion_projects/data\ structures/build/DS1
+==23085== 
+==23085== 
+==23085== HEAP SUMMARY:
+==23085==     in use at exit: 0 bytes in 0 blocks
+==23085==   total heap usage: 12,029 allocs, 12,029 frees, 295,128 bytes allocated
+==23085== 
+==23085== All heap blocks were freed -- no leaks are possible
+==23085== 
+==23085== For lists of detected and suppressed errors, rerun with: -s
+==23085== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+58.txt
 
-==15048== Memcheck, a memory error detector
-==15048== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==15048== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==15048== Command: /home/batelov/Technion_projects/build/DS1
-==15048== 
-==15048== 
-==15048== HEAP SUMMARY:
-==15048==     in use at exit: 0 bytes in 0 blocks
-==15048==   total heap usage: 905 allocs, 905 frees, 21,680 bytes allocated
-==15048== 
-==15048== All heap blocks were freed -- no leaks are possible
-==15048== 
-==15048== For lists of detected and suppressed errors, rerun with: -s
-==15048== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==23097== Memcheck, a memory error detector
+==23097== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==23097== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==23097== Command: /home/batelov/Technion_projects/data\ structures/build/DS1
+==23097== 
+==23097== 
+==23097== HEAP SUMMARY:
+==23097==     in use at exit: 0 bytes in 0 blocks
+==23097==   total heap usage: 5,702 allocs, 5,702 frees, 137,104 bytes allocated
+==23097== 
+==23097== All heap blocks were freed -- no leaks are possible
+==23097== 
+==23097== For lists of detected and suppressed errors, rerun with: -s
+==23097== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+59.txt
+
+==23120== Memcheck, a memory error detector
+==23120== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==23120== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==23120== Command: /home/batelov/Technion_projects/data\ structures/build/DS1
+==23120== 
+==23120== 
+==23120== HEAP SUMMARY:
+==23120==     in use at exit: 0 bytes in 0 blocks
+==23120==   total heap usage: 4,377 allocs, 4,377 frees, 109,816 bytes allocated
+==23120== 
+==23120== All heap blocks were freed -- no leaks are possible
+==23120== 
+==23120== For lists of detected and suppressed errors, rerun with: -s
+==23120== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 6.txt
 
-==15072== Memcheck, a memory error detector
-==15072== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==15072== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==15072== Command: /home/batelov/Technion_projects/build/DS1
-==15072== 
-==15072== 
-==15072== HEAP SUMMARY:
-==15072==     in use at exit: 0 bytes in 0 blocks
-==15072==   total heap usage: 1,088 allocs, 1,088 frees, 26,344 bytes allocated
-==15072== 
-==15072== All heap blocks were freed -- no leaks are possible
-==15072== 
-==15072== For lists of detected and suppressed errors, rerun with: -s
-==15072== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==23130== Memcheck, a memory error detector
+==23130== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==23130== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==23130== Command: /home/batelov/Technion_projects/data\ structures/build/DS1
+==23130== 
+==23130== 
+==23130== HEAP SUMMARY:
+==23130==     in use at exit: 0 bytes in 0 blocks
+==23130==   total heap usage: 1,088 allocs, 1,088 frees, 26,344 bytes allocated
+==23130== 
+==23130== All heap blocks were freed -- no leaks are possible
+==23130== 
+==23130== For lists of detected and suppressed errors, rerun with: -s
+==23130== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 60.txt
 
-==15162== Memcheck, a memory error detector
-==15162== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==15162== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==15162== Command: /home/batelov/Technion_projects/build/DS1
-==15162== 
-==15162== 
-==15162== HEAP SUMMARY:
-==15162==     in use at exit: 0 bytes in 0 blocks
-==15162==   total heap usage: 6,393 allocs, 6,393 frees, 154,280 bytes allocated
-==15162== 
-==15162== All heap blocks were freed -- no leaks are possible
-==15162== 
-==15162== For lists of detected and suppressed errors, rerun with: -s
-==15162== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==23146== Memcheck, a memory error detector
+==23146== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==23146== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==23146== Command: /home/batelov/Technion_projects/data\ structures/build/DS1
+==23146== 
+==23146== 
+==23146== HEAP SUMMARY:
+==23146==     in use at exit: 0 bytes in 0 blocks
+==23146==   total heap usage: 6,393 allocs, 6,393 frees, 154,280 bytes allocated
+==23146== 
+==23146== All heap blocks were freed -- no leaks are possible
+==23146== 
+==23146== For lists of detected and suppressed errors, rerun with: -s
+==23146== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 61.txt
 
-==15170== Memcheck, a memory error detector
-==15170== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==15170== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==15170== Command: /home/batelov/Technion_projects/build/DS1
-==15170== 
-==15170== 
-==15170== HEAP SUMMARY:
-==15170==     in use at exit: 0 bytes in 0 blocks
-==15170==   total heap usage: 5,163 allocs, 5,163 frees, 124,808 bytes allocated
-==15170== 
-==15170== All heap blocks were freed -- no leaks are possible
-==15170== 
-==15170== For lists of detected and suppressed errors, rerun with: -s
-==15170== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-64.txt
+==23154== Memcheck, a memory error detector
+==23154== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==23154== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==23154== Command: /home/batelov/Technion_projects/data\ structures/build/DS1
+==23154== 
+==23154== 
+==23154== HEAP SUMMARY:
+==23154==     in use at exit: 0 bytes in 0 blocks
+==23154==   total heap usage: 5,163 allocs, 5,163 frees, 124,808 bytes allocated
+==23154== 
+==23154== All heap blocks were freed -- no leaks are possible
+==23154== 
+==23154== For lists of detected and suppressed errors, rerun with: -s
+==23154== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+62.txt
 
-==15178== Memcheck, a memory error detector
-==15178== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==15178== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==15178== Command: /home/batelov/Technion_projects/build/DS1
-==15178== 
-==15178== 
-==15178== HEAP SUMMARY:
-==15178==     in use at exit: 0 bytes in 0 blocks
-==15178==   total heap usage: 7,953 allocs, 7,953 frees, 192,544 bytes allocated
-==15178== 
-==15178== All heap blocks were freed -- no leaks are possible
-==15178== 
-==15178== For lists of detected and suppressed errors, rerun with: -s
-==15178== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==23167== Memcheck, a memory error detector
+==23167== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==23167== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==23167== Command: /home/batelov/Technion_projects/data\ structures/build/DS1
+==23167== 
+==23167== 
+==23167== HEAP SUMMARY:
+==23167==     in use at exit: 0 bytes in 0 blocks
+==23167==   total heap usage: 905 allocs, 905 frees, 21,680 bytes allocated
+==23167== 
+==23167== All heap blocks were freed -- no leaks are possible
+==23167== 
+==23167== For lists of detected and suppressed errors, rerun with: -s
+==23167== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 63.txt
 
-==15184== Memcheck, a memory error detector
-==15184== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==15184== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==15184== Command: /home/batelov/Technion_projects/build/DS1
-==15184== 
-==15184== 
-==15184== HEAP SUMMARY:
-==15184==     in use at exit: 0 bytes in 0 blocks
-==15184==   total heap usage: 22,015 allocs, 22,015 frees, 528,768 bytes allocated
-==15184== 
-==15184== All heap blocks were freed -- no leaks are possible
-==15184== 
-==15184== For lists of detected and suppressed errors, rerun with: -s
-==15184== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==23180== Memcheck, a memory error detector
+==23180== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==23180== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==23180== Command: /home/batelov/Technion_projects/data\ structures/build/DS1
+==23180== 
+==23180== 
+==23180== HEAP SUMMARY:
+==23180==     in use at exit: 0 bytes in 0 blocks
+==23180==   total heap usage: 22,015 allocs, 22,015 frees, 528,768 bytes allocated
+==23180== 
+==23180== All heap blocks were freed -- no leaks are possible
+==23180== 
+==23180== For lists of detected and suppressed errors, rerun with: -s
+==23180== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+64.txt
+
+==23267== Memcheck, a memory error detector
+==23267== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==23267== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==23267== Command: /home/batelov/Technion_projects/data\ structures/build/DS1
+==23267== 
+==23267== 
+==23267== HEAP SUMMARY:
+==23267==     in use at exit: 0 bytes in 0 blocks
+==23267==   total heap usage: 7,953 allocs, 7,953 frees, 192,544 bytes allocated
+==23267== 
+==23267== All heap blocks were freed -- no leaks are possible
+==23267== 
+==23267== For lists of detected and suppressed errors, rerun with: -s
+==23267== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 65.txt
 
-==15195== Memcheck, a memory error detector
-==15195== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==15195== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==15195== Command: /home/batelov/Technion_projects/build/DS1
-==15195== 
-==15195== 
-==15195== HEAP SUMMARY:
-==15195==     in use at exit: 0 bytes in 0 blocks
-==15195==   total heap usage: 1,990 allocs, 1,990 frees, 49,600 bytes allocated
-==15195== 
-==15195== All heap blocks were freed -- no leaks are possible
-==15195== 
-==15195== For lists of detected and suppressed errors, rerun with: -s
-==15195== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==23332== Memcheck, a memory error detector
+==23332== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==23332== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==23332== Command: /home/batelov/Technion_projects/data\ structures/build/DS1
+==23332== 
+==23332== 
+==23332== HEAP SUMMARY:
+==23332==     in use at exit: 0 bytes in 0 blocks
+==23332==   total heap usage: 1,990 allocs, 1,990 frees, 49,600 bytes allocated
+==23332== 
+==23332== All heap blocks were freed -- no leaks are possible
+==23332== 
+==23332== For lists of detected and suppressed errors, rerun with: -s
+==23332== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 66.txt
 
-==15205== Memcheck, a memory error detector
-==15205== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==15205== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==15205== Command: /home/batelov/Technion_projects/build/DS1
-==15205== 
-==15205== 
-==15205== HEAP SUMMARY:
-==15205==     in use at exit: 0 bytes in 0 blocks
-==15205==   total heap usage: 790 allocs, 790 frees, 19,264 bytes allocated
-==15205== 
-==15205== All heap blocks were freed -- no leaks are possible
-==15205== 
-==15205== For lists of detected and suppressed errors, rerun with: -s
-==15205== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-69.txt
-
-==15219== Memcheck, a memory error detector
-==15219== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==15219== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==15219== Command: /home/batelov/Technion_projects/build/DS1
-==15219== 
-==15219== 
-==15219== HEAP SUMMARY:
-==15219==     in use at exit: 0 bytes in 0 blocks
-==15219==   total heap usage: 801 allocs, 801 frees, 19,928 bytes allocated
-==15219== 
-==15219== All heap blocks were freed -- no leaks are possible
-==15219== 
-==15219== For lists of detected and suppressed errors, rerun with: -s
-==15219== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-68.txt
-
-==15226== Memcheck, a memory error detector
-==15226== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==15226== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==15226== Command: /home/batelov/Technion_projects/build/DS1
-==15226== 
-==15226== 
-==15226== HEAP SUMMARY:
-==15226==     in use at exit: 0 bytes in 0 blocks
-==15226==   total heap usage: 12,170 allocs, 12,170 frees, 299,912 bytes allocated
-==15226== 
-==15226== All heap blocks were freed -- no leaks are possible
-==15226== 
-==15226== For lists of detected and suppressed errors, rerun with: -s
-==15226== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==23351== Memcheck, a memory error detector
+==23351== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==23351== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==23351== Command: /home/batelov/Technion_projects/data\ structures/build/DS1
+==23351== 
+==23351== 
+==23351== HEAP SUMMARY:
+==23351==     in use at exit: 0 bytes in 0 blocks
+==23351==   total heap usage: 790 allocs, 790 frees, 19,264 bytes allocated
+==23351== 
+==23351== All heap blocks were freed -- no leaks are possible
+==23351== 
+==23351== For lists of detected and suppressed errors, rerun with: -s
+==23351== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 67.txt
 
-==15235== Memcheck, a memory error detector
-==15235== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==15235== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==15235== Command: /home/batelov/Technion_projects/build/DS1
-==15235== 
-==15235== 
-==15235== HEAP SUMMARY:
-==15235==     in use at exit: 0 bytes in 0 blocks
-==15235==   total heap usage: 20,601 allocs, 20,601 frees, 496,136 bytes allocated
-==15235== 
-==15235== All heap blocks were freed -- no leaks are possible
-==15235== 
-==15235== For lists of detected and suppressed errors, rerun with: -s
-==15235== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==23361== Memcheck, a memory error detector
+==23361== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==23361== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==23361== Command: /home/batelov/Technion_projects/data\ structures/build/DS1
+==23361== 
+==23361== 
+==23361== HEAP SUMMARY:
+==23361==     in use at exit: 0 bytes in 0 blocks
+==23361==   total heap usage: 20,601 allocs, 20,601 frees, 496,136 bytes allocated
+==23361== 
+==23361== All heap blocks were freed -- no leaks are possible
+==23361== 
+==23361== For lists of detected and suppressed errors, rerun with: -s
+==23361== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+68.txt
+
+==23398== Memcheck, a memory error detector
+==23398== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==23398== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==23398== Command: /home/batelov/Technion_projects/data\ structures/build/DS1
+==23398== 
+==23398== 
+==23398== HEAP SUMMARY:
+==23398==     in use at exit: 0 bytes in 0 blocks
+==23398==   total heap usage: 12,170 allocs, 12,170 frees, 299,912 bytes allocated
+==23398== 
+==23398== All heap blocks were freed -- no leaks are possible
+==23398== 
+==23398== For lists of detected and suppressed errors, rerun with: -s
+==23398== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+69.txt
+
+==23499== Memcheck, a memory error detector
+==23499== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==23499== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==23499== Command: /home/batelov/Technion_projects/data\ structures/build/DS1
+==23499== 
+==23499== 
+==23499== HEAP SUMMARY:
+==23499==     in use at exit: 0 bytes in 0 blocks
+==23499==   total heap usage: 801 allocs, 801 frees, 19,928 bytes allocated
+==23499== 
+==23499== All heap blocks were freed -- no leaks are possible
+==23499== 
+==23499== For lists of detected and suppressed errors, rerun with: -s
+==23499== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 7.txt
 
-==15263== Memcheck, a memory error detector
-==15263== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==15263== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==15263== Command: /home/batelov/Technion_projects/build/DS1
-==15263== 
-==15263== 
-==15263== HEAP SUMMARY:
-==15263==     in use at exit: 0 bytes in 0 blocks
-==15263==   total heap usage: 43 allocs, 43 frees, 888 bytes allocated
-==15263== 
-==15263== All heap blocks were freed -- no leaks are possible
-==15263== 
-==15263== For lists of detected and suppressed errors, rerun with: -s
-==15263== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-72.txt
-
-==15270== Memcheck, a memory error detector
-==15270== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==15270== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==15270== Command: /home/batelov/Technion_projects/build/DS1
-==15270== 
-==15270== 
-==15270== HEAP SUMMARY:
-==15270==     in use at exit: 0 bytes in 0 blocks
-==15270==   total heap usage: 1,534 allocs, 1,534 frees, 38,696 bytes allocated
-==15270== 
-==15270== All heap blocks were freed -- no leaks are possible
-==15270== 
-==15270== For lists of detected and suppressed errors, rerun with: -s
-==15270== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==23527== Memcheck, a memory error detector
+==23527== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==23527== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==23527== Command: /home/batelov/Technion_projects/data\ structures/build/DS1
+==23527== 
+==23527== 
+==23527== HEAP SUMMARY:
+==23527==     in use at exit: 0 bytes in 0 blocks
+==23527==   total heap usage: 43 allocs, 43 frees, 888 bytes allocated
+==23527== 
+==23527== All heap blocks were freed -- no leaks are possible
+==23527== 
+==23527== For lists of detected and suppressed errors, rerun with: -s
+==23527== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 70.txt
 
-==15284== Memcheck, a memory error detector
-==15284== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==15284== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==15284== Command: /home/batelov/Technion_projects/build/DS1
-==15284== 
-==15284== 
-==15284== HEAP SUMMARY:
-==15284==     in use at exit: 0 bytes in 0 blocks
-==15284==   total heap usage: 1,100 allocs, 1,100 frees, 26,256 bytes allocated
-==15284== 
-==15284== All heap blocks were freed -- no leaks are possible
-==15284== 
-==15284== For lists of detected and suppressed errors, rerun with: -s
-==15284== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==23542== Memcheck, a memory error detector
+==23542== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==23542== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==23542== Command: /home/batelov/Technion_projects/data\ structures/build/DS1
+==23542== 
+==23542== 
+==23542== HEAP SUMMARY:
+==23542==     in use at exit: 0 bytes in 0 blocks
+==23542==   total heap usage: 1,100 allocs, 1,100 frees, 26,256 bytes allocated
+==23542== 
+==23542== All heap blocks were freed -- no leaks are possible
+==23542== 
+==23542== For lists of detected and suppressed errors, rerun with: -s
+==23542== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 71.txt
 
-==15290== Memcheck, a memory error detector
-==15290== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==15290== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==15290== Command: /home/batelov/Technion_projects/build/DS1
-==15290== 
-==15290== 
-==15290== HEAP SUMMARY:
-==15290==     in use at exit: 0 bytes in 0 blocks
-==15290==   total heap usage: 6,502 allocs, 6,502 frees, 158,968 bytes allocated
-==15290== 
-==15290== All heap blocks were freed -- no leaks are possible
-==15290== 
-==15290== For lists of detected and suppressed errors, rerun with: -s
-==15290== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==23578== Memcheck, a memory error detector
+==23578== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==23578== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==23578== Command: /home/batelov/Technion_projects/data\ structures/build/DS1
+==23578== 
+==23578== 
+==23578== HEAP SUMMARY:
+==23578==     in use at exit: 0 bytes in 0 blocks
+==23578==   total heap usage: 6,502 allocs, 6,502 frees, 158,968 bytes allocated
+==23578== 
+==23578== All heap blocks were freed -- no leaks are possible
+==23578== 
+==23578== For lists of detected and suppressed errors, rerun with: -s
+==23578== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+72.txt
+
+==23654== Memcheck, a memory error detector
+==23654== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==23654== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==23654== Command: /home/batelov/Technion_projects/data\ structures/build/DS1
+==23654== 
+==23654== 
+==23654== HEAP SUMMARY:
+==23654==     in use at exit: 0 bytes in 0 blocks
+==23654==   total heap usage: 1,534 allocs, 1,534 frees, 38,696 bytes allocated
+==23654== 
+==23654== All heap blocks were freed -- no leaks are possible
+==23654== 
+==23654== For lists of detected and suppressed errors, rerun with: -s
+==23654== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 73.txt
 
-==15298== Memcheck, a memory error detector
-==15298== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==15298== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==15298== Command: /home/batelov/Technion_projects/build/DS1
-==15298== 
-==15298== 
-==15298== HEAP SUMMARY:
-==15298==     in use at exit: 0 bytes in 0 blocks
-==15298==   total heap usage: 3,007 allocs, 3,007 frees, 71,504 bytes allocated
-==15298== 
-==15298== All heap blocks were freed -- no leaks are possible
-==15298== 
-==15298== For lists of detected and suppressed errors, rerun with: -s
-==15298== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-75.txt
-
-==15305== Memcheck, a memory error detector
-==15305== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==15305== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==15305== Command: /home/batelov/Technion_projects/build/DS1
-==15305== 
-==15305== 
-==15305== HEAP SUMMARY:
-==15305==     in use at exit: 0 bytes in 0 blocks
-==15305==   total heap usage: 1,218 allocs, 1,218 frees, 28,896 bytes allocated
-==15305== 
-==15305== All heap blocks were freed -- no leaks are possible
-==15305== 
-==15305== For lists of detected and suppressed errors, rerun with: -s
-==15305== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==23663== Memcheck, a memory error detector
+==23663== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==23663== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==23663== Command: /home/batelov/Technion_projects/data\ structures/build/DS1
+==23663== 
+==23663== 
+==23663== HEAP SUMMARY:
+==23663==     in use at exit: 0 bytes in 0 blocks
+==23663==   total heap usage: 3,007 allocs, 3,007 frees, 71,504 bytes allocated
+==23663== 
+==23663== All heap blocks were freed -- no leaks are possible
+==23663== 
+==23663== For lists of detected and suppressed errors, rerun with: -s
+==23663== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 74.txt
 
-==15315== Memcheck, a memory error detector
-==15315== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==15315== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==15315== Command: /home/batelov/Technion_projects/build/DS1
-==15315== 
-==15315== 
-==15315== HEAP SUMMARY:
-==15315==     in use at exit: 0 bytes in 0 blocks
-==15315==   total heap usage: 2,198 allocs, 2,198 frees, 54,152 bytes allocated
-==15315== 
-==15315== All heap blocks were freed -- no leaks are possible
-==15315== 
-==15315== For lists of detected and suppressed errors, rerun with: -s
-==15315== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==23679== Memcheck, a memory error detector
+==23679== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==23679== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==23679== Command: /home/batelov/Technion_projects/data\ structures/build/DS1
+==23679== 
+==23679== 
+==23679== HEAP SUMMARY:
+==23679==     in use at exit: 0 bytes in 0 blocks
+==23679==   total heap usage: 2,198 allocs, 2,198 frees, 54,152 bytes allocated
+==23679== 
+==23679== All heap blocks were freed -- no leaks are possible
+==23679== 
+==23679== For lists of detected and suppressed errors, rerun with: -s
+==23679== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+75.txt
+
+==23699== Memcheck, a memory error detector
+==23699== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==23699== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==23699== Command: /home/batelov/Technion_projects/data\ structures/build/DS1
+==23699== 
+==23699== 
+==23699== HEAP SUMMARY:
+==23699==     in use at exit: 0 bytes in 0 blocks
+==23699==   total heap usage: 1,218 allocs, 1,218 frees, 28,896 bytes allocated
+==23699== 
+==23699== All heap blocks were freed -- no leaks are possible
+==23699== 
+==23699== For lists of detected and suppressed errors, rerun with: -s
+==23699== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 76.txt
 
-==15326== Memcheck, a memory error detector
-==15326== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==15326== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==15326== Command: /home/batelov/Technion_projects/build/DS1
-==15326== 
-==15326== 
-==15326== HEAP SUMMARY:
-==15326==     in use at exit: 0 bytes in 0 blocks
-==15326==   total heap usage: 2,344 allocs, 2,344 frees, 56,520 bytes allocated
-==15326== 
-==15326== All heap blocks were freed -- no leaks are possible
-==15326== 
-==15326== For lists of detected and suppressed errors, rerun with: -s
-==15326== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==23721== Memcheck, a memory error detector
+==23721== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==23721== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==23721== Command: /home/batelov/Technion_projects/data\ structures/build/DS1
+==23721== 
+==23721== 
+==23721== HEAP SUMMARY:
+==23721==     in use at exit: 0 bytes in 0 blocks
+==23721==   total heap usage: 2,344 allocs, 2,344 frees, 56,520 bytes allocated
+==23721== 
+==23721== All heap blocks were freed -- no leaks are possible
+==23721== 
+==23721== For lists of detected and suppressed errors, rerun with: -s
+==23721== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 77.txt
 
-==15333== Memcheck, a memory error detector
-==15333== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==15333== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==15333== Command: /home/batelov/Technion_projects/build/DS1
-==15333== 
-==15333== 
-==15333== HEAP SUMMARY:
-==15333==     in use at exit: 0 bytes in 0 blocks
-==15333==   total heap usage: 7,221 allocs, 7,221 frees, 183,984 bytes allocated
-==15333== 
-==15333== All heap blocks were freed -- no leaks are possible
-==15333== 
-==15333== For lists of detected and suppressed errors, rerun with: -s
-==15333== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-8.txt
-
-==15342== Memcheck, a memory error detector
-==15342== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==15342== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==15342== Command: /home/batelov/Technion_projects/build/DS1
-==15342== 
-==15342== 
-==15342== HEAP SUMMARY:
-==15342==     in use at exit: 0 bytes in 0 blocks
-==15342==   total heap usage: 39 allocs, 39 frees, 720 bytes allocated
-==15342== 
-==15342== All heap blocks were freed -- no leaks are possible
-==15342== 
-==15342== For lists of detected and suppressed errors, rerun with: -s
-==15342== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==23743== Memcheck, a memory error detector
+==23743== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==23743== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==23743== Command: /home/batelov/Technion_projects/data\ structures/build/DS1
+==23743== 
+==23743== 
+==23743== HEAP SUMMARY:
+==23743==     in use at exit: 0 bytes in 0 blocks
+==23743==   total heap usage: 7,221 allocs, 7,221 frees, 183,984 bytes allocated
+==23743== 
+==23743== All heap blocks were freed -- no leaks are possible
+==23743== 
+==23743== For lists of detected and suppressed errors, rerun with: -s
+==23743== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 78.txt
 
-==15351== Memcheck, a memory error detector
-==15351== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==15351== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==15351== Command: /home/batelov/Technion_projects/build/DS1
-==15351== 
-==15351== 
-==15351== HEAP SUMMARY:
-==15351==     in use at exit: 0 bytes in 0 blocks
-==15351==   total heap usage: 1,678 allocs, 1,678 frees, 41,592 bytes allocated
-==15351== 
-==15351== All heap blocks were freed -- no leaks are possible
-==15351== 
-==15351== For lists of detected and suppressed errors, rerun with: -s
-==15351== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==23756== Memcheck, a memory error detector
+==23756== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==23756== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==23756== Command: /home/batelov/Technion_projects/data\ structures/build/DS1
+==23756== 
+==23756== 
+==23756== HEAP SUMMARY:
+==23756==     in use at exit: 0 bytes in 0 blocks
+==23756==   total heap usage: 1,678 allocs, 1,678 frees, 41,592 bytes allocated
+==23756== 
+==23756== All heap blocks were freed -- no leaks are possible
+==23756== 
+==23756== For lists of detected and suppressed errors, rerun with: -s
+==23756== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 79.txt
 
-==15358== Memcheck, a memory error detector
-==15358== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==15358== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==15358== Command: /home/batelov/Technion_projects/build/DS1
-==15358== 
-==15358== 
-==15358== HEAP SUMMARY:
-==15358==     in use at exit: 0 bytes in 0 blocks
-==15358==   total heap usage: 4,163 allocs, 4,163 frees, 99,968 bytes allocated
-==15358== 
-==15358== All heap blocks were freed -- no leaks are possible
-==15358== 
-==15358== For lists of detected and suppressed errors, rerun with: -s
-==15358== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-81.txt
+==23772== Memcheck, a memory error detector
+==23772== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==23772== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==23772== Command: /home/batelov/Technion_projects/data\ structures/build/DS1
+==23772== 
+==23772== 
+==23772== HEAP SUMMARY:
+==23772==     in use at exit: 0 bytes in 0 blocks
+==23772==   total heap usage: 4,163 allocs, 4,163 frees, 99,968 bytes allocated
+==23772== 
+==23772== All heap blocks were freed -- no leaks are possible
+==23772== 
+==23772== For lists of detected and suppressed errors, rerun with: -s
+==23772== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+8.txt
 
-==15366== Memcheck, a memory error detector
-==15366== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==15366== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==15366== Command: /home/batelov/Technion_projects/build/DS1
-==15366== 
-==15366== 
-==15366== HEAP SUMMARY:
-==15366==     in use at exit: 0 bytes in 0 blocks
-==15366==   total heap usage: 28,826 allocs, 28,826 frees, 690,720 bytes allocated
-==15366== 
-==15366== All heap blocks were freed -- no leaks are possible
-==15366== 
-==15366== For lists of detected and suppressed errors, rerun with: -s
-==15366== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==23786== Memcheck, a memory error detector
+==23786== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==23786== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==23786== Command: /home/batelov/Technion_projects/data\ structures/build/DS1
+==23786== 
+==23786== 
+==23786== HEAP SUMMARY:
+==23786==     in use at exit: 0 bytes in 0 blocks
+==23786==   total heap usage: 39 allocs, 39 frees, 720 bytes allocated
+==23786== 
+==23786== All heap blocks were freed -- no leaks are possible
+==23786== 
+==23786== For lists of detected and suppressed errors, rerun with: -s
+==23786== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 80.txt
 
-==15381== Memcheck, a memory error detector
-==15381== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==15381== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==15381== Command: /home/batelov/Technion_projects/build/DS1
-==15381== 
-==15381== 
-==15381== HEAP SUMMARY:
-==15381==     in use at exit: 0 bytes in 0 blocks
-==15381==   total heap usage: 1,173 allocs, 1,173 frees, 28,880 bytes allocated
-==15381== 
-==15381== All heap blocks were freed -- no leaks are possible
-==15381== 
-==15381== For lists of detected and suppressed errors, rerun with: -s
-==15381== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-83.txt
+==23798== Memcheck, a memory error detector
+==23798== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==23798== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==23798== Command: /home/batelov/Technion_projects/data\ structures/build/DS1
+==23798== 
+==23798== 
+==23798== HEAP SUMMARY:
+==23798==     in use at exit: 0 bytes in 0 blocks
+==23798==   total heap usage: 1,173 allocs, 1,173 frees, 28,880 bytes allocated
+==23798== 
+==23798== All heap blocks were freed -- no leaks are possible
+==23798== 
+==23798== For lists of detected and suppressed errors, rerun with: -s
+==23798== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+81.txt
 
-==15407== Memcheck, a memory error detector
-==15407== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==15407== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==15407== Command: /home/batelov/Technion_projects/build/DS1
-==15407== 
-==15407== 
-==15407== HEAP SUMMARY:
-==15407==     in use at exit: 0 bytes in 0 blocks
-==15407==   total heap usage: 418 allocs, 418 frees, 9,904 bytes allocated
-==15407== 
-==15407== All heap blocks were freed -- no leaks are possible
-==15407== 
-==15407== For lists of detected and suppressed errors, rerun with: -s
-==15407== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==23808== Memcheck, a memory error detector
+==23808== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==23808== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==23808== Command: /home/batelov/Technion_projects/data\ structures/build/DS1
+==23808== 
+==23808== 
+==23808== HEAP SUMMARY:
+==23808==     in use at exit: 0 bytes in 0 blocks
+==23808==   total heap usage: 28,826 allocs, 28,826 frees, 690,720 bytes allocated
+==23808== 
+==23808== All heap blocks were freed -- no leaks are possible
+==23808== 
+==23808== For lists of detected and suppressed errors, rerun with: -s
+==23808== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 82.txt
 
-==15496== Memcheck, a memory error detector
-==15496== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==15496== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==15496== Command: /home/batelov/Technion_projects/build/DS1
-==15496== 
-==15496== 
-==15496== HEAP SUMMARY:
-==15496==     in use at exit: 0 bytes in 0 blocks
-==15496==   total heap usage: 5,520 allocs, 5,520 frees, 135,800 bytes allocated
-==15496== 
-==15496== All heap blocks were freed -- no leaks are possible
-==15496== 
-==15496== For lists of detected and suppressed errors, rerun with: -s
-==15496== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==23833== Memcheck, a memory error detector
+==23833== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==23833== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==23833== Command: /home/batelov/Technion_projects/data\ structures/build/DS1
+==23833== 
+==23833== 
+==23833== HEAP SUMMARY:
+==23833==     in use at exit: 0 bytes in 0 blocks
+==23833==   total heap usage: 5,520 allocs, 5,520 frees, 135,800 bytes allocated
+==23833== 
+==23833== All heap blocks were freed -- no leaks are possible
+==23833== 
+==23833== For lists of detected and suppressed errors, rerun with: -s
+==23833== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+83.txt
+
+==23840== Memcheck, a memory error detector
+==23840== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==23840== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==23840== Command: /home/batelov/Technion_projects/data\ structures/build/DS1
+==23840== 
+==23840== 
+==23840== HEAP SUMMARY:
+==23840==     in use at exit: 0 bytes in 0 blocks
+==23840==   total heap usage: 418 allocs, 418 frees, 9,904 bytes allocated
+==23840== 
+==23840== All heap blocks were freed -- no leaks are possible
+==23840== 
+==23840== For lists of detected and suppressed errors, rerun with: -s
+==23840== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 84.txt
 
-==15506== Memcheck, a memory error detector
-==15506== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==15506== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==15506== Command: /home/batelov/Technion_projects/build/DS1
-==15506== 
-==15506== 
-==15506== HEAP SUMMARY:
-==15506==     in use at exit: 0 bytes in 0 blocks
-==15506==   total heap usage: 5,041 allocs, 5,041 frees, 121,864 bytes allocated
-==15506== 
-==15506== All heap blocks were freed -- no leaks are possible
-==15506== 
-==15506== For lists of detected and suppressed errors, rerun with: -s
-==15506== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==23860== Memcheck, a memory error detector
+==23860== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==23860== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==23860== Command: /home/batelov/Technion_projects/data\ structures/build/DS1
+==23860== 
+==23860== 
+==23860== HEAP SUMMARY:
+==23860==     in use at exit: 0 bytes in 0 blocks
+==23860==   total heap usage: 5,041 allocs, 5,041 frees, 121,864 bytes allocated
+==23860== 
+==23860== All heap blocks were freed -- no leaks are possible
+==23860== 
+==23860== For lists of detected and suppressed errors, rerun with: -s
+==23860== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 85.txt
 
-==15513== Memcheck, a memory error detector
-==15513== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==15513== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==15513== Command: /home/batelov/Technion_projects/build/DS1
-==15513== 
-==15513== 
-==15513== HEAP SUMMARY:
-==15513==     in use at exit: 0 bytes in 0 blocks
-==15513==   total heap usage: 2,451 allocs, 2,451 frees, 60,448 bytes allocated
-==15513== 
-==15513== All heap blocks were freed -- no leaks are possible
-==15513== 
-==15513== For lists of detected and suppressed errors, rerun with: -s
-==15513== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-88.txt
-
-==15520== Memcheck, a memory error detector
-==15520== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==15520== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==15520== Command: /home/batelov/Technion_projects/build/DS1
-==15520== 
-==15520== 
-==15520== HEAP SUMMARY:
-==15520==     in use at exit: 0 bytes in 0 blocks
-==15520==   total heap usage: 145 allocs, 145 frees, 3,280 bytes allocated
-==15520== 
-==15520== All heap blocks were freed -- no leaks are possible
-==15520== 
-==15520== For lists of detected and suppressed errors, rerun with: -s
-==15520== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==23878== Memcheck, a memory error detector
+==23878== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==23878== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==23878== Command: /home/batelov/Technion_projects/data\ structures/build/DS1
+==23878== 
+==23878== 
+==23878== HEAP SUMMARY:
+==23878==     in use at exit: 0 bytes in 0 blocks
+==23878==   total heap usage: 2,451 allocs, 2,451 frees, 60,448 bytes allocated
+==23878== 
+==23878== All heap blocks were freed -- no leaks are possible
+==23878== 
+==23878== For lists of detected and suppressed errors, rerun with: -s
+==23878== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 86.txt
 
-==15527== Memcheck, a memory error detector
-==15527== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==15527== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==15527== Command: /home/batelov/Technion_projects/build/DS1
-==15527== 
-==15527== 
-==15527== HEAP SUMMARY:
-==15527==     in use at exit: 0 bytes in 0 blocks
-==15527==   total heap usage: 1,025 allocs, 1,025 frees, 24,752 bytes allocated
-==15527== 
-==15527== All heap blocks were freed -- no leaks are possible
-==15527== 
-==15527== For lists of detected and suppressed errors, rerun with: -s
-==15527== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==23913== Memcheck, a memory error detector
+==23913== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==23913== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==23913== Command: /home/batelov/Technion_projects/data\ structures/build/DS1
+==23913== 
+==23913== 
+==23913== HEAP SUMMARY:
+==23913==     in use at exit: 0 bytes in 0 blocks
+==23913==   total heap usage: 1,025 allocs, 1,025 frees, 24,752 bytes allocated
+==23913== 
+==23913== All heap blocks were freed -- no leaks are possible
+==23913== 
+==23913== For lists of detected and suppressed errors, rerun with: -s
+==23913== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 87.txt
 
-==15536== Memcheck, a memory error detector
-==15536== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==15536== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==15536== Command: /home/batelov/Technion_projects/build/DS1
-==15536== 
-==15536== 
-==15536== HEAP SUMMARY:
-==15536==     in use at exit: 0 bytes in 0 blocks
-==15536==   total heap usage: 23,320 allocs, 23,320 frees, 574,608 bytes allocated
-==15536== 
-==15536== All heap blocks were freed -- no leaks are possible
-==15536== 
-==15536== For lists of detected and suppressed errors, rerun with: -s
-==15536== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==23934== Memcheck, a memory error detector
+==23934== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==23934== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==23934== Command: /home/batelov/Technion_projects/data\ structures/build/DS1
+==23934== 
+==23934== 
+==23934== HEAP SUMMARY:
+==23934==     in use at exit: 0 bytes in 0 blocks
+==23934==   total heap usage: 23,320 allocs, 23,320 frees, 574,608 bytes allocated
+==23934== 
+==23934== All heap blocks were freed -- no leaks are possible
+==23934== 
+==23934== For lists of detected and suppressed errors, rerun with: -s
+==23934== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+88.txt
+
+==23960== Memcheck, a memory error detector
+==23960== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==23960== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==23960== Command: /home/batelov/Technion_projects/data\ structures/build/DS1
+==23960== 
+==23960== 
+==23960== HEAP SUMMARY:
+==23960==     in use at exit: 0 bytes in 0 blocks
+==23960==   total heap usage: 145 allocs, 145 frees, 3,280 bytes allocated
+==23960== 
+==23960== All heap blocks were freed -- no leaks are possible
+==23960== 
+==23960== For lists of detected and suppressed errors, rerun with: -s
+==23960== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 89.txt
 
-==15568== Memcheck, a memory error detector
-==15568== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==15568== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==15568== Command: /home/batelov/Technion_projects/build/DS1
-==15568== 
-==15568== 
-==15568== HEAP SUMMARY:
-==15568==     in use at exit: 0 bytes in 0 blocks
-==15568==   total heap usage: 4,097 allocs, 4,097 frees, 97,672 bytes allocated
-==15568== 
-==15568== All heap blocks were freed -- no leaks are possible
-==15568== 
-==15568== For lists of detected and suppressed errors, rerun with: -s
-==15568== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==23975== Memcheck, a memory error detector
+==23975== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==23975== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==23975== Command: /home/batelov/Technion_projects/data\ structures/build/DS1
+==23975== 
+==23975== 
+==23975== HEAP SUMMARY:
+==23975==     in use at exit: 0 bytes in 0 blocks
+==23975==   total heap usage: 4,097 allocs, 4,097 frees, 97,672 bytes allocated
+==23975== 
+==23975== All heap blocks were freed -- no leaks are possible
+==23975== 
+==23975== For lists of detected and suppressed errors, rerun with: -s
+==23975== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 9.txt
 
-==15582== Memcheck, a memory error detector
-==15582== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==15582== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==15582== Command: /home/batelov/Technion_projects/build/DS1
-==15582== 
-==15582== 
-==15582== HEAP SUMMARY:
-==15582==     in use at exit: 0 bytes in 0 blocks
-==15582==   total heap usage: 1,608 allocs, 1,608 frees, 40,424 bytes allocated
-==15582== 
-==15582== All heap blocks were freed -- no leaks are possible
-==15582== 
-==15582== For lists of detected and suppressed errors, rerun with: -s
-==15582== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-91.txt
-
-==15588== Memcheck, a memory error detector
-==15588== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==15588== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==15588== Command: /home/batelov/Technion_projects/build/DS1
-==15588== 
-==15588== 
-==15588== HEAP SUMMARY:
-==15588==     in use at exit: 0 bytes in 0 blocks
-==15588==   total heap usage: 147 allocs, 147 frees, 3,344 bytes allocated
-==15588== 
-==15588== All heap blocks were freed -- no leaks are possible
-==15588== 
-==15588== For lists of detected and suppressed errors, rerun with: -s
-==15588== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==24003== Memcheck, a memory error detector
+==24003== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==24003== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==24003== Command: /home/batelov/Technion_projects/data\ structures/build/DS1
+==24003== 
+==24003== 
+==24003== HEAP SUMMARY:
+==24003==     in use at exit: 0 bytes in 0 blocks
+==24003==   total heap usage: 1,608 allocs, 1,608 frees, 40,424 bytes allocated
+==24003== 
+==24003== All heap blocks were freed -- no leaks are possible
+==24003== 
+==24003== For lists of detected and suppressed errors, rerun with: -s
+==24003== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 90.txt
 
-==15597== Memcheck, a memory error detector
-==15597== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==15597== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==15597== Command: /home/batelov/Technion_projects/build/DS1
-==15597== 
-==15597== 
-==15597== HEAP SUMMARY:
-==15597==     in use at exit: 0 bytes in 0 blocks
-==15597==   total heap usage: 3,030 allocs, 3,030 frees, 77,360 bytes allocated
-==15597== 
-==15597== All heap blocks were freed -- no leaks are possible
-==15597== 
-==15597== For lists of detected and suppressed errors, rerun with: -s
-==15597== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==24013== Memcheck, a memory error detector
+==24013== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==24013== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==24013== Command: /home/batelov/Technion_projects/data\ structures/build/DS1
+==24013== 
+==24013== 
+==24013== HEAP SUMMARY:
+==24013==     in use at exit: 0 bytes in 0 blocks
+==24013==   total heap usage: 3,030 allocs, 3,030 frees, 77,360 bytes allocated
+==24013== 
+==24013== All heap blocks were freed -- no leaks are possible
+==24013== 
+==24013== For lists of detected and suppressed errors, rerun with: -s
+==24013== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+91.txt
+
+==24032== Memcheck, a memory error detector
+==24032== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==24032== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==24032== Command: /home/batelov/Technion_projects/data\ structures/build/DS1
+==24032== 
+==24032== 
+==24032== HEAP SUMMARY:
+==24032==     in use at exit: 0 bytes in 0 blocks
+==24032==   total heap usage: 147 allocs, 147 frees, 3,344 bytes allocated
+==24032== 
+==24032== All heap blocks were freed -- no leaks are possible
+==24032== 
+==24032== For lists of detected and suppressed errors, rerun with: -s
+==24032== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 92.txt
 
-==15604== Memcheck, a memory error detector
-==15604== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==15604== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==15604== Command: /home/batelov/Technion_projects/build/DS1
-==15604== 
-==15604== 
-==15604== HEAP SUMMARY:
-==15604==     in use at exit: 0 bytes in 0 blocks
-==15604==   total heap usage: 10 allocs, 10 frees, 168 bytes allocated
-==15604== 
-==15604== All heap blocks were freed -- no leaks are possible
-==15604== 
-==15604== For lists of detected and suppressed errors, rerun with: -s
-==15604== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-94.txt
-
-==15612== Memcheck, a memory error detector
-==15612== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==15612== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==15612== Command: /home/batelov/Technion_projects/build/DS1
-==15612== 
-==15612== 
-==15612== HEAP SUMMARY:
-==15612==     in use at exit: 0 bytes in 0 blocks
-==15612==   total heap usage: 3,475 allocs, 3,475 frees, 87,440 bytes allocated
-==15612== 
-==15612== All heap blocks were freed -- no leaks are possible
-==15612== 
-==15612== For lists of detected and suppressed errors, rerun with: -s
-==15612== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==24044== Memcheck, a memory error detector
+==24044== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==24044== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==24044== Command: /home/batelov/Technion_projects/data\ structures/build/DS1
+==24044== 
+==24044== 
+==24044== HEAP SUMMARY:
+==24044==     in use at exit: 0 bytes in 0 blocks
+==24044==   total heap usage: 10 allocs, 10 frees, 168 bytes allocated
+==24044== 
+==24044== All heap blocks were freed -- no leaks are possible
+==24044== 
+==24044== For lists of detected and suppressed errors, rerun with: -s
+==24044== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 93.txt
 
-==15629== Memcheck, a memory error detector
-==15629== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==15629== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==15629== Command: /home/batelov/Technion_projects/build/DS1
-==15629== 
-==15629== 
-==15629== HEAP SUMMARY:
-==15629==     in use at exit: 0 bytes in 0 blocks
-==15629==   total heap usage: 2,070 allocs, 2,070 frees, 51,736 bytes allocated
-==15629== 
-==15629== All heap blocks were freed -- no leaks are possible
-==15629== 
-==15629== For lists of detected and suppressed errors, rerun with: -s
-==15629== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==24055== Memcheck, a memory error detector
+==24055== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==24055== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==24055== Command: /home/batelov/Technion_projects/data\ structures/build/DS1
+==24055== 
+==24055== 
+==24055== HEAP SUMMARY:
+==24055==     in use at exit: 0 bytes in 0 blocks
+==24055==   total heap usage: 2,070 allocs, 2,070 frees, 51,736 bytes allocated
+==24055== 
+==24055== All heap blocks were freed -- no leaks are possible
+==24055== 
+==24055== For lists of detected and suppressed errors, rerun with: -s
+==24055== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+94.txt
+
+==24082== Memcheck, a memory error detector
+==24082== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==24082== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==24082== Command: /home/batelov/Technion_projects/data\ structures/build/DS1
+==24082== 
+==24082== 
+==24082== HEAP SUMMARY:
+==24082==     in use at exit: 0 bytes in 0 blocks
+==24082==   total heap usage: 3,475 allocs, 3,475 frees, 87,440 bytes allocated
+==24082== 
+==24082== All heap blocks were freed -- no leaks are possible
+==24082== 
+==24082== For lists of detected and suppressed errors, rerun with: -s
+==24082== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 95.txt
 
-==15641== Memcheck, a memory error detector
-==15641== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==15641== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==15641== Command: /home/batelov/Technion_projects/build/DS1
-==15641== 
-==15641== 
-==15641== HEAP SUMMARY:
-==15641==     in use at exit: 0 bytes in 0 blocks
-==15641==   total heap usage: 6,773 allocs, 6,773 frees, 164,488 bytes allocated
-==15641== 
-==15641== All heap blocks were freed -- no leaks are possible
-==15641== 
-==15641== For lists of detected and suppressed errors, rerun with: -s
-==15641== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-97.txt
-
-==15649== Memcheck, a memory error detector
-==15649== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==15649== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==15649== Command: /home/batelov/Technion_projects/build/DS1
-==15649== 
-==15649== 
-==15649== HEAP SUMMARY:
-==15649==     in use at exit: 0 bytes in 0 blocks
-==15649==   total heap usage: 4,136 allocs, 4,136 frees, 104,352 bytes allocated
-==15649== 
-==15649== All heap blocks were freed -- no leaks are possible
-==15649== 
-==15649== For lists of detected and suppressed errors, rerun with: -s
-==15649== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==24091== Memcheck, a memory error detector
+==24091== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==24091== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==24091== Command: /home/batelov/Technion_projects/data\ structures/build/DS1
+==24091== 
+==24091== 
+==24091== HEAP SUMMARY:
+==24091==     in use at exit: 0 bytes in 0 blocks
+==24091==   total heap usage: 6,773 allocs, 6,773 frees, 164,488 bytes allocated
+==24091== 
+==24091== All heap blocks were freed -- no leaks are possible
+==24091== 
+==24091== For lists of detected and suppressed errors, rerun with: -s
+==24091== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 96.txt
 
-==15655== Memcheck, a memory error detector
-==15655== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==15655== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==15655== Command: /home/batelov/Technion_projects/build/DS1
-==15655== 
-==15655== 
-==15655== HEAP SUMMARY:
-==15655==     in use at exit: 0 bytes in 0 blocks
-==15655==   total heap usage: 4,006 allocs, 4,006 frees, 101,000 bytes allocated
-==15655== 
-==15655== All heap blocks were freed -- no leaks are possible
-==15655== 
-==15655== For lists of detected and suppressed errors, rerun with: -s
-==15655== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==24113== Memcheck, a memory error detector
+==24113== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==24113== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==24113== Command: /home/batelov/Technion_projects/data\ structures/build/DS1
+==24113== 
+==24113== 
+==24113== HEAP SUMMARY:
+==24113==     in use at exit: 0 bytes in 0 blocks
+==24113==   total heap usage: 4,006 allocs, 4,006 frees, 101,000 bytes allocated
+==24113== 
+==24113== All heap blocks were freed -- no leaks are possible
+==24113== 
+==24113== For lists of detected and suppressed errors, rerun with: -s
+==24113== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+97.txt
+
+==24124== Memcheck, a memory error detector
+==24124== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==24124== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==24124== Command: /home/batelov/Technion_projects/data\ structures/build/DS1
+==24124== 
+==24124== 
+==24124== HEAP SUMMARY:
+==24124==     in use at exit: 0 bytes in 0 blocks
+==24124==   total heap usage: 4,136 allocs, 4,136 frees, 104,352 bytes allocated
+==24124== 
+==24124== All heap blocks were freed -- no leaks are possible
+==24124== 
+==24124== For lists of detected and suppressed errors, rerun with: -s
+==24124== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 98.txt
 
-==15663== Memcheck, a memory error detector
-==15663== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==15663== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==15663== Command: /home/batelov/Technion_projects/build/DS1
-==15663== 
-==15663== 
-==15663== HEAP SUMMARY:
-==15663==     in use at exit: 0 bytes in 0 blocks
-==15663==   total heap usage: 16,150 allocs, 16,150 frees, 395,856 bytes allocated
-==15663== 
-==15663== All heap blocks were freed -- no leaks are possible
-==15663== 
-==15663== For lists of detected and suppressed errors, rerun with: -s
-==15663== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==24147== Memcheck, a memory error detector
+==24147== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==24147== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==24147== Command: /home/batelov/Technion_projects/data\ structures/build/DS1
+==24147== 
+==24147== 
+==24147== HEAP SUMMARY:
+==24147==     in use at exit: 0 bytes in 0 blocks
+==24147==   total heap usage: 16,150 allocs, 16,150 frees, 395,856 bytes allocated
+==24147== 
+==24147== All heap blocks were freed -- no leaks are possible
+==24147== 
+==24147== For lists of detected and suppressed errors, rerun with: -s
+==24147== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 99.txt
 
-==15678== Memcheck, a memory error detector
-==15678== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==15678== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==15678== Command: /home/batelov/Technion_projects/build/DS1
-==15678== 
-==15678== 
-==15678== HEAP SUMMARY:
-==15678==     in use at exit: 0 bytes in 0 blocks
-==15678==   total heap usage: 299 allocs, 299 frees, 7,144 bytes allocated
-==15678== 
-==15678== All heap blocks were freed -- no leaks are possible
-==15678== 
-==15678== For lists of detected and suppressed errors, rerun with: -s
-==15678== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==24165== Memcheck, a memory error detector
+==24165== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==24165== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==24165== Command: /home/batelov/Technion_projects/data\ structures/build/DS1
+==24165== 
+==24165== 
+==24165== HEAP SUMMARY:
+==24165==     in use at exit: 0 bytes in 0 blocks
+==24165==   total heap usage: 299 allocs, 299 frees, 7,144 bytes allocated
+==24165== 
+==24165== All heap blocks were freed -- no leaks are possible
+==24165== 
+==24165== For lists of detected and suppressed errors, rerun with: -s
+==24165== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)

@@ -31,7 +31,6 @@ public:
 
     ~SaleElement() = default;
 
-
 private:
     int typeID_;
     int sales_;

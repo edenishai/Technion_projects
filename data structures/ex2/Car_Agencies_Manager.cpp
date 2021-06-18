@@ -18,7 +18,7 @@ StatusType Car_Agencies_Manager::AddAgency()
 
 StatusType Car_Agencies_Manager::SellCar(int agencyID, int typeID, int k)
 {
-    if (agencies_->findIdentifier(agencyID) == agencies_->NO_PARENT) {
+    if (agencies_->findIdentifier(agencyID) == agencies_->DOESNT_EXIST) {
         return FAILURE;
     }
     Agency *agency = &(agencies_->findElement(agencyID));

@@ -26,7 +26,6 @@ public:
 
     ~CarElement() = default;
 
-
 private:
     int typeID_;
     int sales_;

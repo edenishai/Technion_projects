@@ -54,14 +54,14 @@ public:
 
     T *findMin() const;
 
-    T *getMax() const; // O(1)
+    T *getMax() const;
 
-    T *getMin() const; // O(1)
+    T *getMin() const;
 
     int currentSize() const;
 
     void getInOrder(T *array, int size) const;
-
+    
 private:
     RTNode<T> *root_;
     RTNode<T> *max_;
@@ -99,7 +99,7 @@ private:
 
     int size(RTNode<T> *node) const;
 
-    void getInOrder(RTNode<T> *node, T *array, int size, int *index) const;
+    void getInOrder(RTNode<T> *node, T *array, int size, int *index, bool read_flag) const;
 };
 
 template<class T>
@@ -194,13 +194,16 @@ void RankTree<T>::getInOrder(T *array, int size) const
 {
     size = min(size, currentSize());
     int index = 0;
-    getInOrder(root_, array, size, &index);
+    getInOrder(min_, array, size, &index, true);
 }
 
 template<class T>
 RTNode<T> *RankTree<T>::LL_Rotate(RTNode<T> *node)
 {
     RTNode<T> *temp = node->left_;
+
+    if (temp->right_)
+        temp->right_->parent_ = node;
     temp->parent_ = node->parent_;
     node->parent_ = temp;
     node->left_ = temp->right_;
@@ -216,6 +219,9 @@ template<class T>
 RTNode<T> *RankTree<T>::RR_Rotate(RTNode<T> *node)
 {
     RTNode<T> *temp = node->right_;
+    
+    if (temp->left_)
+        temp->left_->parent_ = node;
     temp->parent_ = node->parent_;
     node->parent_ = temp;
     node->right_ = temp->left_;
@@ -269,6 +275,7 @@ RTNode<T> *RankTree<T>::insert_aux(T *data, RTNode<T> *node)
     }
     node->height_ = max(height(node->left_), height(node->right_)) + 1;
     sizeUpdate(node);
+
     return node;
 }
 
@@ -298,6 +305,8 @@ RTNode<T> *RankTree<T>::remove_aux(T *data, RTNode<T> *node)
             node = node->right_;
         else if (node->right_ == NULL)
             node = node->left_;
+        if (node)
+            node->parent_ = temp->parent_;
         delete temp;
     }
     if (node == NULL)
@@ -341,9 +350,13 @@ RTNode<T> *RankTree<T>::buildOrdered_aux(T **data, int start, int end, int heigh
     T *new_data = data[middle];
     RTNode<T> *node = new RTNode<T>(new_data);
     node->height_ = height;
-
+    
     node->left_ = buildOrdered_aux(data, start, middle - 1, height - 1);
+    if (node->left_)
+        node->left_->parent_ = node;
     node->right_ = buildOrdered_aux(data, middle + 1, end, height - 1);
+    if (node->right_)
+        node->right_->parent_ = node;
 
     sizeUpdate(node);
     return node;
@@ -431,15 +444,26 @@ int RankTree<T>::size(RTNode<T> *node) const
 }
 
 template<class T>
-void RankTree<T>::getInOrder(RTNode<T> *root, T *array, int size, int *index) const
+void RankTree<T>::getInOrder(RTNode<T> *node, T *array, int size, int *index, bool read_flag) const
 {
-    if (root == nullptr || *index == size)
+    if (!node || *index == size)
         return;
-    getInOrder(root->left_, array, size, index);
-    array[*index] = *(root->getData());
-    (*index)++;
-    getInOrder(root->right_, array, size, index);
-}
 
+    if (read_flag) {
+        array[*index] = *(node->getData());
+        (*index)++;
+    }
+    if (node->right_ && read_flag) {
+        getInOrder(findMin_aux(node->right_), array, size, index, true);
+        return;
+    }
+    if (*index == size) 
+        return;
+
+    if (node->parent_ && node->parent_->left_ == node)
+        getInOrder(node->parent_, array, size, index, true);
+    else if (node->parent_ && node->parent_->right_ == node)
+        getInOrder(node->parent_, array, size, index, false);
+}
 
 #endif /* RANK_TREE_H */
