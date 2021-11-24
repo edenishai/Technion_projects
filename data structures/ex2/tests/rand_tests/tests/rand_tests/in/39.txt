@@ -1,0 +1,13 @@
+Init
+AddAgency
+AddAgency
+AddAgency
+UniteAgencies 0 2
+SellCar 2 7618 18
+AddAgency
+GetIthSoldType 2 0
+AddAgency
+GetIthSoldType 9787 8
+SellCar 4 6044 21
+UniteAgencies 7 -3
+Quit

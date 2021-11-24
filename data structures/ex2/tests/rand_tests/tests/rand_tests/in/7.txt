@@ -1,0 +1,11 @@
+Init
+SellCar -15 1600 4
+AddAgency
+GetIthSoldType 238 9
+AddAgency
+AddAgency
+GetIthSoldType 3 -17
+AddAgency
+SellCar 1 3334 15
+AddAgency
+Quit

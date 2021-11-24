@@ -1,0 +1,4 @@
+init done.
+SellCar: FAILURE
+AddAgency: SUCCESS
+quit done.

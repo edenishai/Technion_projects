@@ -1,0 +1,12 @@
+Init
+SellCar 9835 8913 23
+AddAgency
+AddAgency
+GetIthSoldType 2 -16
+SellCar 3 7840 -21
+SellCar 1 1601 20
+SellCar 6222 7129 2
+AddAgency
+SellCar 0 750 9
+AddAgency
+Quit

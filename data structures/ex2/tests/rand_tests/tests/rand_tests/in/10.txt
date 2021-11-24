@@ -1,0 +1,23 @@
+Init
+SellCar 729 9372 2
+SellCar 9876 5844 8
+SellCar 3778 2623 21
+AddAgency
+SellCar 0 4830 14
+UniteAgencies -13 10
+AddAgency
+GetIthSoldType 4 -6
+GetIthSoldType 7 -9
+AddAgency
+AddAgency
+SellCar 0 4003 23
+GetIthSoldType 10 -25
+UniteAgencies 7524 473
+GetIthSoldType 0 1
+AddAgency
+SellCar 2 3299 27
+UniteAgencies -15 -7
+GetIthSoldType 7 -12
+UniteAgencies 1 3
+AddAgency
+Quit
